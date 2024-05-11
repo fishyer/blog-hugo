@@ -6,21 +6,70 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 11 May 2024 02:37:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 10:58:03 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Prisma-最好用的ORM框架</title>
-      <link>http://localhost:1313/post/prisma-%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84orm%E6%A1%86%E6%9E%B6/</link>
-      <pubDate>Sat, 11 May 2024 01:37:56 +0000</pubDate>
-      <guid>http://localhost:1313/post/prisma-%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84orm%E6%A1%86%E6%9E%B6/</guid>
+      <title>Obsidian插件开发笔记</title>
+      <link>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 11 May 2024 11:19:02 +0800</pubDate>
+      <guid>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
+      <description>#占位 1111 2222 333</description>
+    </item>
+    <item>
+      <title>宝塔部署笔记</title>
+      <link>http://localhost:1313/post/%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 11 May 2024 11:18:50 +0800</pubDate>
+      <guid>http://localhost:1313/post/%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</guid>
       <description>占位</description>
+    </item>
+    <item>
+      <title>docker部署笔记</title>
+      <link>http://localhost:1313/post/docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 11 May 2024 11:18:40 +0800</pubDate>
+      <guid>http://localhost:1313/post/docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</guid>
+      <description>占位</description>
+    </item>
+    <item>
+      <title>hugo-使用go构建的静态博客工具</title>
+      <link>http://localhost:1313/post/hugo-%E4%BD%BF%E7%94%A8go%E6%9E%84%E5%BB%BA%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 11 May 2024 10:55:47 +0800</pubDate>
+      <guid>http://localhost:1313/post/hugo-%E4%BD%BF%E7%94%A8go%E6%9E%84%E5%BB%BA%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7/</guid>
+      <description>速度很快，比Jekyll/Hexo都快222</description>
+    </item>
+    <item>
+      <title>laf-云函数平台</title>
+      <link>http://localhost:1313/post/laf-%E4%BA%91%E5%87%BD%E6%95%B0%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Sat, 11 May 2024 10:53:17 +0800</pubDate>
+      <guid>http://localhost:1313/post/laf-%E4%BA%91%E5%87%BD%E6%95%B0%E5%B9%B3%E5%8F%B0/</guid>
+      <description>占位 1111</description>
+    </item>
+    <item>
+      <title>Sealos-云托管平台</title>
+      <link>http://localhost:1313/post/sealos-%E4%BA%91%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Sat, 11 May 2024 10:43:19 +0800</pubDate>
+      <guid>http://localhost:1313/post/sealos-%E4%BA%91%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0/</guid>
+      <description>占位</description>
+    </item>
+    <item>
+      <title>FastApi-Python上最好用的Web框架</title>
+      <link>http://localhost:1313/post/fastapi-python%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84web%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Thu, 09 May 2024 10:44:15 +0000</pubDate>
+      <guid>http://localhost:1313/post/fastapi-python%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84web%E6%A1%86%E6%9E%B6/</guid>
+      <description>支持协程 自动生成文档</description>
     </item>
     <item>
       <title>git-更新忽略文件</title>
       <link>http://localhost:1313/post/git-%E6%9B%B4%E6%96%B0%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Sat, 11 May 2024 01:37:56 +0800</pubDate>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/git-%E6%9B%B4%E6%96%B0%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/</guid>
       <description>1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39;</description>
+    </item>
+    <item>
+      <title>Prisma-最好用的ORM框架</title>
+      <link>http://localhost:1313/post/prisma-%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84orm%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Wed, 01 May 2024 20:37:56 +0000</pubDate>
+      <guid>http://localhost:1313/post/prisma-%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84orm%E6%A1%86%E6%9E%B6/</guid>
+      <description>占位</description>
     </item>
     <item>
       <title>WPLs-introduction-and-test</title>
@@ -30,7 +79,7 @@
       <description>WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 zhihu ，安装即可，如下图。虽然目前排在最后一个&amp;#x1f622;。 Markdown基础功能</description>
     </item>
     <item>
-      <title>长恨歌</title>
+      <title>长恨歌-白居易</title>
       <link>http://localhost:1313/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/</link>
       <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
       <guid>http://localhost:1313/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/</guid>
