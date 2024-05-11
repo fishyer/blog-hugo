@@ -1,5 +1,5 @@
 ---
-lastmod: 2024-05-11T12:56:01+08:00
+lastmod: 2024-05-11T12:57:18+08:00
 date: 2024-05-11T12:16:47+08:00
 id: 1c701082-2351-4aed-8081-ff3b55e3ac25
 title: Obsidian插件-自动添加元数据
@@ -33,7 +33,7 @@ tags: []
 
 ## 仿TabCopy的小功能
 
-我在这个插件里面还添加一个小功能（Tab-Copy for Advanced URL）：可以像TabCopy一样，通过命令一键生成类似：`[title](url)`这种格式的链接，不过它的链接是用的Adcanced-URI插件的，最后生成的效果如下：[Obsidian插件-自动添加元数据](obsidian://advanced-uri?vault=note&uid=1c701082-2351-4aed-8081-ff3b55e3ac25 )
+我在这个插件里面还添加一个小功能（Tab-Copy for Advanced URL）：可以像TabCopy一样，通过命令一键生成类似：`[title](url)`这种格式的链接，不过它的链接是用的Adcanced-URI插件的，最后生成的效果如下：`[Obsidian插件-自动添加元数据](obsidian://advanced-uri?vault=note&uid=1c701082-2351-4aed-8081-ff3b55e3ac25 )`
 
 强烈建议将这个命令通过Commander插件添加在页面首部，这样在其它地方引用就方便多了。比如我就经常把Obsidian的笔记链接粘贴到WorkFlowy中。
 
