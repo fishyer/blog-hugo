@@ -1,5 +1,5 @@
 ---
-lastmod: 2024-05-11T12:41:54+08:00
+lastmod: 2024-05-11T12:46:52+08:00
 date: 2024-05-11T12:16:47+08:00
 id: f50ee79a-23fd-4db4-bfa1-4d7c0900fd85
 title: Obsidian插件-自动添加元数据
@@ -20,7 +20,6 @@ tags: []
 ```
 自己手动添加这些属性太麻烦了，就让插件来帮我自动生成吧，每次修改时，都会自动更新属性值（没有就新建，有就更新），其实更新操作主要是更新最后修改时间。
 
-## 
 
 ## 配置项
 
@@ -31,6 +30,7 @@ tags: []
 - 其它的配置我没动过，都是[obsidian-frontmatter-modified-date](https://github.com/alangrainger/obsidian-frontmatter-modified-date )插件上原有的
 
 ![image.png](https://yupic.oss-cn-shanghai.aliyuncs.com/20240511122458.png)
+
 ## 如何使用
 
 下载源码，将dist文件夹的内容移动到.obsidian/plugins文件夹即可，可以将dist文件夹改一下名：auto-frontmatter
@@ -40,6 +40,6 @@ tags: []
 
 ## 源码
 
-- [fishyer/auto-frontmatter](https://github.com/fishyer/auto-frontmatter )
-- [fishyer/blog-hugo](https://github.com/fishyer/blog-hugo )
+1. [fishyer/auto-frontmatter](https://github.com/fishyer/auto-frontmatter )
+2. [fishyer/blog-hugo](https://github.com/fishyer/blog-hugo )
 
