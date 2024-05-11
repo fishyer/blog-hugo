@@ -47,13 +47,13 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
     <meta property="article:published_time" content="2024-05-11T12:16:47+08:00">
-    <meta property="article:modified_time" content="2024-05-11T12:46:52+08:00">
+    <meta property="article:modified_time" content="2024-05-11T12:56:01+08:00">
 
   <meta itemprop="name" content="Obsidian插件-自动添加元数据">
   <meta itemprop="description" content="开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid">
   <meta itemprop="datePublished" content="2024-05-11T12:16:47+08:00">
-  <meta itemprop="dateModified" content="2024-05-11T12:46:52+08:00">
-  <meta itemprop="wordCount" content="729"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Obsidian插件-自动添加元数据">
+  <meta itemprop="dateModified" content="2024-05-11T12:56:01+08:00">
+  <meta itemprop="wordCount" content="949"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Obsidian插件-自动添加元数据">
 <meta name="twitter:description" content="开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid">
 
 <!--[if lte IE 9]>
@@ -132,7 +132,7 @@
       <div class="post-meta">
         <span class="post-time"> 2024-05-11 </span>
         
-          <span class="more-meta"> 约 729 字 </span>
+          <span class="more-meta"> 约 949 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -147,6 +147,7 @@
       <ul>
         <li><a href="#开发目的">开发目的</a></li>
         <li><a href="#配置项">配置项</a></li>
+        <li><a href="#仿tabcopy的小功能">仿TabCopy的小功能</a></li>
         <li><a href="#如何使用">如何使用</a></li>
         <li><a href="#源码">源码</a></li>
       </ul>
@@ -185,6 +186,9 @@
 <li>其它的配置我没动过，都是<a href="https://github.com/alangrainger/obsidian-frontmatter-modified-date">obsidian-frontmatter-modified-date</a>插件上原有的</li>
 </ul>
 <p><img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240511122458.png" alt="image.png"></p>
+<h2 id="仿tabcopy的小功能">仿TabCopy的小功能</h2>
+<p>我在这个插件里面还添加一个小功能（Tab-Copy for Advanced URL）：可以像TabCopy一样，通过命令一键生成类似：<code>[title](url)</code>这种格式的链接，不过它的链接是用的Adcanced-URI插件的，最后生成的效果如下：<a href="obsidian://advanced-uri?vault=note&amp;uid=1c701082-2351-4aed-8081-ff3b55e3ac25">Obsidian插件-自动添加元数据</a></p>
+<p>强烈建议将这个命令通过Commander插件添加在页面首部，这样在其它地方引用就方便多了。比如我就经常把Obsidian的笔记链接粘贴到WorkFlowy中。</p>
 <h2 id="如何使用">如何使用</h2>
 <p>下载源码，将dist文件夹的内容移动到.obsidian/plugins文件夹即可，可以将dist文件夹改一下名：auto-frontmatter</p>
 <p>我是用的Hugo，所以才这样配置，如果你是用的其它静态站点生成器，比如：jekyll/hexo/gatsby等，可能需要调整一下配置项。如果这些配置无法满足你的需求，可以自己修改源码。或者通过邮件联系我，我来拓展一下这个插件的功能。未来的计划是让这插件可以通过模板来自定义配置项，这样就可以更灵活地使用。</p>
