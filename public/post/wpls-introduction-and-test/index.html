@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>WPLs-introduction-and-test - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="fishyer" /><meta name="description" content="WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 zhihu ，安装即可，如下图。虽然目前排在最后一个&amp;#x1f622;。 Markdown基础功能" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.125.7 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/wpls-introduction-and-test/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="http://localhost:1313/post/wpls-introduction-and-test/">
+  <meta property="og:site_name" content="Even - A super concise theme for Hugo">
+  <meta property="og:title" content="WPLs-introduction-and-test">
+  <meta property="og:description" content="WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 zhihu ，安装即可，如下图。虽然目前排在最后一个😢。 Markdown基础功能">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2017-08-30T01:37:56+08:00">
+    <meta property="article:modified_time" content="2017-08-30T01:37:56+08:00">
+    <meta property="article:tag" content="工具">
+    <meta property="article:tag" content="笔记">
+
+  <meta itemprop="name" content="WPLs-introduction-and-test">
+  <meta itemprop="description" content="WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 zhihu ，安装即可，如下图。虽然目前排在最后一个&#x1f622;。 Markdown基础功能">
+  <meta itemprop="datePublished" content="2017-08-30T01:37:56+08:00">
+  <meta itemprop="dateModified" content="2017-08-30T01:37:56+08:00">
+  <meta itemprop="wordCount" content="3081">
+  <meta itemprop="keywords" content="工具,笔记"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="WPLs-introduction-and-test">
+<meta name="twitter:description" content="WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 zhihu ，安装即可，如下图。虽然目前排在最后一个&#x1f622;。 Markdown基础功能">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Fishyer</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/aboutme/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Fishyer</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/aboutme/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">WPLs-introduction-and-test</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-08-30 </span>
+        
+          <span class="more-meta"> 约 3081 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#部分格式提醒">部分格式提醒</a>
+      <ul>
+        <li><a href="#jekyll-元数据httpsjekyllrbcomdocsfront-matter"><a href="https://jekyllrb.com/docs/front-matter/">Jekyll 元数据</a></a></li>
+        <li><a href="#链接卡片">链接卡片</a></li>
+        <li><a href="#参考文献">参考文献</a></li>
+      </ul>
+    </li>
+    <li><a href="#以下是各个功能的测试">以下是各个功能的测试</a></li>
+    <li><a href="#插件特色功能">插件特色功能</a>
+      <ul>
+        <li><a href="#测试01题图">测试01：题图</a></li>
+        <li><a href="#链接卡片-1">链接卡片</a></li>
+      </ul>
+    </li>
+    <li><a href="#markdown功能测试">Markdown功能测试</a>
+      <ul>
+        <li><a href="#测试01六级标题">测试01：六级标题</a>
+          <ul>
+            <li><a href="#三级标题">三级标题</a></li>
+          </ul>
+        </li>
+        <li><a href="#测试02分割线">测试02：分割线</a></li>
+        <li><a href="#测试03引用">测试03：引用</a></li>
+        <li><a href="#测试04链接">测试04：链接</a>
+          <ul>
+            <li><a href="#图片链接">图片链接</a></li>
+            <li><a href="#标题链接httpsgithubcomjks-liuwpl-s"><a href="https://github.com/jks-liu/WPL-s">标题链接</a></a></li>
+          </ul>
+        </li>
+        <li><a href="#测试05图片">测试05：图片</a>
+          <ul>
+            <li><a href="#二维码">二维码</a></li>
+          </ul>
+        </li>
+        <li><a href="#测试06表格">测试06：表格</a></li>
+        <li><a href="#测试07公式">测试07：公式</a></li>
+        <li><a href="#测试08代码">测试08：代码</a>
+          <ul>
+            <li><a href="#测试081代码int-a在标题中">测试08.1：代码<code>int a</code>在标题中</a></li>
+          </ul>
+        </li>
+        <li><a href="#测试09加粗-斜体-删除线">测试09：<strong>加粗</strong>， <em>斜体</em>， <del>删除线</del></a></li>
+        <li><a href="#测试10列表">测试10：列表</a></li>
+        <li><a href="#测试11任务列表">测试11：任务列表</a></li>
+        <li><a href="#测试12参考文献">测试12：参考文献</a></li>
+        <li><a href="#测试13-congratulations-emoji表情">测试13： &#x3297;&#xfe0f; Emoji表情</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 <code>zhihu</code> ，安装即可，如下图。虽然目前排在最后一个&#x1f622;。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Markdown基础功能</th>
+<th style="text-align:left">支持与否</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">章节标题</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *1</td>
+</tr>
+<tr>
+<td style="text-align:left">分割线</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">引用</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">链接</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *8</td>
+</tr>
+<tr>
+<td style="text-align:left">图片</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *6</td>
+</tr>
+<tr>
+<td style="text-align:left">表格</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *2</td>
+</tr>
+<tr>
+<td style="text-align:left">公式</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">代码块</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">加粗</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">斜体</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">加粗斜体嵌套</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">删除线</td>
+<td style="text-align:left">&#x274c; *3</td>
+</tr>
+<tr>
+<td style="text-align:left">列表</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td style="text-align:left">参考文献</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *4</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">其它特色功能</th>
+<th style="text-align:left">支持与否</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">元数据</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *4</td>
+</tr>
+<tr>
+<td style="text-align:left">目录</td>
+<td style="text-align:left">&#x274c; *0</td>
+</tr>
+<tr>
+<td style="text-align:left">章节标题自动编号</td>
+<td style="text-align:left">&#x274c; *0</td>
+</tr>
+<tr>
+<td style="text-align:left">Emoji表情</td>
+<td style="text-align:left">&#x2714;&#xfe0f; *5</td>
+</tr>
+<tr>
+<td style="text-align:left">任务列表</td>
+<td style="text-align:left">&#x2714;&#xfe0f;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>知乎特色功能</th>
+<th>支持与否</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标题</td>
+<td>&#x2714;&#xfe0f; *7</td>
+</tr>
+<tr>
+<td>回答问题</td>
+<td>&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td>发布文章</td>
+<td>&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td>题图</td>
+<td>&#x2714;&#xfe0f; *7</td>
+</tr>
+<tr>
+<td>链接卡片</td>
+<td>&#x2714;&#xfe0f; *4</td>
+</tr>
+<tr>
+<td>视频</td>
+<td>&#x274c;</td>
+</tr>
+<tr>
+<td>好物推荐</td>
+<td>&#x274c;</td>
+</tr>
+<tr>
+<td>附件</td>
+<td>&#x274c;</td>
+</tr>
+<tr>
+<td>标签</td>
+<td>&#x2714;&#xfe0f; *7</td>
+</tr>
+<tr>
+<td>草稿</td>
+<td>&#x2714;&#xfe0f;</td>
+</tr>
+<tr>
+<td>赞赏</td>
+<td>&#x274c;</td>
+</tr>
+<tr>
+<td>追更</td>
+<td>&#x274c;</td>
+</tr>
+</tbody>
+</table>
+<p>（0）打算近期支持，star，点赞，收藏，一键三连给我动力呀</p>
+<ol>
+<li>最多可支持 4 级标题</li>
+<li>表格暂时不支持对齐</li>
+<li>知乎本身不支持，请大家踊跃向<a href="https://www.zhihu.com/people/zhihuadmin">知乎小管家</a>提建议</li>
+<li>格式见下一小节</li>
+<li>支持大部分Emoji（很多emoji刚发的时候可以看到，但一段时间过后就会被知乎过滤掉），具体列表请查看上面的链接。</li>
+<li>
+<ul>
+<li>同时支持本地图片和网络链接（暂时不支持 SVG 格式）,二维码会被知乎过滤掉</li>
+</ul>
+</li>
+<li>在元数据中指定</li>
+<li>不支持为图片设置连接</li>
+</ol>
+<h1 id="部分格式提醒">部分格式提醒</h1>
+<p>最直接的方法是参考<a href="https://github.com/jks-liu/zhihu/blob/master/WPLs-introduction-and-test.md">上面提到的 Markdown 测试文件</a>。</p>
+<h2 id="jekyll-元数据httpsjekyllrbcomdocsfront-matter"><a href="https://jekyllrb.com/docs/front-matter/">Jekyll 元数据</a></h2>
+<p>目前仅支持如下元数据：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: 请输入标题（若是回答的话，请删除本行）
+</span></span><span class="line"><span class="cl">zhihu-url: 请输入知乎链接（删除本行发表新的知乎专栏文章）
+</span></span><span class="line"><span class="cl">zhihu-title-image: 请输入专栏文章题图（若无需题图，删除本行）
+</span></span><span class="line"><span class="cl">zhihu-tags: tag1, tag 2, tag-3, 标签4, 标签以半角逗号分隔, 只有知乎已经存在的标签才能添加成功
+</span></span><span class="line"><span class="cl">注意: 所有的冒号是半角冒号，冒号后面有一个半角空格
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="链接卡片">链接卡片</h2>
+<p>语法上和一个图片链接一样，但图片的文字需要以<code>zhihu-link-card:</code>开头。</p>
+<h2 id="参考文献">参考文献</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">   用[^n]来引用。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[^n]: https://网址.com 说明文字
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">注意字符 ^ 不能少。冒号后面有一个空格。网址中不能有空格。网址和说明文字之间有一个空格，说明文字自己可以有空格。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="以下是各个功能的测试">以下是各个功能的测试</h1>
+<h1 id="插件特色功能">插件特色功能</h1>
+<h2 id="测试01题图">测试01：题图</h2>
+<p>如支持，应该可以在标题上面看到清明上河图。</p>
+<h2 id="链接卡片-1">链接卡片</h2>
+<h1 id="markdown功能测试">Markdown功能测试</h1>
+<h2 id="测试01六级标题">测试01：六级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h4 id="四级标题">四级标题</h4>
+<h5 id="五级标题">五级标题</h5>
+<h6 id="六级标题">六级标题</h6>
+<h2 id="测试02分割线">测试02：分割线</h2>
+<hr>
+<h2 id="测试03引用">测试03：引用</h2>
+<blockquote>
+<p>引用</p>
+</blockquote>
+<h2 id="测试04链接">测试04：链接</h2>
+<p><a href="https://github.com/jks-liu/WPL-s">本项目 GitHub 链接</a></p>
+<h3 id="图片链接">图片链接</h3>
+<h3 id="标题链接httpsgithubcomjks-liuwpl-s"><a href="https://github.com/jks-liu/WPL-s">标题链接</a></h3>
+<h2 id="测试05图片">测试05：图片</h2>
+<p>SVG 格式暂不支持</p>
+<p><img src="https://raw.githubusercontent.com/jks-liu/WPL-s/master/res/media/vs-code-extension-search-zhihu.png" alt="网络 PNG 图片">
+<code>![网络 SVG 图片](https://www.w3school.com.cn/svg/circle1.svg)</code></p>
+<h3 id="二维码">二维码</h3>
+<p><img src="https://mobilecodec.alipay.com/show.htm?code=apnvimjdm3e9sa6hb0&amp;picSize=S&amp;d=true" alt="我的支付宝捐赠二维码"></p>
+<h2 id="测试06表格">测试06：表格</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">一</td>
+<td style="text-align:center">二</td>
+<td style="text-align:right">三</td>
+</tr>
+<tr>
+<td style="text-align:left">二一</td>
+<td style="text-align:center">二二</td>
+<td style="text-align:right">二三</td>
+</tr>
+</tbody>
+</table>
+<h2 id="测试07公式">测试07：公式</h2>
+<p>行内公式：$\alpha = \beta$，$亿=爱慕*四一^{平方}$</p>
+<p>行间公式：
+$$
+\alpha = \beta
+$$
+$$
+亿=爱慕*四一^{平方}
+$$</p>
+<h2 id="测试08代码">测试08：代码</h2>
+<p>行内代码：<code>var a = 1;</code>。</p>
+<p>行间代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="测试081代码int-a在标题中">测试08.1：代码<code>int a</code>在标题中</h3>
+<h2 id="测试09加粗-斜体-删除线">测试09：<strong>加粗</strong>， <em>斜体</em>， <del>删除线</del></h2>
+<p><strong>加粗</strong>， <em>斜体</em>， <del>删除线</del>，<em>斜体</em>，<strong>加粗</strong>，<em>斜体组合<strong>加粗</strong></em>，<strong>加粗组合<em>斜体</em></strong></p>
+<h2 id="测试10列表">测试10：列表</h2>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+</ul>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>嵌套
+<ol>
+<li>嵌套<br>
+换行</li>
+</ol>
+</li>
+</ul>
+<h2 id="测试11任务列表">测试11：任务列表</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 未完成的任务</li>
+<li><input checked="" disabled="" type="checkbox"> 已完成的任务
+<ul>
+<li><input disabled="" type="checkbox"> 嵌套未完成的任务</li>
+<li><input checked="" disabled="" type="checkbox"> 嵌套已完成的任务</li>
+</ul>
+</li>
+</ul>
+<h2 id="测试12参考文献">测试12：参考文献</h2>
+<ul>
+<li>这里<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>你可以找到本文的Markdown原文；</li>
+<li>这个<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>也是原文，但没有说明文字；</li>
+<li>重复第一个<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</li>
+</ul>
+<h2 id="测试13-congratulations-emoji表情">测试13： &#x3297;&#xfe0f; Emoji表情</h2>
+<p>Emoji表情列表来自rxaviers的gist：<a href="https://gist.github.com/rxaviers/7360908">https://gist.github.com/rxaviers/7360908</a>。</p>
+<p>很多表情在刚发到知乎的时候还是可以显示的，但一段时间过后就不见了。</p>
+<p>People</p>
+<table>
+<thead>
+<tr>
+<th>:bowtie: <code>:bowtie:</code></th>
+<th>&#x1f604; <code>:smile:</code></th>
+<th>&#x1f606; <code>:laughing:</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x1f60a; <code>:blush:</code></td>
+<td>&#x1f603; <code>:smiley:</code></td>
+<td>&#x263a;&#xfe0f; <code>:relaxed:</code></td>
+</tr>
+<tr>
+<td>&#x1f60f; <code>:smirk:</code></td>
+<td>&#x1f60d; <code>:heart_eyes:</code></td>
+<td>&#x1f618; <code>:kissing_heart:</code></td>
+</tr>
+<tr>
+<td>&#x1f61a; <code>:kissing_closed_eyes:</code></td>
+<td>&#x1f633; <code>:flushed:</code></td>
+<td>&#x1f60c; <code>:relieved:</code></td>
+</tr>
+<tr>
+<td>&#x1f606; <code>:satisfied:</code></td>
+<td>&#x1f601; <code>:grin:</code></td>
+<td>&#x1f609; <code>:wink:</code></td>
+</tr>
+<tr>
+<td>&#x1f61c; <code>:stuck_out_tongue_winking_eye:</code></td>
+<td>&#x1f61d; <code>:stuck_out_tongue_closed_eyes:</code></td>
+<td>&#x1f600; <code>:grinning:</code></td>
+</tr>
+<tr>
+<td>&#x1f617; <code>:kissing:</code></td>
+<td>&#x1f619; <code>:kissing_smiling_eyes:</code></td>
+<td>&#x1f61b; <code>:stuck_out_tongue:</code></td>
+</tr>
+<tr>
+<td>&#x1f634; <code>:sleeping:</code></td>
+<td>&#x1f61f; <code>:worried:</code></td>
+<td>&#x1f626; <code>:frowning:</code></td>
+</tr>
+<tr>
+<td>&#x1f627; <code>:anguished:</code></td>
+<td>&#x1f62e; <code>:open_mouth:</code></td>
+<td>&#x1f62c; <code>:grimacing:</code></td>
+</tr>
+<tr>
+<td>&#x1f615; <code>:confused:</code></td>
+<td>&#x1f62f; <code>:hushed:</code></td>
+<td>&#x1f611; <code>:expressionless:</code></td>
+</tr>
+<tr>
+<td>&#x1f612; <code>:unamused:</code></td>
+<td>&#x1f605; <code>:sweat_smile:</code></td>
+<td>&#x1f613; <code>:sweat:</code></td>
+</tr>
+<tr>
+<td>&#x1f625; <code>:disappointed_relieved:</code></td>
+<td>&#x1f629; <code>:weary:</code></td>
+<td>&#x1f614; <code>:pensive:</code></td>
+</tr>
+<tr>
+<td>&#x1f61e; <code>:disappointed:</code></td>
+<td>&#x1f616; <code>:confounded:</code></td>
+<td>&#x1f628; <code>:fearful:</code></td>
+</tr>
+<tr>
+<td>&#x1f630; <code>:cold_sweat:</code></td>
+<td>&#x1f623; <code>:persevere:</code></td>
+<td>&#x1f622; <code>:cry:</code></td>
+</tr>
+<tr>
+<td>&#x1f62d; <code>:sob:</code></td>
+<td>&#x1f602; <code>:joy:</code></td>
+<td>&#x1f632; <code>:astonished:</code></td>
+</tr>
+<tr>
+<td>&#x1f631; <code>:scream:</code></td>
+<td>:neckbeard: <code>:neckbeard:</code></td>
+<td>&#x1f62b; <code>:tired_face:</code></td>
+</tr>
+<tr>
+<td>&#x1f620; <code>:angry:</code></td>
+<td>&#x1f621; <code>:rage:</code></td>
+<td>&#x1f624; <code>:triumph:</code></td>
+</tr>
+<tr>
+<td>&#x1f62a; <code>:sleepy:</code></td>
+<td>&#x1f60b; <code>:yum:</code></td>
+<td>&#x1f637; <code>:mask:</code></td>
+</tr>
+<tr>
+<td>&#x1f60e; <code>:sunglasses:</code></td>
+<td>&#x1f635; <code>:dizzy_face:</code></td>
+<td>&#x1f47f; <code>:imp:</code></td>
+</tr>
+<tr>
+<td>&#x1f608; <code>:smiling_imp:</code></td>
+<td>&#x1f610; <code>:neutral_face:</code></td>
+<td>&#x1f636; <code>:no_mouth:</code></td>
+</tr>
+<tr>
+<td>&#x1f607; <code>:innocent:</code></td>
+<td>&#x1f47d; <code>:alien:</code></td>
+<td>&#x1f49b; <code>:yellow_heart:</code></td>
+</tr>
+<tr>
+<td>&#x1f499; <code>:blue_heart:</code></td>
+<td>&#x1f49c; <code>:purple_heart:</code></td>
+<td>&#x2764;&#xfe0f; <code>:heart:</code></td>
+</tr>
+<tr>
+<td>&#x1f49a; <code>:green_heart:</code></td>
+<td>&#x1f494; <code>:broken_heart:</code></td>
+<td>&#x1f493; <code>:heartbeat:</code></td>
+</tr>
+<tr>
+<td>&#x1f497; <code>:heartpulse:</code></td>
+<td>&#x1f495; <code>:two_hearts:</code></td>
+<td>&#x1f49e; <code>:revolving_hearts:</code></td>
+</tr>
+<tr>
+<td>&#x1f498; <code>:cupid:</code></td>
+<td>&#x1f496; <code>:sparkling_heart:</code></td>
+<td>&#x2728; <code>:sparkles:</code></td>
+</tr>
+<tr>
+<td>&#x2b50; <code>:star:</code></td>
+<td>&#x1f31f; <code>:star2:</code></td>
+<td>&#x1f4ab; <code>:dizzy:</code></td>
+</tr>
+<tr>
+<td>&#x1f4a5; <code>:boom:</code></td>
+<td>&#x1f4a5; <code>:collision:</code></td>
+<td>&#x1f4a2; <code>:anger:</code></td>
+</tr>
+<tr>
+<td>&#x2757; <code>:exclamation:</code></td>
+<td>&#x2753; <code>:question:</code></td>
+<td>&#x2755; <code>:grey_exclamation:</code></td>
+</tr>
+<tr>
+<td>&#x2754; <code>:grey_question:</code></td>
+<td>&#x1f4a4; <code>:zzz:</code></td>
+<td>&#x1f4a8; <code>:dash:</code></td>
+</tr>
+<tr>
+<td>&#x1f4a6; <code>:sweat_drops:</code></td>
+<td>&#x1f3b6; <code>:notes:</code></td>
+<td>&#x1f3b5; <code>:musical_note:</code></td>
+</tr>
+<tr>
+<td>&#x1f525; <code>:fire:</code></td>
+<td>&#x1f4a9; <code>:hankey:</code></td>
+<td>&#x1f4a9; <code>:poop:</code></td>
+</tr>
+<tr>
+<td>&#x1f4a9; <code>:shit:</code></td>
+<td>&#x1f44d; <code>:+1:</code></td>
+<td>&#x1f44d; <code>:thumbsup:</code></td>
+</tr>
+<tr>
+<td>&#x1f44e; <code>:-1:</code></td>
+<td>&#x1f44e; <code>:thumbsdown:</code></td>
+<td>&#x1f44c; <code>:ok_hand:</code></td>
+</tr>
+<tr>
+<td>&#x1f44a; <code>:punch:</code></td>
+<td>&#x1f44a; <code>:facepunch:</code></td>
+<td>&#x270a; <code>:fist:</code></td>
+</tr>
+<tr>
+<td>&#x270c;&#xfe0f; <code>:v:</code></td>
+<td>&#x1f44b; <code>:wave:</code></td>
+<td>&#x270b; <code>:hand:</code></td>
+</tr>
+<tr>
+<td>&#x270b; <code>:raised_hand:</code></td>
+<td>&#x1f450; <code>:open_hands:</code></td>
+<td>&#x261d;&#xfe0f; <code>:point_up:</code></td>
+</tr>
+<tr>
+<td>&#x1f447; <code>:point_down:</code></td>
+<td>&#x1f448; <code>:point_left:</code></td>
+<td>&#x1f449; <code>:point_right:</code></td>
+</tr>
+<tr>
+<td>&#x1f64c; <code>:raised_hands:</code></td>
+<td>&#x1f64f; <code>:pray:</code></td>
+<td>&#x1f446; <code>:point_up_2:</code></td>
+</tr>
+<tr>
+<td>&#x1f44f; <code>:clap:</code></td>
+<td>&#x1f4aa; <code>:muscle:</code></td>
+<td>&#x1f918; <code>:metal:</code></td>
+</tr>
+<tr>
+<td>&#x1f595; <code>:fu:</code></td>
+<td>&#x1f6b6; <code>:walking:</code></td>
+<td>&#x1f3c3; <code>:runner:</code></td>
+</tr>
+<tr>
+<td>&#x1f3c3; <code>:running:</code></td>
+<td>&#x1f46b; <code>:couple:</code></td>
+<td>&#x1f46a; <code>:family:</code></td>
+</tr>
+<tr>
+<td>&#x1f46c; <code>:two_men_holding_hands:</code></td>
+<td>&#x1f46d; <code>:two_women_holding_hands:</code></td>
+<td>&#x1f483; <code>:dancer:</code></td>
+</tr>
+<tr>
+<td>&#x1f46f; <code>:dancers:</code></td>
+<td>&#x1f646;&zwj;&#x2640;&#xfe0f; <code>:ok_woman:</code></td>
+<td>&#x1f645; <code>:no_good:</code></td>
+</tr>
+<tr>
+<td>&#x1f481; <code>:information_desk_person:</code></td>
+<td>&#x1f64b; <code>:raising_hand:</code></td>
+<td>&#x1f470;&zwj;&#x2640;&#xfe0f; <code>:bride_with_veil:</code></td>
+</tr>
+<tr>
+<td>:person_with_pouting_face: <code>:person_with_pouting_face:</code></td>
+<td>:person_frowning: <code>:person_frowning:</code></td>
+<td>&#x1f647; <code>:bow:</code></td>
+</tr>
+<tr>
+<td>&#x1f48f; <code>:couplekiss:</code></td>
+<td>&#x1f491; <code>:couple_with_heart:</code></td>
+<td>&#x1f486; <code>:massage:</code></td>
+</tr>
+<tr>
+<td>&#x1f487; <code>:haircut:</code></td>
+<td>&#x1f485; <code>:nail_care:</code></td>
+<td>&#x1f466; <code>:boy:</code></td>
+</tr>
+<tr>
+<td>&#x1f467; <code>:girl:</code></td>
+<td>&#x1f469; <code>:woman:</code></td>
+<td>&#x1f468; <code>:man:</code></td>
+</tr>
+<tr>
+<td>&#x1f476; <code>:baby:</code></td>
+<td>&#x1f475; <code>:older_woman:</code></td>
+<td>&#x1f474; <code>:older_man:</code></td>
+</tr>
+<tr>
+<td>:person_with_blond_hair: <code>:person_with_blond_hair:</code></td>
+<td>&#x1f472; <code>:man_with_gua_pi_mao:</code></td>
+<td>&#x1f473;&zwj;&#x2642;&#xfe0f; <code>:man_with_turban:</code></td>
+</tr>
+<tr>
+<td>&#x1f477; <code>:construction_worker:</code></td>
+<td>&#x1f46e; <code>:cop:</code></td>
+<td>&#x1f47c; <code>:angel:</code></td>
+</tr>
+<tr>
+<td>&#x1f478; <code>:princess:</code></td>
+<td>&#x1f63a; <code>:smiley_cat:</code></td>
+<td>&#x1f638; <code>:smile_cat:</code></td>
+</tr>
+<tr>
+<td>&#x1f63b; <code>:heart_eyes_cat:</code></td>
+<td>&#x1f63d; <code>:kissing_cat:</code></td>
+<td>&#x1f63c; <code>:smirk_cat:</code></td>
+</tr>
+<tr>
+<td>&#x1f640; <code>:scream_cat:</code></td>
+<td>&#x1f63f; <code>:crying_cat_face:</code></td>
+<td>&#x1f639; <code>:joy_cat:</code></td>
+</tr>
+<tr>
+<td>&#x1f63e; <code>:pouting_cat:</code></td>
+<td>&#x1f479; <code>:japanese_ogre:</code></td>
+<td>&#x1f47a; <code>:japanese_goblin:</code></td>
+</tr>
+<tr>
+<td>&#x1f648; <code>:see_no_evil:</code></td>
+<td>&#x1f649; <code>:hear_no_evil:</code></td>
+<td>&#x1f64a; <code>:speak_no_evil:</code></td>
+</tr>
+<tr>
+<td>&#x1f482;&zwj;&#x2642;&#xfe0f; <code>:guardsman:</code></td>
+<td>&#x1f480; <code>:skull:</code></td>
+<td>&#x1f43e; <code>:feet:</code></td>
+</tr>
+<tr>
+<td>&#x1f444; <code>:lips:</code></td>
+<td>&#x1f48b; <code>:kiss:</code></td>
+<td>&#x1f4a7; <code>:droplet:</code></td>
+</tr>
+<tr>
+<td>&#x1f442; <code>:ear:</code></td>
+<td>&#x1f440; <code>:eyes:</code></td>
+<td>&#x1f443; <code>:nose:</code></td>
+</tr>
+<tr>
+<td>&#x1f445; <code>:tongue:</code></td>
+<td>&#x1f48c; <code>:love_letter:</code></td>
+<td>&#x1f464; <code>:bust_in_silhouette:</code></td>
+</tr>
+<tr>
+<td>&#x1f465; <code>:busts_in_silhouette:</code></td>
+<td>&#x1f4ac; <code>:speech_balloon:</code></td>
+<td>&#x1f4ad; <code>:thought_balloon:</code></td>
+</tr>
+<tr>
+<td>:feelsgood: <code>:feelsgood:</code></td>
+<td>:finnadie: <code>:finnadie:</code></td>
+<td>:goberserk: <code>:goberserk:</code></td>
+</tr>
+<tr>
+<td>:godmode: <code>:godmode:</code></td>
+<td>:hurtrealbad: <code>:hurtrealbad:</code></td>
+<td>:rage1: <code>:rage1:</code></td>
+</tr>
+<tr>
+<td>:rage2: <code>:rage2:</code></td>
+<td>:rage3: <code>:rage3:</code></td>
+<td>:rage4: <code>:rage4:</code></td>
+</tr>
+<tr>
+<td>:suspect: <code>:suspect:</code></td>
+<td>:trollface: <code>:trollface:</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Nature</p>
+<table>
+<thead>
+<tr>
+<th>&#x2600;&#xfe0f; <code>:sunny:</code></th>
+<th>&#x2614; <code>:umbrella:</code></th>
+<th>&#x2601;&#xfe0f; <code>:cloud:</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x2744;&#xfe0f; <code>:snowflake:</code></td>
+<td>&#x26c4; <code>:snowman:</code></td>
+<td>&#x26a1; <code>:zap:</code></td>
+</tr>
+<tr>
+<td>&#x1f300; <code>:cyclone:</code></td>
+<td>&#x1f301; <code>:foggy:</code></td>
+<td>&#x1f30a; <code>:ocean:</code></td>
+</tr>
+<tr>
+<td>&#x1f431; <code>:cat:</code></td>
+<td>&#x1f436; <code>:dog:</code></td>
+<td>&#x1f42d; <code>:mouse:</code></td>
+</tr>
+<tr>
+<td>&#x1f439; <code>:hamster:</code></td>
+<td>&#x1f430; <code>:rabbit:</code></td>
+<td>&#x1f43a; <code>:wolf:</code></td>
+</tr>
+<tr>
+<td>&#x1f438; <code>:frog:</code></td>
+<td>&#x1f42f; <code>:tiger:</code></td>
+<td>&#x1f428; <code>:koala:</code></td>
+</tr>
+<tr>
+<td>&#x1f43b; <code>:bear:</code></td>
+<td>&#x1f437; <code>:pig:</code></td>
+<td>&#x1f43d; <code>:pig_nose:</code></td>
+</tr>
+<tr>
+<td>&#x1f42e; <code>:cow:</code></td>
+<td>&#x1f417; <code>:boar:</code></td>
+<td>&#x1f435; <code>:monkey_face:</code></td>
+</tr>
+<tr>
+<td>&#x1f412; <code>:monkey:</code></td>
+<td>&#x1f434; <code>:horse:</code></td>
+<td>&#x1f40e; <code>:racehorse:</code></td>
+</tr>
+<tr>
+<td>&#x1f42b; <code>:camel:</code></td>
+<td>&#x1f411; <code>:sheep:</code></td>
+<td>&#x1f418; <code>:elephant:</code></td>
+</tr>
+<tr>
+<td>&#x1f43c; <code>:panda_face:</code></td>
+<td>&#x1f40d; <code>:snake:</code></td>
+<td>&#x1f426; <code>:bird:</code></td>
+</tr>
+<tr>
+<td>&#x1f424; <code>:baby_chick:</code></td>
+<td>&#x1f425; <code>:hatched_chick:</code></td>
+<td>&#x1f423; <code>:hatching_chick:</code></td>
+</tr>
+<tr>
+<td>&#x1f414; <code>:chicken:</code></td>
+<td>&#x1f427; <code>:penguin:</code></td>
+<td>&#x1f422; <code>:turtle:</code></td>
+</tr>
+<tr>
+<td>&#x1f41b; <code>:bug:</code></td>
+<td>&#x1f41d; <code>:honeybee:</code></td>
+<td>&#x1f41c; <code>:ant:</code></td>
+</tr>
+<tr>
+<td>&#x1fab2; <code>:beetle:</code></td>
+<td>&#x1f40c; <code>:snail:</code></td>
+<td>&#x1f419; <code>:octopus:</code></td>
+</tr>
+<tr>
+<td>&#x1f420; <code>:tropical_fish:</code></td>
+<td>&#x1f41f; <code>:fish:</code></td>
+<td>&#x1f433; <code>:whale:</code></td>
+</tr>
+<tr>
+<td>&#x1f40b; <code>:whale2:</code></td>
+<td>&#x1f42c; <code>:dolphin:</code></td>
+<td>&#x1f404; <code>:cow2:</code></td>
+</tr>
+<tr>
+<td>&#x1f40f; <code>:ram:</code></td>
+<td>&#x1f400; <code>:rat:</code></td>
+<td>&#x1f403; <code>:water_buffalo:</code></td>
+</tr>
+<tr>
+<td>&#x1f405; <code>:tiger2:</code></td>
+<td>&#x1f407; <code>:rabbit2:</code></td>
+<td>&#x1f409; <code>:dragon:</code></td>
+</tr>
+<tr>
+<td>&#x1f410; <code>:goat:</code></td>
+<td>&#x1f413; <code>:rooster:</code></td>
+<td>&#x1f415; <code>:dog2:</code></td>
+</tr>
+<tr>
+<td>&#x1f416; <code>:pig2:</code></td>
+<td>&#x1f401; <code>:mouse2:</code></td>
+<td>&#x1f402; <code>:ox:</code></td>
+</tr>
+<tr>
+<td>&#x1f432; <code>:dragon_face:</code></td>
+<td>&#x1f421; <code>:blowfish:</code></td>
+<td>&#x1f40a; <code>:crocodile:</code></td>
+</tr>
+<tr>
+<td>&#x1f42a; <code>:dromedary_camel:</code></td>
+<td>&#x1f406; <code>:leopard:</code></td>
+<td>&#x1f408; <code>:cat2:</code></td>
+</tr>
+<tr>
+<td>&#x1f429; <code>:poodle:</code></td>
+<td>&#x1f43e; <code>:paw_prints:</code></td>
+<td>&#x1f490; <code>:bouquet:</code></td>
+</tr>
+<tr>
+<td>&#x1f338; <code>:cherry_blossom:</code></td>
+<td>&#x1f337; <code>:tulip:</code></td>
+<td>&#x1f340; <code>:four_leaf_clover:</code></td>
+</tr>
+<tr>
+<td>&#x1f339; <code>:rose:</code></td>
+<td>&#x1f33b; <code>:sunflower:</code></td>
+<td>&#x1f33a; <code>:hibiscus:</code></td>
+</tr>
+<tr>
+<td>&#x1f341; <code>:maple_leaf:</code></td>
+<td>&#x1f343; <code>:leaves:</code></td>
+<td>&#x1f342; <code>:fallen_leaf:</code></td>
+</tr>
+<tr>
+<td>&#x1f33f; <code>:herb:</code></td>
+<td>&#x1f344; <code>:mushroom:</code></td>
+<td>&#x1f335; <code>:cactus:</code></td>
+</tr>
+<tr>
+<td>&#x1f334; <code>:palm_tree:</code></td>
+<td>&#x1f332; <code>:evergreen_tree:</code></td>
+<td>&#x1f333; <code>:deciduous_tree:</code></td>
+</tr>
+<tr>
+<td>&#x1f330; <code>:chestnut:</code></td>
+<td>&#x1f331; <code>:seedling:</code></td>
+<td>&#x1f33c; <code>:blossom:</code></td>
+</tr>
+<tr>
+<td>&#x1f33e; <code>:ear_of_rice:</code></td>
+<td>&#x1f41a; <code>:shell:</code></td>
+<td>&#x1f310; <code>:globe_with_meridians:</code></td>
+</tr>
+<tr>
+<td>&#x1f31e; <code>:sun_with_face:</code></td>
+<td>&#x1f31d; <code>:full_moon_with_face:</code></td>
+<td>&#x1f31a; <code>:new_moon_with_face:</code></td>
+</tr>
+<tr>
+<td>&#x1f311; <code>:new_moon:</code></td>
+<td>&#x1f312; <code>:waxing_crescent_moon:</code></td>
+<td>&#x1f313; <code>:first_quarter_moon:</code></td>
+</tr>
+<tr>
+<td>&#x1f314; <code>:waxing_gibbous_moon:</code></td>
+<td>&#x1f315; <code>:full_moon:</code></td>
+<td>&#x1f316; <code>:waning_gibbous_moon:</code></td>
+</tr>
+<tr>
+<td>&#x1f317; <code>:last_quarter_moon:</code></td>
+<td>&#x1f318; <code>:waning_crescent_moon:</code></td>
+<td>&#x1f31c; <code>:last_quarter_moon_with_face:</code></td>
+</tr>
+<tr>
+<td>&#x1f31b; <code>:first_quarter_moon_with_face:</code></td>
+<td>&#x1f314; <code>:moon:</code></td>
+<td>&#x1f30d; <code>:earth_africa:</code></td>
+</tr>
+<tr>
+<td>&#x1f30e; <code>:earth_americas:</code></td>
+<td>&#x1f30f; <code>:earth_asia:</code></td>
+<td>&#x1f30b; <code>:volcano:</code></td>
+</tr>
+<tr>
+<td>&#x1f30c; <code>:milky_way:</code></td>
+<td>&#x26c5; <code>:partly_sunny:</code></td>
+<td>:octocat: <code>:octocat:</code></td>
+</tr>
+<tr>
+<td>:squirrel: <code>:squirrel:</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Objects</p>
+<table>
+<thead>
+<tr>
+<th>&#x1f38d; <code>:bamboo:</code></th>
+<th>&#x1f49d; <code>:gift_heart:</code></th>
+<th>&#x1f38e; <code>:dolls:</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x1f392; <code>:school_satchel:</code></td>
+<td>&#x1f393; <code>:mortar_board:</code></td>
+<td>&#x1f38f; <code>:flags:</code></td>
+</tr>
+<tr>
+<td>&#x1f386; <code>:fireworks:</code></td>
+<td>&#x1f387; <code>:sparkler:</code></td>
+<td>&#x1f390; <code>:wind_chime:</code></td>
+</tr>
+<tr>
+<td>&#x1f391; <code>:rice_scene:</code></td>
+<td>&#x1f383; <code>:jack_o_lantern:</code></td>
+<td>&#x1f47b; <code>:ghost:</code></td>
+</tr>
+<tr>
+<td>&#x1f385; <code>:santa:</code></td>
+<td>&#x1f384; <code>:christmas_tree:</code></td>
+<td>&#x1f381; <code>:gift:</code></td>
+</tr>
+<tr>
+<td>&#x1f514; <code>:bell:</code></td>
+<td>&#x1f515; <code>:no_bell:</code></td>
+<td>&#x1f38b; <code>:tanabata_tree:</code></td>
+</tr>
+<tr>
+<td>&#x1f389; <code>:tada:</code></td>
+<td>&#x1f38a; <code>:confetti_ball:</code></td>
+<td>&#x1f388; <code>:balloon:</code></td>
+</tr>
+<tr>
+<td>&#x1f52e; <code>:crystal_ball:</code></td>
+<td>&#x1f4bf; <code>:cd:</code></td>
+<td>&#x1f4c0; <code>:dvd:</code></td>
+</tr>
+<tr>
+<td>&#x1f4be; <code>:floppy_disk:</code></td>
+<td>&#x1f4f7; <code>:camera:</code></td>
+<td>&#x1f4f9; <code>:video_camera:</code></td>
+</tr>
+<tr>
+<td>&#x1f3a5; <code>:movie_camera:</code></td>
+<td>&#x1f4bb; <code>:computer:</code></td>
+<td>&#x1f4fa; <code>:tv:</code></td>
+</tr>
+<tr>
+<td>&#x1f4f1; <code>:iphone:</code></td>
+<td>&#x260e;&#xfe0f; <code>:phone:</code></td>
+<td>&#x260e;&#xfe0f; <code>:telephone:</code></td>
+</tr>
+<tr>
+<td>&#x1f4de; <code>:telephone_receiver:</code></td>
+<td>&#x1f4df; <code>:pager:</code></td>
+<td>&#x1f4e0; <code>:fax:</code></td>
+</tr>
+<tr>
+<td>&#x1f4bd; <code>:minidisc:</code></td>
+<td>&#x1f4fc; <code>:vhs:</code></td>
+<td>&#x1f509; <code>:sound:</code></td>
+</tr>
+<tr>
+<td>&#x1f508; <code>:speaker:</code></td>
+<td>&#x1f507; <code>:mute:</code></td>
+<td>&#x1f4e2; <code>:loudspeaker:</code></td>
+</tr>
+<tr>
+<td>&#x1f4e3; <code>:mega:</code></td>
+<td>&#x231b; <code>:hourglass:</code></td>
+<td>&#x23f3; <code>:hourglass_flowing_sand:</code></td>
+</tr>
+<tr>
+<td>&#x23f0; <code>:alarm_clock:</code></td>
+<td>&#x231a; <code>:watch:</code></td>
+<td>&#x1f4fb; <code>:radio:</code></td>
+</tr>
+<tr>
+<td>&#x1f4e1; <code>:satellite:</code></td>
+<td>&#x27bf; <code>:loop:</code></td>
+<td>&#x1f50d; <code>:mag:</code></td>
+</tr>
+<tr>
+<td>&#x1f50e; <code>:mag_right:</code></td>
+<td>&#x1f513; <code>:unlock:</code></td>
+<td>&#x1f512; <code>:lock:</code></td>
+</tr>
+<tr>
+<td>&#x1f50f; <code>:lock_with_ink_pen:</code></td>
+<td>&#x1f510; <code>:closed_lock_with_key:</code></td>
+<td>&#x1f511; <code>:key:</code></td>
+</tr>
+<tr>
+<td>&#x1f4a1; <code>:bulb:</code></td>
+<td>&#x1f526; <code>:flashlight:</code></td>
+<td>&#x1f506; <code>:high_brightness:</code></td>
+</tr>
+<tr>
+<td>&#x1f505; <code>:low_brightness:</code></td>
+<td>&#x1f50c; <code>:electric_plug:</code></td>
+<td>&#x1f50b; <code>:battery:</code></td>
+</tr>
+<tr>
+<td>&#x1f4f2; <code>:calling:</code></td>
+<td>&#x1f4e7; <code>:email:</code></td>
+<td>&#x1f4eb; <code>:mailbox:</code></td>
+</tr>
+<tr>
+<td>&#x1f4ee; <code>:postbox:</code></td>
+<td>&#x1f6c0; <code>:bath:</code></td>
+<td>&#x1f6c1; <code>:bathtub:</code></td>
+</tr>
+<tr>
+<td>&#x1f6bf; <code>:shower:</code></td>
+<td>&#x1f6bd; <code>:toilet:</code></td>
+<td>&#x1f527; <code>:wrench:</code></td>
+</tr>
+<tr>
+<td>&#x1f529; <code>:nut_and_bolt:</code></td>
+<td>&#x1f528; <code>:hammer:</code></td>
+<td>&#x1f4ba; <code>:seat:</code></td>
+</tr>
+<tr>
+<td>&#x1f4b0; <code>:moneybag:</code></td>
+<td>&#x1f4b4; <code>:yen:</code></td>
+<td>&#x1f4b5; <code>:dollar:</code></td>
+</tr>
+<tr>
+<td>&#x1f4b7; <code>:pound:</code></td>
+<td>&#x1f4b6; <code>:euro:</code></td>
+<td>&#x1f4b3; <code>:credit_card:</code></td>
+</tr>
+<tr>
+<td>&#x1f4b8; <code>:money_with_wings:</code></td>
+<td>&#x1f4e7; <code>:e-mail:</code></td>
+<td>&#x1f4e5; <code>:inbox_tray:</code></td>
+</tr>
+<tr>
+<td>&#x1f4e4; <code>:outbox_tray:</code></td>
+<td>&#x2709;&#xfe0f; <code>:envelope:</code></td>
+<td>&#x1f4e8; <code>:incoming_envelope:</code></td>
+</tr>
+<tr>
+<td>&#x1f4ef; <code>:postal_horn:</code></td>
+<td>&#x1f4ea; <code>:mailbox_closed:</code></td>
+<td>&#x1f4ec; <code>:mailbox_with_mail:</code></td>
+</tr>
+<tr>
+<td>&#x1f4ed; <code>:mailbox_with_no_mail:</code></td>
+<td>&#x1f6aa; <code>:door:</code></td>
+<td>&#x1f6ac; <code>:smoking:</code></td>
+</tr>
+<tr>
+<td>&#x1f4a3; <code>:bomb:</code></td>
+<td>&#x1f52b; <code>:gun:</code></td>
+<td>&#x1f52a; <code>:hocho:</code></td>
+</tr>
+<tr>
+<td>&#x1f48a; <code>:pill:</code></td>
+<td>&#x1f489; <code>:syringe:</code></td>
+<td>&#x1f4c4; <code>:page_facing_up:</code></td>
+</tr>
+<tr>
+<td>&#x1f4c3; <code>:page_with_curl:</code></td>
+<td>&#x1f4d1; <code>:bookmark_tabs:</code></td>
+<td>&#x1f4ca; <code>:bar_chart:</code></td>
+</tr>
+<tr>
+<td>&#x1f4c8; <code>:chart_with_upwards_trend:</code></td>
+<td>&#x1f4c9; <code>:chart_with_downwards_trend:</code></td>
+<td>&#x1f4dc; <code>:scroll:</code></td>
+</tr>
+<tr>
+<td>&#x1f4cb; <code>:clipboard:</code></td>
+<td>&#x1f4c6; <code>:calendar:</code></td>
+<td>&#x1f4c5; <code>:date:</code></td>
+</tr>
+<tr>
+<td>&#x1f4c7; <code>:card_index:</code></td>
+<td>&#x1f4c1; <code>:file_folder:</code></td>
+<td>&#x1f4c2; <code>:open_file_folder:</code></td>
+</tr>
+<tr>
+<td>&#x2702;&#xfe0f; <code>:scissors:</code></td>
+<td>&#x1f4cc; <code>:pushpin:</code></td>
+<td>&#x1f4ce; <code>:paperclip:</code></td>
+</tr>
+<tr>
+<td>&#x2712;&#xfe0f; <code>:black_nib:</code></td>
+<td>&#x270f;&#xfe0f; <code>:pencil2:</code></td>
+<td>&#x1f4cf; <code>:straight_ruler:</code></td>
+</tr>
+<tr>
+<td>&#x1f4d0; <code>:triangular_ruler:</code></td>
+<td>&#x1f4d5; <code>:closed_book:</code></td>
+<td>&#x1f4d7; <code>:green_book:</code></td>
+</tr>
+<tr>
+<td>&#x1f4d8; <code>:blue_book:</code></td>
+<td>&#x1f4d9; <code>:orange_book:</code></td>
+<td>&#x1f4d3; <code>:notebook:</code></td>
+</tr>
+<tr>
+<td>&#x1f4d4; <code>:notebook_with_decorative_cover:</code></td>
+<td>&#x1f4d2; <code>:ledger:</code></td>
+<td>&#x1f4da; <code>:books:</code></td>
+</tr>
+<tr>
+<td>&#x1f516; <code>:bookmark:</code></td>
+<td>&#x1f4db; <code>:name_badge:</code></td>
+<td>&#x1f52c; <code>:microscope:</code></td>
+</tr>
+<tr>
+<td>&#x1f52d; <code>:telescope:</code></td>
+<td>&#x1f4f0; <code>:newspaper:</code></td>
+<td>&#x1f3c8; <code>:football:</code></td>
+</tr>
+<tr>
+<td>&#x1f3c0; <code>:basketball:</code></td>
+<td>&#x26bd; <code>:soccer:</code></td>
+<td>&#x26be; <code>:baseball:</code></td>
+</tr>
+<tr>
+<td>&#x1f3be; <code>:tennis:</code></td>
+<td>&#x1f3b1; <code>:8ball:</code></td>
+<td>&#x1f3c9; <code>:rugby_football:</code></td>
+</tr>
+<tr>
+<td>&#x1f3b3; <code>:bowling:</code></td>
+<td>&#x26f3; <code>:golf:</code></td>
+<td>&#x1f6b5; <code>:mountain_bicyclist:</code></td>
+</tr>
+<tr>
+<td>&#x1f6b4; <code>:bicyclist:</code></td>
+<td>&#x1f3c7; <code>:horse_racing:</code></td>
+<td>&#x1f3c2; <code>:snowboarder:</code></td>
+</tr>
+<tr>
+<td>&#x1f3ca; <code>:swimmer:</code></td>
+<td>&#x1f3c4; <code>:surfer:</code></td>
+<td>&#x1f3bf; <code>:ski:</code></td>
+</tr>
+<tr>
+<td>&#x2660;&#xfe0f; <code>:spades:</code></td>
+<td>&#x2665;&#xfe0f; <code>:hearts:</code></td>
+<td>&#x2663;&#xfe0f; <code>:clubs:</code></td>
+</tr>
+<tr>
+<td>&#x2666;&#xfe0f; <code>:diamonds:</code></td>
+<td>&#x1f48e; <code>:gem:</code></td>
+<td>&#x1f48d; <code>:ring:</code></td>
+</tr>
+<tr>
+<td>&#x1f3c6; <code>:trophy:</code></td>
+<td>&#x1f3bc; <code>:musical_score:</code></td>
+<td>&#x1f3b9; <code>:musical_keyboard:</code></td>
+</tr>
+<tr>
+<td>&#x1f3bb; <code>:violin:</code></td>
+<td>&#x1f47e; <code>:space_invader:</code></td>
+<td>&#x1f3ae; <code>:video_game:</code></td>
+</tr>
+<tr>
+<td>&#x1f0cf; <code>:black_joker:</code></td>
+<td>&#x1f3b4; <code>:flower_playing_cards:</code></td>
+<td>&#x1f3b2; <code>:game_die:</code></td>
+</tr>
+<tr>
+<td>&#x1f3af; <code>:dart:</code></td>
+<td>&#x1f004; <code>:mahjong:</code></td>
+<td>&#x1f3ac; <code>:clapper:</code></td>
+</tr>
+<tr>
+<td>&#x1f4dd; <code>:memo:</code></td>
+<td>&#x1f4dd; <code>:pencil:</code></td>
+<td>&#x1f4d6; <code>:book:</code></td>
+</tr>
+<tr>
+<td>&#x1f3a8; <code>:art:</code></td>
+<td>&#x1f3a4; <code>:microphone:</code></td>
+<td>&#x1f3a7; <code>:headphones:</code></td>
+</tr>
+<tr>
+<td>&#x1f3ba; <code>:trumpet:</code></td>
+<td>&#x1f3b7; <code>:saxophone:</code></td>
+<td>&#x1f3b8; <code>:guitar:</code></td>
+</tr>
+<tr>
+<td>&#x1f45e; <code>:shoe:</code></td>
+<td>&#x1f461; <code>:sandal:</code></td>
+<td>&#x1f460; <code>:high_heel:</code></td>
+</tr>
+<tr>
+<td>&#x1f484; <code>:lipstick:</code></td>
+<td>&#x1f462; <code>:boot:</code></td>
+<td>&#x1f455; <code>:shirt:</code></td>
+</tr>
+<tr>
+<td>&#x1f455; <code>:tshirt:</code></td>
+<td>&#x1f454; <code>:necktie:</code></td>
+<td>&#x1f45a; <code>:womans_clothes:</code></td>
+</tr>
+<tr>
+<td>&#x1f457; <code>:dress:</code></td>
+<td>&#x1f3bd; <code>:running_shirt_with_sash:</code></td>
+<td>&#x1f456; <code>:jeans:</code></td>
+</tr>
+<tr>
+<td>&#x1f458; <code>:kimono:</code></td>
+<td>&#x1f459; <code>:bikini:</code></td>
+<td>&#x1f380; <code>:ribbon:</code></td>
+</tr>
+<tr>
+<td>&#x1f3a9; <code>:tophat:</code></td>
+<td>&#x1f451; <code>:crown:</code></td>
+<td>&#x1f452; <code>:womans_hat:</code></td>
+</tr>
+<tr>
+<td>&#x1f45e; <code>:mans_shoe:</code></td>
+<td>&#x1f302; <code>:closed_umbrella:</code></td>
+<td>&#x1f4bc; <code>:briefcase:</code></td>
+</tr>
+<tr>
+<td>&#x1f45c; <code>:handbag:</code></td>
+<td>&#x1f45d; <code>:pouch:</code></td>
+<td>&#x1f45b; <code>:purse:</code></td>
+</tr>
+<tr>
+<td>&#x1f453; <code>:eyeglasses:</code></td>
+<td>&#x1f3a3; <code>:fishing_pole_and_fish:</code></td>
+<td>&#x2615; <code>:coffee:</code></td>
+</tr>
+<tr>
+<td>&#x1f375; <code>:tea:</code></td>
+<td>&#x1f376; <code>:sake:</code></td>
+<td>&#x1f37c; <code>:baby_bottle:</code></td>
+</tr>
+<tr>
+<td>&#x1f37a; <code>:beer:</code></td>
+<td>&#x1f37b; <code>:beers:</code></td>
+<td>&#x1f378; <code>:cocktail:</code></td>
+</tr>
+<tr>
+<td>&#x1f379; <code>:tropical_drink:</code></td>
+<td>&#x1f377; <code>:wine_glass:</code></td>
+<td>&#x1f374; <code>:fork_and_knife:</code></td>
+</tr>
+<tr>
+<td>&#x1f355; <code>:pizza:</code></td>
+<td>&#x1f354; <code>:hamburger:</code></td>
+<td>&#x1f35f; <code>:fries:</code></td>
+</tr>
+<tr>
+<td>&#x1f357; <code>:poultry_leg:</code></td>
+<td>&#x1f356; <code>:meat_on_bone:</code></td>
+<td>&#x1f35d; <code>:spaghetti:</code></td>
+</tr>
+<tr>
+<td>&#x1f35b; <code>:curry:</code></td>
+<td>&#x1f364; <code>:fried_shrimp:</code></td>
+<td>&#x1f371; <code>:bento:</code></td>
+</tr>
+<tr>
+<td>&#x1f363; <code>:sushi:</code></td>
+<td>&#x1f365; <code>:fish_cake:</code></td>
+<td>&#x1f359; <code>:rice_ball:</code></td>
+</tr>
+<tr>
+<td>&#x1f358; <code>:rice_cracker:</code></td>
+<td>&#x1f35a; <code>:rice:</code></td>
+<td>&#x1f35c; <code>:ramen:</code></td>
+</tr>
+<tr>
+<td>&#x1f372; <code>:stew:</code></td>
+<td>&#x1f362; <code>:oden:</code></td>
+<td>&#x1f361; <code>:dango:</code></td>
+</tr>
+<tr>
+<td>&#x1f95a; <code>:egg:</code></td>
+<td>&#x1f35e; <code>:bread:</code></td>
+<td>&#x1f369; <code>:doughnut:</code></td>
+</tr>
+<tr>
+<td>&#x1f36e; <code>:custard:</code></td>
+<td>&#x1f366; <code>:icecream:</code></td>
+<td>&#x1f368; <code>:ice_cream:</code></td>
+</tr>
+<tr>
+<td>&#x1f367; <code>:shaved_ice:</code></td>
+<td>&#x1f382; <code>:birthday:</code></td>
+<td>&#x1f370; <code>:cake:</code></td>
+</tr>
+<tr>
+<td>&#x1f36a; <code>:cookie:</code></td>
+<td>&#x1f36b; <code>:chocolate_bar:</code></td>
+<td>&#x1f36c; <code>:candy:</code></td>
+</tr>
+<tr>
+<td>&#x1f36d; <code>:lollipop:</code></td>
+<td>&#x1f36f; <code>:honey_pot:</code></td>
+<td>&#x1f34e; <code>:apple:</code></td>
+</tr>
+<tr>
+<td>&#x1f34f; <code>:green_apple:</code></td>
+<td>&#x1f34a; <code>:tangerine:</code></td>
+<td>&#x1f34b; <code>:lemon:</code></td>
+</tr>
+<tr>
+<td>&#x1f352; <code>:cherries:</code></td>
+<td>&#x1f347; <code>:grapes:</code></td>
+<td>&#x1f349; <code>:watermelon:</code></td>
+</tr>
+<tr>
+<td>&#x1f353; <code>:strawberry:</code></td>
+<td>&#x1f351; <code>:peach:</code></td>
+<td>&#x1f348; <code>:melon:</code></td>
+</tr>
+<tr>
+<td>&#x1f34c; <code>:banana:</code></td>
+<td>&#x1f350; <code>:pear:</code></td>
+<td>&#x1f34d; <code>:pineapple:</code></td>
+</tr>
+<tr>
+<td>&#x1f360; <code>:sweet_potato:</code></td>
+<td>&#x1f346; <code>:eggplant:</code></td>
+<td>&#x1f345; <code>:tomato:</code></td>
+</tr>
+<tr>
+<td>&#x1f33d; <code>:corn:</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Places</p>
+<table>
+<thead>
+<tr>
+<th>&#x1f3e0; <code>:house:</code></th>
+<th>&#x1f3e1; <code>:house_with_garden:</code></th>
+<th>&#x1f3eb; <code>:school:</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x1f3e2; <code>:office:</code></td>
+<td>&#x1f3e3; <code>:post_office:</code></td>
+<td>&#x1f3e5; <code>:hospital:</code></td>
+</tr>
+<tr>
+<td>&#x1f3e6; <code>:bank:</code></td>
+<td>&#x1f3ea; <code>:convenience_store:</code></td>
+<td>&#x1f3e9; <code>:love_hotel:</code></td>
+</tr>
+<tr>
+<td>&#x1f3e8; <code>:hotel:</code></td>
+<td>&#x1f492; <code>:wedding:</code></td>
+<td>&#x26ea; <code>:church:</code></td>
+</tr>
+<tr>
+<td>&#x1f3ec; <code>:department_store:</code></td>
+<td>&#x1f3e4; <code>:european_post_office:</code></td>
+<td>&#x1f307; <code>:city_sunrise:</code></td>
+</tr>
+<tr>
+<td>&#x1f306; <code>:city_sunset:</code></td>
+<td>&#x1f3ef; <code>:japanese_castle:</code></td>
+<td>&#x1f3f0; <code>:european_castle:</code></td>
+</tr>
+<tr>
+<td>&#x26fa; <code>:tent:</code></td>
+<td>&#x1f3ed; <code>:factory:</code></td>
+<td>&#x1f5fc; <code>:tokyo_tower:</code></td>
+</tr>
+<tr>
+<td>&#x1f5fe; <code>:japan:</code></td>
+<td>&#x1f5fb; <code>:mount_fuji:</code></td>
+<td>&#x1f304; <code>:sunrise_over_mountains:</code></td>
+</tr>
+<tr>
+<td>&#x1f305; <code>:sunrise:</code></td>
+<td>&#x1f320; <code>:stars:</code></td>
+<td>&#x1f5fd; <code>:statue_of_liberty:</code></td>
+</tr>
+<tr>
+<td>&#x1f309; <code>:bridge_at_night:</code></td>
+<td>&#x1f3a0; <code>:carousel_horse:</code></td>
+<td>&#x1f308; <code>:rainbow:</code></td>
+</tr>
+<tr>
+<td>&#x1f3a1; <code>:ferris_wheel:</code></td>
+<td>&#x26f2; <code>:fountain:</code></td>
+<td>&#x1f3a2; <code>:roller_coaster:</code></td>
+</tr>
+<tr>
+<td>&#x1f6a2; <code>:ship:</code></td>
+<td>&#x1f6a4; <code>:speedboat:</code></td>
+<td>&#x26f5; <code>:boat:</code></td>
+</tr>
+<tr>
+<td>&#x26f5; <code>:sailboat:</code></td>
+<td>&#x1f6a3; <code>:rowboat:</code></td>
+<td>&#x2693; <code>:anchor:</code></td>
+</tr>
+<tr>
+<td>&#x1f680; <code>:rocket:</code></td>
+<td>&#x2708;&#xfe0f; <code>:airplane:</code></td>
+<td>&#x1f681; <code>:helicopter:</code></td>
+</tr>
+<tr>
+<td>&#x1f682; <code>:steam_locomotive:</code></td>
+<td>&#x1f68a; <code>:tram:</code></td>
+<td>&#x1f69e; <code>:mountain_railway:</code></td>
+</tr>
+<tr>
+<td>&#x1f6b2; <code>:bike:</code></td>
+<td>&#x1f6a1; <code>:aerial_tramway:</code></td>
+<td>&#x1f69f; <code>:suspension_railway:</code></td>
+</tr>
+<tr>
+<td>&#x1f6a0; <code>:mountain_cableway:</code></td>
+<td>&#x1f69c; <code>:tractor:</code></td>
+<td>&#x1f699; <code>:blue_car:</code></td>
+</tr>
+<tr>
+<td>&#x1f698; <code>:oncoming_automobile:</code></td>
+<td>&#x1f697; <code>:car:</code></td>
+<td>&#x1f697; <code>:red_car:</code></td>
+</tr>
+<tr>
+<td>&#x1f695; <code>:taxi:</code></td>
+<td>&#x1f696; <code>:oncoming_taxi:</code></td>
+<td>&#x1f69b; <code>:articulated_lorry:</code></td>
+</tr>
+<tr>
+<td>&#x1f68c; <code>:bus:</code></td>
+<td>&#x1f68d; <code>:oncoming_bus:</code></td>
+<td>&#x1f6a8; <code>:rotating_light:</code></td>
+</tr>
+<tr>
+<td>&#x1f693; <code>:police_car:</code></td>
+<td>&#x1f694; <code>:oncoming_police_car:</code></td>
+<td>&#x1f692; <code>:fire_engine:</code></td>
+</tr>
+<tr>
+<td>&#x1f691; <code>:ambulance:</code></td>
+<td>&#x1f690; <code>:minibus:</code></td>
+<td>&#x1f69a; <code>:truck:</code></td>
+</tr>
+<tr>
+<td>&#x1f68b; <code>:train:</code></td>
+<td>&#x1f689; <code>:station:</code></td>
+<td>&#x1f686; <code>:train2:</code></td>
+</tr>
+<tr>
+<td>&#x1f685; <code>:bullettrain_front:</code></td>
+<td>&#x1f684; <code>:bullettrain_side:</code></td>
+<td>&#x1f688; <code>:light_rail:</code></td>
+</tr>
+<tr>
+<td>&#x1f69d; <code>:monorail:</code></td>
+<td>&#x1f683; <code>:railway_car:</code></td>
+<td>&#x1f68e; <code>:trolleybus:</code></td>
+</tr>
+<tr>
+<td>&#x1f3ab; <code>:ticket:</code></td>
+<td>&#x26fd; <code>:fuelpump:</code></td>
+<td>&#x1f6a6; <code>:vertical_traffic_light:</code></td>
+</tr>
+<tr>
+<td>&#x1f6a5; <code>:traffic_light:</code></td>
+<td>&#x26a0;&#xfe0f; <code>:warning:</code></td>
+<td>&#x1f6a7; <code>:construction:</code></td>
+</tr>
+<tr>
+<td>&#x1f530; <code>:beginner:</code></td>
+<td>&#x1f3e7; <code>:atm:</code></td>
+<td>&#x1f3b0; <code>:slot_machine:</code></td>
+</tr>
+<tr>
+<td>&#x1f68f; <code>:busstop:</code></td>
+<td>&#x1f488; <code>:barber:</code></td>
+<td>&#x2668;&#xfe0f; <code>:hotsprings:</code></td>
+</tr>
+<tr>
+<td>&#x1f3c1; <code>:checkered_flag:</code></td>
+<td>&#x1f38c; <code>:crossed_flags:</code></td>
+<td>&#x1f3ee; <code>:izakaya_lantern:</code></td>
+</tr>
+<tr>
+<td>&#x1f5ff; <code>:moyai:</code></td>
+<td>&#x1f3aa; <code>:circus_tent:</code></td>
+<td>&#x1f3ad; <code>:performing_arts:</code></td>
+</tr>
+<tr>
+<td>&#x1f4cd; <code>:round_pushpin:</code></td>
+<td>&#x1f6a9; <code>:triangular_flag_on_post:</code></td>
+<td>&#x1f1ef;&#x1f1f5; <code>:jp:</code></td>
+</tr>
+<tr>
+<td>&#x1f1f0;&#x1f1f7; <code>:kr:</code></td>
+<td>&#x1f1e8;&#x1f1f3; <code>:cn:</code></td>
+<td>&#x1f1fa;&#x1f1f8; <code>:us:</code></td>
+</tr>
+<tr>
+<td>&#x1f1eb;&#x1f1f7; <code>:fr:</code></td>
+<td>&#x1f1ea;&#x1f1f8; <code>:es:</code></td>
+<td>&#x1f1ee;&#x1f1f9; <code>:it:</code></td>
+</tr>
+<tr>
+<td>&#x1f1f7;&#x1f1fa; <code>:ru:</code></td>
+<td>&#x1f1ec;&#x1f1e7; <code>:gb:</code></td>
+<td>&#x1f1ec;&#x1f1e7; <code>:uk:</code></td>
+</tr>
+<tr>
+<td>&#x1f1e9;&#x1f1ea; <code>:de:</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Symbols</p>
+<table>
+<thead>
+<tr>
+<th>&#x31;&#xfe0f;&#x20e3; <code>:one:</code></th>
+<th>&#x32;&#xfe0f;&#x20e3; <code>:two:</code></th>
+<th>&#x33;&#xfe0f;&#x20e3; <code>:three:</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x34;&#xfe0f;&#x20e3; <code>:four:</code></td>
+<td>&#x35;&#xfe0f;&#x20e3; <code>:five:</code></td>
+<td>&#x36;&#xfe0f;&#x20e3; <code>:six:</code></td>
+</tr>
+<tr>
+<td>&#x37;&#xfe0f;&#x20e3; <code>:seven:</code></td>
+<td>&#x38;&#xfe0f;&#x20e3; <code>:eight:</code></td>
+<td>&#x39;&#xfe0f;&#x20e3; <code>:nine:</code></td>
+</tr>
+<tr>
+<td>&#x1f51f; <code>:keycap_ten:</code></td>
+<td>&#x1f522; <code>:1234:</code></td>
+<td>&#x30;&#xfe0f;&#x20e3; <code>:zero:</code></td>
+</tr>
+<tr>
+<td>&#x23;&#xfe0f;&#x20e3; <code>:hash:</code></td>
+<td>&#x1f523; <code>:symbols:</code></td>
+<td>&#x25c0;&#xfe0f; <code>:arrow_backward:</code></td>
+</tr>
+<tr>
+<td>&#x2b07;&#xfe0f; <code>:arrow_down:</code></td>
+<td>&#x25b6;&#xfe0f; <code>:arrow_forward:</code></td>
+<td>&#x2b05;&#xfe0f; <code>:arrow_left:</code></td>
+</tr>
+<tr>
+<td>&#x1f520; <code>:capital_abcd:</code></td>
+<td>&#x1f521; <code>:abcd:</code></td>
+<td>&#x1f524; <code>:abc:</code></td>
+</tr>
+<tr>
+<td>&#x2199;&#xfe0f; <code>:arrow_lower_left:</code></td>
+<td>&#x2198;&#xfe0f; <code>:arrow_lower_right:</code></td>
+<td>&#x27a1;&#xfe0f; <code>:arrow_right:</code></td>
+</tr>
+<tr>
+<td>&#x2b06;&#xfe0f; <code>:arrow_up:</code></td>
+<td>&#x2196;&#xfe0f; <code>:arrow_upper_left:</code></td>
+<td>&#x2197;&#xfe0f; <code>:arrow_upper_right:</code></td>
+</tr>
+<tr>
+<td>&#x23ec; <code>:arrow_double_down:</code></td>
+<td>&#x23eb; <code>:arrow_double_up:</code></td>
+<td>&#x1f53d; <code>:arrow_down_small:</code></td>
+</tr>
+<tr>
+<td>&#x2935;&#xfe0f; <code>:arrow_heading_down:</code></td>
+<td>&#x2934;&#xfe0f; <code>:arrow_heading_up:</code></td>
+<td>&#x21a9;&#xfe0f; <code>:leftwards_arrow_with_hook:</code></td>
+</tr>
+<tr>
+<td>&#x21aa;&#xfe0f; <code>:arrow_right_hook:</code></td>
+<td>&#x2194;&#xfe0f; <code>:left_right_arrow:</code></td>
+<td>&#x2195;&#xfe0f; <code>:arrow_up_down:</code></td>
+</tr>
+<tr>
+<td>&#x1f53c; <code>:arrow_up_small:</code></td>
+<td>&#x1f503; <code>:arrows_clockwise:</code></td>
+<td>&#x1f504; <code>:arrows_counterclockwise:</code></td>
+</tr>
+<tr>
+<td>&#x23ea; <code>:rewind:</code></td>
+<td>&#x23e9; <code>:fast_forward:</code></td>
+<td>&#x2139;&#xfe0f; <code>:information_source:</code></td>
+</tr>
+<tr>
+<td>&#x1f197; <code>:ok:</code></td>
+<td>&#x1f500; <code>:twisted_rightwards_arrows:</code></td>
+<td>&#x1f501; <code>:repeat:</code></td>
+</tr>
+<tr>
+<td>&#x1f502; <code>:repeat_one:</code></td>
+<td>&#x1f195; <code>:new:</code></td>
+<td>&#x1f51d; <code>:top:</code></td>
+</tr>
+<tr>
+<td>&#x1f199; <code>:up:</code></td>
+<td>&#x1f192; <code>:cool:</code></td>
+<td>&#x1f193; <code>:free:</code></td>
+</tr>
+<tr>
+<td>&#x1f196; <code>:ng:</code></td>
+<td>&#x1f3a6; <code>:cinema:</code></td>
+<td>&#x1f201; <code>:koko:</code></td>
+</tr>
+<tr>
+<td>&#x1f4f6; <code>:signal_strength:</code></td>
+<td>&#x1f239; <code>:u5272:</code></td>
+<td>&#x1f234; <code>:u5408:</code></td>
+</tr>
+<tr>
+<td>&#x1f23a; <code>:u55b6:</code></td>
+<td>&#x1f22f; <code>:u6307:</code></td>
+<td>&#x1f237;&#xfe0f; <code>:u6708:</code></td>
+</tr>
+<tr>
+<td>&#x1f236; <code>:u6709:</code></td>
+<td>&#x1f235; <code>:u6e80:</code></td>
+<td>&#x1f21a; <code>:u7121:</code></td>
+</tr>
+<tr>
+<td>&#x1f238; <code>:u7533:</code></td>
+<td>&#x1f233; <code>:u7a7a:</code></td>
+<td>&#x1f232; <code>:u7981:</code></td>
+</tr>
+<tr>
+<td>&#x1f202;&#xfe0f; <code>:sa:</code></td>
+<td>&#x1f6bb; <code>:restroom:</code></td>
+<td>&#x1f6b9; <code>:mens:</code></td>
+</tr>
+<tr>
+<td>&#x1f6ba; <code>:womens:</code></td>
+<td>&#x1f6bc; <code>:baby_symbol:</code></td>
+<td>&#x1f6ad; <code>:no_smoking:</code></td>
+</tr>
+<tr>
+<td>&#x1f17f;&#xfe0f; <code>:parking:</code></td>
+<td>&#x267f; <code>:wheelchair:</code></td>
+<td>&#x1f687; <code>:metro:</code></td>
+</tr>
+<tr>
+<td>&#x1f6c4; <code>:baggage_claim:</code></td>
+<td>&#x1f251; <code>:accept:</code></td>
+<td>&#x1f6be; <code>:wc:</code></td>
+</tr>
+<tr>
+<td>&#x1f6b0; <code>:potable_water:</code></td>
+<td>&#x1f6ae; <code>:put_litter_in_its_place:</code></td>
+<td>&#x3299;&#xfe0f; <code>:secret:</code></td>
+</tr>
+<tr>
+<td>&#x3297;&#xfe0f; <code>:congratulations:</code></td>
+<td>&#x24c2;&#xfe0f; <code>:m:</code></td>
+<td>&#x1f6c2; <code>:passport_control:</code></td>
+</tr>
+<tr>
+<td>&#x1f6c5; <code>:left_luggage:</code></td>
+<td>&#x1f6c3; <code>:customs:</code></td>
+<td>&#x1f250; <code>:ideograph_advantage:</code></td>
+</tr>
+<tr>
+<td>&#x1f191; <code>:cl:</code></td>
+<td>&#x1f198; <code>:sos:</code></td>
+<td>&#x1f194; <code>:id:</code></td>
+</tr>
+<tr>
+<td>&#x1f6ab; <code>:no_entry_sign:</code></td>
+<td>&#x1f51e; <code>:underage:</code></td>
+<td>&#x1f4f5; <code>:no_mobile_phones:</code></td>
+</tr>
+<tr>
+<td>&#x1f6af; <code>:do_not_litter:</code></td>
+<td>&#x1f6b1; <code>:non-potable_water:</code></td>
+<td>&#x1f6b3; <code>:no_bicycles:</code></td>
+</tr>
+<tr>
+<td>&#x1f6b7; <code>:no_pedestrians:</code></td>
+<td>&#x1f6b8; <code>:children_crossing:</code></td>
+<td>&#x26d4; <code>:no_entry:</code></td>
+</tr>
+<tr>
+<td>&#x2733;&#xfe0f; <code>:eight_spoked_asterisk:</code></td>
+<td>&#x2734;&#xfe0f; <code>:eight_pointed_black_star:</code></td>
+<td>&#x1f49f; <code>:heart_decoration:</code></td>
+</tr>
+<tr>
+<td>&#x1f19a; <code>:vs:</code></td>
+<td>&#x1f4f3; <code>:vibration_mode:</code></td>
+<td>&#x1f4f4; <code>:mobile_phone_off:</code></td>
+</tr>
+<tr>
+<td>&#x1f4b9; <code>:chart:</code></td>
+<td>&#x1f4b1; <code>:currency_exchange:</code></td>
+<td>&#x2648; <code>:aries:</code></td>
+</tr>
+<tr>
+<td>&#x2649; <code>:taurus:</code></td>
+<td>&#x264a; <code>:gemini:</code></td>
+<td>&#x264b; <code>:cancer:</code></td>
+</tr>
+<tr>
+<td>&#x264c; <code>:leo:</code></td>
+<td>&#x264d; <code>:virgo:</code></td>
+<td>&#x264e; <code>:libra:</code></td>
+</tr>
+<tr>
+<td>&#x264f; <code>:scorpius:</code></td>
+<td>&#x2650; <code>:sagittarius:</code></td>
+<td>&#x2651; <code>:capricorn:</code></td>
+</tr>
+<tr>
+<td>&#x2652; <code>:aquarius:</code></td>
+<td>&#x2653; <code>:pisces:</code></td>
+<td>&#x26ce; <code>:ophiuchus:</code></td>
+</tr>
+<tr>
+<td>&#x1f52f; <code>:six_pointed_star:</code></td>
+<td>&#x274e; <code>:negative_squared_cross_mark:</code></td>
+<td>&#x1f170;&#xfe0f; <code>:a:</code></td>
+</tr>
+<tr>
+<td>&#x1f171;&#xfe0f; <code>:b:</code></td>
+<td>&#x1f18e; <code>:ab:</code></td>
+<td>&#x1f17e;&#xfe0f; <code>:o2:</code></td>
+</tr>
+<tr>
+<td>&#x1f4a0; <code>:diamond_shape_with_a_dot_inside:</code></td>
+<td>&#x267b;&#xfe0f; <code>:recycle:</code></td>
+<td>&#x1f51a; <code>:end:</code></td>
+</tr>
+<tr>
+<td>&#x1f51b; <code>:on:</code></td>
+<td>&#x1f51c; <code>:soon:</code></td>
+<td>&#x1f550; <code>:clock1:</code></td>
+</tr>
+<tr>
+<td>&#x1f55c; <code>:clock130:</code></td>
+<td>&#x1f559; <code>:clock10:</code></td>
+<td>&#x1f565; <code>:clock1030:</code></td>
+</tr>
+<tr>
+<td>&#x1f55a; <code>:clock11:</code></td>
+<td>&#x1f566; <code>:clock1130:</code></td>
+<td>&#x1f55b; <code>:clock12:</code></td>
+</tr>
+<tr>
+<td>&#x1f567; <code>:clock1230:</code></td>
+<td>&#x1f551; <code>:clock2:</code></td>
+<td>&#x1f55d; <code>:clock230:</code></td>
+</tr>
+<tr>
+<td>&#x1f552; <code>:clock3:</code></td>
+<td>&#x1f55e; <code>:clock330:</code></td>
+<td>&#x1f553; <code>:clock4:</code></td>
+</tr>
+<tr>
+<td>&#x1f55f; <code>:clock430:</code></td>
+<td>&#x1f554; <code>:clock5:</code></td>
+<td>&#x1f560; <code>:clock530:</code></td>
+</tr>
+<tr>
+<td>&#x1f555; <code>:clock6:</code></td>
+<td>&#x1f561; <code>:clock630:</code></td>
+<td>&#x1f556; <code>:clock7:</code></td>
+</tr>
+<tr>
+<td>&#x1f562; <code>:clock730:</code></td>
+<td>&#x1f557; <code>:clock8:</code></td>
+<td>&#x1f563; <code>:clock830:</code></td>
+</tr>
+<tr>
+<td>&#x1f558; <code>:clock9:</code></td>
+<td>&#x1f564; <code>:clock930:</code></td>
+<td>&#x1f4b2; <code>:heavy_dollar_sign:</code></td>
+</tr>
+<tr>
+<td>&#xa9;&#xfe0f; <code>:copyright:</code></td>
+<td>&#xae;&#xfe0f; <code>:registered:</code></td>
+<td>&#x2122;&#xfe0f; <code>:tm:</code></td>
+</tr>
+<tr>
+<td>&#x274c; <code>:x:</code></td>
+<td>&#x2757; <code>:heavy_exclamation_mark:</code></td>
+<td>&#x203c;&#xfe0f; <code>:bangbang:</code></td>
+</tr>
+<tr>
+<td>&#x2049;&#xfe0f; <code>:interrobang:</code></td>
+<td>&#x2b55; <code>:o:</code></td>
+<td>&#x2716;&#xfe0f; <code>:heavy_multiplication_x:</code></td>
+</tr>
+<tr>
+<td>&#x2795; <code>:heavy_plus_sign:</code></td>
+<td>&#x2796; <code>:heavy_minus_sign:</code></td>
+<td>&#x2797; <code>:heavy_division_sign:</code></td>
+</tr>
+<tr>
+<td>&#x1f4ae; <code>:white_flower:</code></td>
+<td>&#x1f4af; <code>:100:</code></td>
+<td>&#x2714;&#xfe0f; <code>:heavy_check_mark:</code></td>
+</tr>
+<tr>
+<td>&#x2611;&#xfe0f; <code>:ballot_box_with_check:</code></td>
+<td>&#x1f518; <code>:radio_button:</code></td>
+<td>&#x1f517; <code>:link:</code></td>
+</tr>
+<tr>
+<td>&#x27b0; <code>:curly_loop:</code></td>
+<td>&#x3030;&#xfe0f; <code>:wavy_dash:</code></td>
+<td>&#x303d;&#xfe0f; <code>:part_alternation_mark:</code></td>
+</tr>
+<tr>
+<td>&#x1f531; <code>:trident:</code></td>
+<td>:black_square: <code>:black_square:</code></td>
+<td>:white_square: <code>:white_square:</code></td>
+</tr>
+<tr>
+<td>&#x2705; <code>:white_check_mark:</code></td>
+<td>&#x1f532; <code>:black_square_button:</code></td>
+<td>&#x1f533; <code>:white_square_button:</code></td>
+</tr>
+<tr>
+<td>&#x26ab; <code>:black_circle:</code></td>
+<td>&#x26aa; <code>:white_circle:</code></td>
+<td>&#x1f534; <code>:red_circle:</code></td>
+</tr>
+<tr>
+<td>&#x1f535; <code>:large_blue_circle:</code></td>
+<td>&#x1f537; <code>:large_blue_diamond:</code></td>
+<td>&#x1f536; <code>:large_orange_diamond:</code></td>
+</tr>
+<tr>
+<td>&#x1f539; <code>:small_blue_diamond:</code></td>
+<td>&#x1f538; <code>:small_orange_diamond:</code></td>
+<td>&#x1f53a; <code>:small_red_triangle:</code></td>
+</tr>
+<tr>
+<td>&#x1f53b; <code>:small_red_triangle_down:</code></td>
+<td>:shipit: <code>:shipit:</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/jks-liu/zhihu/blob/master/WPLs-introduction-and-test.md">https://github.com/jks-liu/zhihu/blob/master/WPLs-introduction-and-test.md</a> 本文对应的 markdown&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://github.com/jks-liu/zhihu/blob/master/WPLs-introduction-and-test.md">https://github.com/jks-liu/zhihu/blob/master/WPLs-introduction-and-test.md</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">fishyer</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2017-08-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+          <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/git-%E6%9B%B4%E6%96%B0%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">git-更新忽略文件</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/">
+            <span class="next-text nav-default">长恨歌</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
