@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Obsidian插件开发笔记 - Even - A super concise theme for Hugo</title>
+  <title>Obsidian插件-自动添加元数据 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="#占位 1111 2222 3333" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="olOwOlo" /><meta name="description" content="开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.125.7 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" />
+<link rel="canonical" href="http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,25 +39,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+<meta property="og:url" content="http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE/">
   <meta property="og:site_name" content="Even - A super concise theme for Hugo">
-  <meta property="og:title" content="Obsidian插件开发笔记">
-  <meta property="og:description" content="#占位 1111 2222 3333">
+  <meta property="og:title" content="Obsidian插件-自动添加元数据">
+  <meta property="og:description" content="开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2024-05-10T11:19:02+08:00">
-    <meta property="article:modified_time" content="2024-05-11T12:11:04+08:00">
-    <meta property="article:tag" content="Obsidian">
-    <meta property="article:tag" content="插件">
+    <meta property="article:published_time" content="2024-05-11T12:16:47+08:00">
+    <meta property="article:modified_time" content="2024-05-11T12:30:42+08:00">
 
-  <meta itemprop="name" content="Obsidian插件开发笔记">
-  <meta itemprop="description" content="#占位 1111 2222 3333">
-  <meta itemprop="datePublished" content="2024-05-10T11:19:02+08:00">
-  <meta itemprop="dateModified" content="2024-05-11T12:11:04+08:00">
-  <meta itemprop="wordCount" content="6">
-  <meta itemprop="keywords" content="Obsidian,插件"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Obsidian插件开发笔记">
-<meta name="twitter:description" content="#占位 1111 2222 3333">
+  <meta itemprop="name" content="Obsidian插件-自动添加元数据">
+  <meta itemprop="description" content="开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid">
+  <meta itemprop="datePublished" content="2024-05-11T12:16:47+08:00">
+  <meta itemprop="dateModified" content="2024-05-11T12:30:42+08:00">
+  <meta itemprop="wordCount" content="577"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Obsidian插件-自动添加元数据">
+<meta name="twitter:description" content="开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,13 +127,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Obsidian插件开发笔记</h1>
+      <h1 class="post-title">Obsidian插件-自动添加元数据</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2024-05-10 </span>
+        <span class="post-time"> 2024-05-11 </span>
         
-          <span class="more-meta"> 约 6 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 577 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -144,14 +141,59 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#开发目的">开发目的</a></li>
+        <li><a href="#heading"></a></li>
+        <li><a href="#配置项">配置项</a></li>
+        <li><a href="#如何使用">如何使用</a></li>
+        <li><a href="#源码">源码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <p>#占位</p>
-<p>1111</p>
-<p>2222</p>
-<p>3333</p>
+      <h2 id="开发目的">开发目的</h2>
+<p>被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsidian用得多，本地的工具还是方便点。最后选择的博客站点生成工具是Hugo，主要是生成的快。</p>
+<p>在用Hugo发布Obsidian的Markdown文件时，需要有一些frontmatter属性，例如这样的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lastmod: 2024-05-11T12:17:17+08:00
+</span></span><span class="line"><span class="cl">date: 2024-05-11T12:16:47+08:00
+</span></span><span class="line"><span class="cl">id: f50ee79a-23fd-4db4-bfa1-4d7c0900fd85
+</span></span><span class="line"><span class="cl">title: Obsidian插件-自动添加元数据
+</span></span><span class="line"><span class="cl">tags: []
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>自己手动添加这些属性太麻烦了，就让插件来帮我自动生成吧，每次修改时，都会自动更新属性值（没有就新建，有就更新），其实更新操作主要是更新最后修改时间。</p>
+<h2 id="heading"></h2>
+<h2 id="配置项">配置项</h2>
+<ul>
+<li>更新时间：lastmod (最好别改，不然hugo可能识别有问题)</li>
+<li>创建时间：date (最好别改，不然hugo可能识别有问题)</li>
+<li>uuid名称：id 这个是方便配合Advanced-URI插件使用,改成id是为了和Omnivore插件保持一致</li>
+<li>时间格式：YYYY-MM-DDTHH:mm:ss+08:00（最好别改，不然hugo可能识别有问题）</li>
+<li>其它的配置我没动过，都是<a href="https://github.com/alangrainger/obsidian-frontmatter-modified-date">obsidian-frontmatter-modified-date</a>插件上原有的</li>
+</ul>
+<p><img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240511122458.png" alt="image.png"></p>
+<h2 id="如何使用">如何使用</h2>
+<p>下载源码，将dist文件夹的内容移动到.obsidian/plugins文件夹即可，可以将dist文件夹改一下名：auto-frontmatter</p>
+<h2 id="源码">源码</h2>
+<ul>
+<li><a href="https://github.com/fishyer/auto-frontmatter">fishyer/auto-frontmatter</a></li>
+<li><a href="https://github.com/fishyer/blog-hugo">fishyer/blog-hugo</a></li>
+</ul>
 
     </div>
 
@@ -171,18 +213,11 @@
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/obsidian/">Obsidian</a>
-          <a href="/tags/%E6%8F%92%E4%BB%B6/">插件</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/sealos-%E4%BA%91%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Sealos-云托管平台</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/fastapi-python%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84web%E6%A1%86%E6%9E%B6/">
-            <span class="next-text nav-default">FastApi-Python上最好用的Web框架</span>
+        
+        <a class="next" href="/post/%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/">
+            <span class="next-text nav-default">宝塔部署笔记</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

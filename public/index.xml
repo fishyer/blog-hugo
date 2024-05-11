@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 12 May 2024 10:58:03 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Obsidian插件开发笔记</title>
-      <link>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 11 May 2024 11:19:02 +0800</pubDate>
-      <guid>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
-      <description>#占位 1111 2222 333</description>
+      <title>Obsidian插件-自动添加元数据</title>
+      <link>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Sat, 11 May 2024 12:16:47 +0800</pubDate>
+      <guid>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE/</guid>
+      <description>开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid</description>
     </item>
     <item>
       <title>宝塔部署笔记</title>
@@ -56,6 +56,13 @@
       <pubDate>Sat, 11 May 2024 01:37:56 +0800</pubDate>
       <guid>http://localhost:1313/aboutme/</guid>
       <description>this is a page about me</description>
+    </item>
+    <item>
+      <title>Obsidian插件开发笔记</title>
+      <link>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 10 May 2024 11:19:02 +0800</pubDate>
+      <guid>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
+      <description>#占位 1111 2222 3333</description>
     </item>
     <item>
       <title>FastApi-Python上最好用的Web框架</title>
