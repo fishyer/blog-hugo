@@ -264,28 +264,87 @@ gtag('config', 'G-9Z9QVXELHX');
         </div>
         
 
-  <span id="/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/" class="leancloud_visitors" data-flag-title="长恨歌-白居易">
-		<span class="post-meta-item-text">文章阅读量 </span>
-		<span class="leancloud-visitors-count">0</span>
-		<p></p>
-	  </span>
-  <div id="vcomments"></div>
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  <script type="text/javascript">
-    new Valine({
-        el: '#vcomments' ,
-        appId: 'DMoscM6ifWKddIi8a7vK8M3y-gzGzoHsz',
-        appKey: 'jPYkWXuYRnt7xY8fuzHdEqeY',
-        notify:  true ,
-        verify:  false ,
-        avatar:'mm',
-        placeholder: '说点什么吧...',
-        visitor:  true 
-    });
-  </script>
+  
 
   
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    
+    const locale = {
+      nick: '昵称',
+      nickError: '昵称不能少于3个字符',
+      mail: '邮箱',
+      mailError: '请填写正确的邮件地址',
+      link: '网址',
+      optional: '可选',
+      placeholder: '欢迎评论，可以不登录，不填昵称、邮箱、网址哦~',
+      sofa: '来发评论吧~',
+      submit: '提交',
+      like: '喜欢',
+      cancelLike: '取消喜欢',
+      reply: '回复',
+      cancelReply: '取消回复',
+      comment: '评论',
+      refresh: '刷新',
+      more: '加载更多...',
+      preview: '预览',
+      emoji: '表情',
+      uploadImage: '上传图片',
+      seconds: '秒前',
+      minutes: '分钟前',
+      hours: '小时前',
+      days: '天前',
+      now: '刚刚',
+      uploading: '正在上传',
+      login: '登录',
+      logout: '退出',
+      admin: '博主',
+      sticky: '置顶',
+      word: '字',
+      wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+      anonymous: '匿名',
+      level0: '潜水',
+      level1: '冒泡',
+      level2: '吐槽',
+      level3: '活跃',
+      level4: '话痨',
+      level5: '传说',
+      gif: '表情包',
+      gifSearchPlaceholder: '搜索表情包',
+      profile: '个人资料',
+      approved: '通过',
+      waiting: '待审核',
+      spam: '垃圾',
+      unsticky: '取消置顶',
+      oldest: '按倒序',
+      latest: '按正序',
+      hottest: '按热度',
+      reactionTitle: '你认为这篇文章怎么样？',
+    };
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    init({
+      el: '#waline',
+      reaction: true, 
+      serverURL: 'https://waline.fishyer.com',
+      path: location.pathname,
+      locale,
+    });
+  </script>
 
       </div>
     </main>
