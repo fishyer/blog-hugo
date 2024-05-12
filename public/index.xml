@@ -99,12 +99,5 @@
       <guid>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
       <description>直接重建git暂存区 1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39; 移除指定文件 1 git rm --cached redis/dump.rdb #git #配置 #测试 111</description>
     </item>
-    <item>
-      <title>长恨歌-白居易</title>
-      <link>http://localhost:1313/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/</guid>
-      <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
-    </item>
   </channel>
 </rss>

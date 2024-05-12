@@ -191,34 +191,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/preview/</loc>
-    <lastmod>2024-05-11T11:43:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/tag-1/</loc>
-    <lastmod>2024-05-11T11:43:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/%E9%95%BF%E6%81%A8%E6%AD%8C-%E7%99%BD%E5%B1%85%E6%98%93/</loc>
-    <lastmod>2024-05-11T11:43:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/%E4%B8%AD%E6%96%87/</loc>
-    <lastmod>2024-05-11T11:43:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
