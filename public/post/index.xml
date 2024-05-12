@@ -13,7 +13,7 @@
       <link>http://localhost:1313/post/d9867c08-d7e0-4565-b742-ff9994c6d818/</link>
       <pubDate>Sun, 12 May 2024 20:11:04 +0800</pubDate>
       <guid>http://localhost:1313/post/d9867c08-d7e0-4565-b742-ff9994c6d818/</guid>
-      <description>缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is</description>
+      <description>缘起 之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的</description>
     </item>
     <item>
       <title>docker-部署SpringBoot服务</title>

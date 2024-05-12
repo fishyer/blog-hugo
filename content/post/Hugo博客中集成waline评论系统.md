@@ -2,7 +2,7 @@
 title: Hugo博客中集成waline评论系统
 aliases: []
 date: 2024-05-12T20:11:04+08:00
-lastmod: 2024-05-12T21:16:12+08:00
+lastmod: 2024-05-12T21:33:26+08:00
 id: d9867c08-d7e0-4565-b742-ff9994c6d818
 slug: d9867c08-d7e0-4565-b742-ff9994c6d818
 obsidianLink: obsidian://advanced-uri?vault=note&uid=d9867c08-d7e0-4565-b742-ff9994c6d818
@@ -13,7 +13,7 @@ zhihu-tags: []
 
 ## 缘起
 
-之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的评论系统，但是感觉都太简陋了，而且不是每个读者都有Github账号的，它们都需要绑定Github账号才能评论，有点鸡肋。
+之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的评论系统，但是感觉都太简陋了，而且不是每个读者都有Github账号的，它们都需要绑定Github账号才能评论，有点鸡肋。
 
 综合考量后，选择的是[Valine](https://valine.js.org/ )这个无后端评论系统的，这个集成很简单，只需到[LeanCloud国内版](https://www.leancloud.cn/ )弄一个账号，创建一个应用就行，把参数AppID、AppKey、MasterKey在hugo.toml里面配置一下，就几乎完成了。
 

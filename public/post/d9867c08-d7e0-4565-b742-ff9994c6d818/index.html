@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Hugo博客中集成waline评论系统 - Fishyer&#39;s Blog</title>
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="fishyer" /><meta name="description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="fishyer" /><meta name="description" content="缘起 之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -42,7 +42,7 @@
 <meta property="og:url" content="http://localhost:1313/post/d9867c08-d7e0-4565-b742-ff9994c6d818/">
   <meta property="og:site_name" content="Fishyer&#39;s Blog">
   <meta property="og:title" content="Hugo博客中集成waline评论系统">
-  <meta property="og:description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is">
+  <meta property="og:description" content="缘起 之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -50,11 +50,11 @@
     <meta property="article:modified_time" content="2024-05-12T21:16:46+08:00">
 
   <meta itemprop="name" content="Hugo博客中集成waline评论系统">
-  <meta itemprop="description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is">
+  <meta itemprop="description" content="缘起 之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的">
   <meta itemprop="datePublished" content="2024-05-12T20:11:04+08:00">
   <meta itemprop="dateModified" content="2024-05-12T21:16:46+08:00">
-  <meta itemprop="wordCount" content="1992"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hugo博客中集成waline评论系统">
-<meta name="twitter:description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is">
+  <meta itemprop="wordCount" content="1987"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hugo博客中集成waline评论系统">
+<meta name="twitter:description" content="缘起 之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -142,7 +142,7 @@ gtag('config', 'G-9Z9QVXELHX');
       <div class="post-meta">
         <span class="post-time"> 2024-05-12 </span>
         
-          <span class="more-meta"> 约 1992 字 </span>
+          <span class="more-meta"> 约 1987 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -171,7 +171,7 @@ gtag('config', 'G-9Z9QVXELHX');
 </div>
     <div class="post-content">
       <h2 id="缘起">缘起</h2>
-<p>之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的评论系统，但是感觉都太简陋了，而且不是每个读者都有Github账号的，它们都需要绑定Github账号才能评论，有点鸡肋。</p>
+<p>之前已经搞定了从Obsidian自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的评论系统，但是感觉都太简陋了，而且不是每个读者都有Github账号的，它们都需要绑定Github账号才能评论，有点鸡肋。</p>
 <p>综合考量后，选择的是<a href="https://valine.js.org/">Valine</a>这个无后端评论系统的，这个集成很简单，只需到<a href="https://www.leancloud.cn/">LeanCloud国内版</a>弄一个账号，创建一个应用就行，把参数AppID、AppKey、MasterKey在hugo.toml里面配置一下，就几乎完成了。</p>
 <p>但是后来发现Valine在有人评论时是无法收到邮件提醒的，这就有点坑了。看它的文档，好像1.4.0以后就不支持了，而且Valine两年都没更新了。所以只好看看有没有其他方案。</p>
 <p>幸好，找到了一个基于Valine升级的<a href="https://waline.js.org/guide/get-started/">Waline</a>，这个评论系统很新，最近的Github更新是4小时前的。</p>
@@ -475,6 +475,13 @@ gtag('config', 'G-9Z9QVXELHX');
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
 
 
 
