@@ -17,3 +17,7 @@ cd /Users/yutianran/Documents/MyPKM/test/blog-hugo
 hugo -c /Users/yutianran/Documents/MyPKM/note/blog
 hugo server -D -c /Users/yutianran/Documents/MyPKM/note/blog
 ```
+
+## 评论系统
+
+[快速上手 | Waline](https://waline.js.org/guide/get-started/ )
