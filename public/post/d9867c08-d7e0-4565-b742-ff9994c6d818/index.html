@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hugo博客中集成waline评论系统 - Fishyer&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="fishyer" /><meta name="description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.125.7 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/d9867c08-d7e0-4565-b742-ff9994c6d818/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.35a28153ad50513521415b53ff28bc5a730019565c3dd09fba91d754a0c1c62d.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="http://localhost:1313/post/d9867c08-d7e0-4565-b742-ff9994c6d818/">
+  <meta property="og:site_name" content="Fishyer&#39;s Blog">
+  <meta property="og:title" content="Hugo博客中集成waline评论系统">
+  <meta property="og:description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-12T20:11:04+08:00">
+    <meta property="article:modified_time" content="2024-05-12T21:16:12+08:00">
+
+  <meta itemprop="name" content="Hugo博客中集成waline评论系统">
+  <meta itemprop="description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is">
+  <meta itemprop="datePublished" content="2024-05-12T20:11:04+08:00">
+  <meta itemprop="dateModified" content="2024-05-12T21:16:12+08:00">
+  <meta itemprop="wordCount" content="1992"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hugo博客中集成waline评论系统">
+<meta name="twitter:description" content="缘起 之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub is">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Fishyer</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/aboutme/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Fishyer</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/aboutme/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hugo博客中集成waline评论系统</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-05-12 </span>
+        
+          <span class="more-meta"> 约 1992 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+      <div class="post-meta">
+        
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#缘起">缘起</a></li>
+        <li><a href="#在vercel里面配置waline服务端的环境变量">在Vercel里面配置Waline服务端的环境变量</a></li>
+        <li><a href="#在hugo里面添加waline客户端">在Hugo里面添加Waline客户端</a></li>
+        <li><a href="#相关推荐">相关推荐</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="缘起">缘起</h2>
+<p>之前已经搞定了从Obsidian发布到快速自动发布到Hugo的流程，今天则是折腾了一下Hugo的评论系统。试验了一些基于GitHub issues的评论系统，但是感觉都太简陋了，而且不是每个读者都有Github账号的，它们都需要绑定Github账号才能评论，有点鸡肋。</p>
+<p>综合考量后，选择的是<a href="https://valine.js.org/">Valine</a>这个无后端评论系统的，这个集成很简单，只需到<a href="https://www.leancloud.cn/">LeanCloud国内版</a>弄一个账号，创建一个应用就行，把参数AppID、AppKey、MasterKey在hugo.toml里面配置一下，就几乎完成了。</p>
+<p>但是后来发现Valine在有人评论时是无法收到邮件提醒的，这就有点坑了。看它的文档，好像1.4.0以后就不支持了，而且Valine两年都没更新了。所以只好看看有没有其他方案。</p>
+<p>幸好，找到了一个基于Valine升级的<a href="https://waline.js.org/guide/get-started/">Waline</a>，这个评论系统很新，最近的Github更新是4小时前的。</p>
+<h2 id="在vercel里面配置waline服务端的环境变量">在Vercel里面配置Waline服务端的环境变量</h2>
+<p>一步一步按照它的文档来：</p>
+<ol>
+<li>注册<a href="https://console.leancloud.app/apps">LeanCloud国际版账号</a>，</li>
+<li>创建一个应用，获得3个参数：AppID、AppKey、MasterKey</li>
+<li>通过Waline的模版一键发布到<a href="https://vercel.com">Vercel</a>,然后再填写几个环境变量，重新发布。</li>
+</ol>
+<p>环境变量配置如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="c1"># LeanCloud国际版参数</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LEAN_ID</span><span class="o">=</span>XXXXXXXXX
+</span></span><span class="line"><span class="cl"><span class="nv">LEAN_KEY</span><span class="o">=</span>XXXXXXXXX
+</span></span><span class="line"><span class="cl"><span class="nv">LEAN_MASTER_KEY</span><span class="o">=</span>XXXXXXXXX
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 博客站点</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SITE_URL</span><span class="o">=</span>https://blog.fishyer.com
+</span></span><span class="line"><span class="cl"><span class="nv">SITE_NAME</span><span class="o">=</span>blog-hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 邮件通知</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SMTP_SERVICE</span><span class="o">=</span>QQ
+</span></span><span class="line"><span class="cl"><span class="nv">SMTP_SECURE</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SMTP_HOST</span><span class="o">=</span>smtp.qq.com
+</span></span><span class="line"><span class="cl"><span class="nv">SMTP_PORT</span><span class="o">=</span><span class="m">465</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SMTP_USER</span><span class="o">=</span>630709658@qq.com
+</span></span><span class="line"><span class="cl"><span class="nv">SMTP_PASS</span><span class="o">=</span>XXXXXXXXX
+</span></span><span class="line"><span class="cl"><span class="nv">AUTHOR_EMAIL</span><span class="o">=</span>fishyer@foxmail.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其实foxmail邮箱和qq邮箱是一个邮箱，我这里配置AUTHOR_EMAIL是为了方便测试，因为默认自己评论是不会给自己发邮件提醒的。</p>
+<blockquote>
+<p>注意：不能在.env文件里面设置，得在Vercel管理页面设置，有点坑，我本来还想通过vercel-cli在本地配置环境变量的，结果不行了，浪费了一些时间</p>
+</blockquote>
+<p>发布完成后，可以在Vercel绑定一下自己的评论系统的域名。我的Waline服务就是：https://waline.fishyer.com。然后注册一下管理员账号(第一个人用户就是管理员)，就可以在Waline的后台页面查看评论记录了: <a href="https://waline.fishyer.com/ui">https://waline.fishyer.com/ui</a></p>
+<p><img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240512203725.png" alt="image.png"></p>
+<blockquote>
+<p>注意：waline服务和你的博客站点是不同的域名，比如我的waline服务是waline.fishyer.com，博客站点是 blog.fishyer.com。环境变量里面的SITE_URL不要写错了，不然就不方便从后台评论列表那里直接点击链接跳转到自己的博客文章页面了。</p>
+</blockquote>
+<p>收到的邮件示意图如下，这里我没有改通知模板，就是默认的，可以通过邮件通知直达文章页面，还是蛮方便的。
+<img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240512203838.png" alt="image.png"></p>
+<p>配合微信上的QQ邮箱提醒，嘿嘿，再也不怕漏过文章评论了。</p>
+<h2 id="在hugo里面添加waline客户端">在Hugo里面添加Waline客户端</h2>
+<p>在模版的themes/even/layouts/partials/comments.html文件里面，添加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span>
+</span></span><span class="line"><span class="cl">  <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/@waline/client@v3/dist/waline.css&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;waline&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">import</span> <span class="p">{</span> <span class="nx">init</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;https://unpkg.com/@waline/client@v3/dist/waline.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">init</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#waline&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">reaction</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 开启快速反应 就是那几个表情按钮
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">serverURL</span><span class="o">:</span> <span class="s1">&#39;https://waline.fishyer.com&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="相关推荐">相关推荐</h2>
+<p>推荐大家去体验我开发的Obsidian插件：<a href="https://github.com/fishyer/auto-frontmatter">fishyer/auto-frontmatter</a>,可以自动生成这些frontmatter属性，：
+<img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240512204210.png" alt="image.png">
+这里面的8个字段都是自动生成和更新的，每次修改了文档10s后就会按需自动更新，或者通过命令【Update FrontMatter】也可以快速更新。</p>
+<ul>
+<li>title、date、lastmod、slug这几个是hugo需要的字段</li>
+<li>aliases、tags是Obsidian库的字段，tags和zhihu-tags都是取的文档中的<code>#标签</code>，标签会自动更新，生成aliases则是方便自己加别名，因为自己老是把它和Logseq用的alias搞混</li>
+<li>id是决定slug、obsidianLink、hugoLink的，配合Advanced-URI插件的</li>
+<li>zhihu-tags是配合VSCode插件: <a href="https://marketplace.visualstudio.com/items?itemName=jks-liu.wpls">WPL/s - 知乎</a></li>
+<li>obsidianLink和hugoLink是我自定义的，可以在hugo文章显示的链接，方便快速从博客文章到Obsidian笔记
+<img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240512211546.png" alt="image.png"></li>
+</ul>
+<p>这个VSCode插件是基于<a href="https://github.com/niudai/VSCode-Zhihu">niudai/VSCode-Zhihu</a> 两次开发的，但是将原来必须在文章首行的<code>#! https://zhuanlan.zhihu.com/p/696649182</code>给改成了可以兼容Obsidian的frontmatter，它会使用zhihu-tags字段来发布为知乎的标签(前提是个人知乎上已经创建过这些标签)，知乎链接则是用zhihu-url字段来表示的。</p>
+<h2 id="结语">结语</h2>
+<p>好了，Obsidian写作系统、Hugo博客系统和Waline评论系统的一整套工作流都搭建好了，后面就是享受记录、分享、交流的乐趣。</p>
+<p>分享，不是为了显摆自己知道多少，而是为了寻找同道。谁是全知全能的？谁又没有知识漏洞？敢于暴露自己的无知，也是一种勇气。有的时候，读者的一句关键评论，可能就让困惑许久的自己茅塞顿开。</p>
+<p>新的博客站点，新的写作旅程，期待未来能和大家多多交流，一起学习成长。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">fishyer</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2024-05-12
+        
+    </span>
+  </p>
+  
+    <p class="copyright-item">
+      <span class="item-title">笔记链接</span>
+      <span class="item-content">
+          <a href="obsidian://advanced-uri?vault=note&amp;uid=d9867c08-d7e0-4565-b742-ff9994c6d818">obsidian://advanced-uri?vault=note&amp;uid=d9867c08-d7e0-4565-b742-ff9994c6d818</a>
+      </span>
+    </p>
+  
+  
+    <p class="copyright-item">
+      <span class="item-title">文章链接</span>
+      <span class="item-content">
+          <a href="https://blog.fishyer.com/post/d9867c08-d7e0-4565-b742-ff9994c6d818/">https://blog.fishyer.com/post/d9867c08-d7e0-4565-b742-ff9994c6d818/</a>
+      </span>
+    </p>
+  
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/wx_zs.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/b67149e5-5093-4a0b-9133-c9d66e663be6/">
+            <span class="next-text nav-default">docker-部署SpringBoot服务</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    
+    const locale = {
+      nick: '昵称',
+      nickError: '昵称不能少于3个字符',
+      mail: '邮箱',
+      mailError: '请填写正确的邮件地址',
+      link: '网址',
+      optional: '可选',
+      placeholder: '欢迎评论，可以不登录，不填昵称、邮箱、网址哦~',
+      sofa: '来发评论吧~',
+      submit: '提交',
+      like: '喜欢',
+      cancelLike: '取消喜欢',
+      reply: '回复',
+      cancelReply: '取消回复',
+      comment: '评论',
+      refresh: '刷新',
+      more: '加载更多...',
+      preview: '预览',
+      emoji: '表情',
+      uploadImage: '上传图片',
+      seconds: '秒前',
+      minutes: '分钟前',
+      hours: '小时前',
+      days: '天前',
+      now: '刚刚',
+      uploading: '正在上传',
+      login: '登录',
+      logout: '退出',
+      admin: '博主',
+      sticky: '置顶',
+      word: '字',
+      wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+      anonymous: '匿名',
+      level0: '潜水',
+      level1: '冒泡',
+      level2: '吐槽',
+      level3: '活跃',
+      level4: '话痨',
+      level5: '传说',
+      gif: '表情包',
+      gifSearchPlaceholder: '搜索表情包',
+      profile: '个人资料',
+      approved: '通过',
+      waiting: '待审核',
+      spam: '垃圾',
+      unsticky: '取消置顶',
+      oldest: '按倒序',
+      latest: '按正序',
+      hottest: '按热度',
+      reactionTitle: '你认为这篇文章怎么样？',
+    };
+
+    init({
+      el: '#waline',
+      reaction: true, 
+      serverURL: 'https://waline.fishyer.com',
+      path: location.pathname,
+      locale,
+    });
+  </script>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:fishyer@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/fishyer" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/fishyer2850" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/481831994" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>fishyer</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+
+
+
+
+
+</body>
+</html>

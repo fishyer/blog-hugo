@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/b67149e5-5093-4a0b-9133-c9d66e663be6/</loc>
-    <lastmod>2024-05-12T10:52:48+08:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-05-12T21:16:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-05-12T10:52:48+08:00</lastmod>
+    <loc>http://localhost:1313/post/d9867c08-d7e0-4565-b742-ff9994c6d818/</loc>
+    <lastmod>2024-05-12T21:16:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2024-05-12T21:16:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/b67149e5-5093-4a0b-9133-c9d66e663be6/</loc>
     <lastmod>2024-05-12T10:52:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
