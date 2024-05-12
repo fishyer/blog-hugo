@@ -11,6 +11,9 @@ tags:
 zhihu-tags:
   - Obsidian
   - Markdown
+obsidianLink: obsidian://advanced-uri?vault=note&uid=7826b334-1950-4289-84a5-3fa6ac29b81c
+hugoLink: http://blog.fishyer.com/post/7826b334-1950-4289-84a5-3fa6ac29b81c/
+lastmod: 2024-05-12T10:10:45+08:00
 ---
 
 #Obsidian #Markdown 

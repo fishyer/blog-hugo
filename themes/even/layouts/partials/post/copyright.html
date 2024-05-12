@@ -19,6 +19,14 @@
       </span>
     </p>
   {{ end }}
+  {{ if .Params.hugoLink }}
+    <p class="copyright-item">
+      <span class="item-title">文章链接</span>
+      <span class="item-content">
+          <a href="{{ .Params.hugoLink | safeURL }}">{{ .Params.hugoLink }}</a>
+      </span>
+    </p>
+  {{ end }}
   {{ if $.Site.Params.linkToMarkDown -}}
     {{ with $.OutputFormats.Get "markdown" -}}
     <p class="copyright-item">
