@@ -1,10 +1,13 @@
 ---
-date: 2024-05-01 20:37:56
-lastmod: 2024-05-11 02:37:56
-timezone: UTC+8
-title: "Prisma-最好用的ORM框架"
-tags: ["配置", "git"]
-author: "fishyer"
+title: Prisma-最好用的ORM框架
+tags:
+  - 配置
+  - git
+aliases: []
+date: 2024-05-11T10:30:30+08:00
+updated_at: 2024-05-12T08:47:15+08:00
+id: 4b2f4739-42fc-4e2d-bedc-9be51ea57081
+slug: 4b2f4739-42fc-4e2d-bedc-9be51ea57081
 ---
 
 占位

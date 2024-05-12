@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>部署 on Fishyer&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 部署 on Fishyer&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 11 May 2024 12:32:37 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>宝塔部署笔记</title>
+      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
+      <pubDate>Sat, 11 May 2024 11:18:50 +0800</pubDate>
+      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
+      <description>#服务器面板 #部署 占位2222 #测试</description>
+    </item>
+  </channel>
+</rss>

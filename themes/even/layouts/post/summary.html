@@ -15,6 +15,16 @@
         <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
       {{- end }}
     </div>
+    <div class="post-meta">
+      <!-- 标签显示 -->
+      {{ with .Params.tags -}}
+        <div class="post-tags">
+          {{ range . -}}
+            <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}{{ if $.Site.Params.uglyURLs }}.html{{ else }}/{{ end }}">#{{ . }}</a>
+          {{ end -}}
+        </div>
+      {{- end -}}
+    </div>
   </header>
   <!-- Content -->
   <!-- <div class="post-content">

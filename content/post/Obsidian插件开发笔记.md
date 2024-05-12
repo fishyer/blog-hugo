@@ -6,6 +6,9 @@ title: Obsidian插件开发笔记
 tags:
   - Obsidian
   - 插件
+aliases: []
+updated_at: 2024-05-12T08:46:10+08:00
+slug: 4166e75d-1a12-48d3-97c8-651e135df537
 ---
 
 #占位

@@ -1,20 +1,14 @@
 ---
-zhihu-tags: Markdown, Obsidian
 zhihu-url: https://zhuanlan.zhihu.com/p/696946945
-updated_at: 2024-05-10 14:11:50
-created_at: 2024-05-10 12:03:13
-id: 45ea777a-2db0-4f3f-9ea0-c9fa523f76ef
 title: WPLs-introduction-and-test
-layout: post
-published: "true"
-date: 2017-08-30T01:37:56+08:00
-lastmod: 2024-05-11 10:45:49
-draft: false
+aliases: []
 tags:
-  - 工具
-  - 笔记
-author: fishyer
-timezone: UTC+8
+  - Markdown
+  - Obsidian
+date: 2024-05-10T12:03:13+08:00
+updated_at: 2024-05-12T08:56:15+08:00
+id: 9cae7f7c-09ed-45ff-bc8f-157e952582fe
+slug: 9cae7f7c-09ed-45ff-bc8f-157e952582fe
 ---
 
 

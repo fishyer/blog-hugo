@@ -6,84 +6,91 @@
     <description>Recent content in Posts on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 May 2024 10:58:03 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 08:40:26 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>docker-部署SpringBoot服务</title>
+      <link>http://localhost:1313/post/b67149e5-5093-4a0b-9133-c9d66e663be6/</link>
+      <pubDate>Sun, 12 May 2024 08:40:26 +0800</pubDate>
+      <guid>http://localhost:1313/post/b67149e5-5093-4a0b-9133-c9d66e663be6/</guid>
+      <description>1.在docker容器外使用mvn构建 其实就是先mvn clean package生成jar包 然后再将jar包拷贝到容器里面 问题在于：可能不同开发者的本</description>
+    </item>
+    <item>
       <title>Obsidian插件-自动添加元数据</title>
-      <link>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE/</link>
+      <link>http://localhost:1313/post/7826b334-1950-4289-84a5-3fa6ac29b81c/</link>
       <pubDate>Sat, 11 May 2024 12:16:47 +0800</pubDate>
-      <guid>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE/</guid>
-      <description>开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid</description>
+      <guid>http://localhost:1313/post/7826b334-1950-4289-84a5-3fa6ac29b81c/</guid>
+      <description>#Obsidian #Markdown 开发目的 尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞</description>
     </item>
     <item>
       <title>宝塔部署笔记</title>
-      <link>http://localhost:1313/post/%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
       <pubDate>Sat, 11 May 2024 11:18:50 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</guid>
-      <description>占位</description>
+      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
+      <description>#服务器面板 #部署 占位2222 #测试</description>
     </item>
     <item>
       <title>docker部署笔记</title>
-      <link>http://localhost:1313/post/docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/post/d8254244-0607-4d07-969a-307e8ac6ec9c/</link>
       <pubDate>Sat, 11 May 2024 11:18:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/docker%E9%83%A8%E7%BD%B2%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/post/d8254244-0607-4d07-969a-307e8ac6ec9c/</guid>
       <description>占位</description>
     </item>
     <item>
       <title>hugo-使用go构建的静态博客工具</title>
-      <link>http://localhost:1313/post/hugo-%E4%BD%BF%E7%94%A8go%E6%9E%84%E5%BB%BA%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7/</link>
+      <link>http://localhost:1313/post/4b10468b-f7ea-47bc-9d89-b5df4eb9e5c1/</link>
       <pubDate>Sat, 11 May 2024 10:55:47 +0800</pubDate>
-      <guid>http://localhost:1313/post/hugo-%E4%BD%BF%E7%94%A8go%E6%9E%84%E5%BB%BA%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7/</guid>
+      <guid>http://localhost:1313/post/4b10468b-f7ea-47bc-9d89-b5df4eb9e5c1/</guid>
       <description>速度很快，比Jekyll/Hexo都快222</description>
     </item>
     <item>
       <title>laf-云函数平台</title>
-      <link>http://localhost:1313/post/laf-%E4%BA%91%E5%87%BD%E6%95%B0%E5%B9%B3%E5%8F%B0/</link>
+      <link>http://localhost:1313/post/e1e8d18b-ff35-4d97-876e-88b464153c2a/</link>
       <pubDate>Sat, 11 May 2024 10:53:17 +0800</pubDate>
-      <guid>http://localhost:1313/post/laf-%E4%BA%91%E5%87%BD%E6%95%B0%E5%B9%B3%E5%8F%B0/</guid>
+      <guid>http://localhost:1313/post/e1e8d18b-ff35-4d97-876e-88b464153c2a/</guid>
       <description>占位 1111</description>
     </item>
     <item>
+      <title>FastApi-Python上最好用的Web框架</title>
+      <link>http://localhost:1313/post/c1c0b906-7eb5-4c47-a6a0-3ad695dbe8b8/</link>
+      <pubDate>Sat, 11 May 2024 10:44:15 +0800</pubDate>
+      <guid>http://localhost:1313/post/c1c0b906-7eb5-4c47-a6a0-3ad695dbe8b8/</guid>
+      <description>支持协程 自动生成文档 #FastApi #Python #Web框架 test</description>
+    </item>
+    <item>
       <title>Sealos-云托管平台</title>
-      <link>http://localhost:1313/post/sealos-%E4%BA%91%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0/</link>
+      <link>http://localhost:1313/post/a45fbd1a-016e-416d-8d81-cf037fd0128b/</link>
       <pubDate>Sat, 11 May 2024 10:43:19 +0800</pubDate>
-      <guid>http://localhost:1313/post/sealos-%E4%BA%91%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0/</guid>
+      <guid>http://localhost:1313/post/a45fbd1a-016e-416d-8d81-cf037fd0128b/</guid>
       <description>占位</description>
     </item>
     <item>
-      <title>Obsidian插件开发笔记</title>
-      <link>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Fri, 10 May 2024 11:19:02 +0800</pubDate>
-      <guid>http://localhost:1313/post/obsidian%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
-      <description>#占位 1111 2222 3333</description>
-    </item>
-    <item>
-      <title>FastApi-Python上最好用的Web框架</title>
-      <link>http://localhost:1313/post/fastapi-python%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84web%E6%A1%86%E6%9E%B6/</link>
-      <pubDate>Thu, 09 May 2024 10:44:15 +0000</pubDate>
-      <guid>http://localhost:1313/post/fastapi-python%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84web%E6%A1%86%E6%9E%B6/</guid>
-      <description>支持协程 自动生成文档</description>
-    </item>
-    <item>
-      <title>git-更新忽略文件</title>
-      <link>http://localhost:1313/post/git-%E6%9B%B4%E6%96%B0%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/git-%E6%9B%B4%E6%96%B0%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/</guid>
-      <description>1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39;</description>
-    </item>
-    <item>
       <title>Prisma-最好用的ORM框架</title>
-      <link>http://localhost:1313/post/prisma-%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84orm%E6%A1%86%E6%9E%B6/</link>
-      <pubDate>Wed, 01 May 2024 20:37:56 +0000</pubDate>
-      <guid>http://localhost:1313/post/prisma-%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84orm%E6%A1%86%E6%9E%B6/</guid>
+      <link>http://localhost:1313/post/4b2f4739-42fc-4e2d-bedc-9be51ea57081/</link>
+      <pubDate>Sat, 11 May 2024 10:30:30 +0800</pubDate>
+      <guid>http://localhost:1313/post/4b2f4739-42fc-4e2d-bedc-9be51ea57081/</guid>
       <description>占位</description>
     </item>
     <item>
       <title>WPLs-introduction-and-test</title>
-      <link>http://localhost:1313/post/wpls-introduction-and-test/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      <guid>http://localhost:1313/post/wpls-introduction-and-test/</guid>
+      <link>http://localhost:1313/post/9cae7f7c-09ed-45ff-bc8f-157e952582fe/</link>
+      <pubDate>Fri, 10 May 2024 12:03:13 +0800</pubDate>
+      <guid>http://localhost:1313/post/9cae7f7c-09ed-45ff-bc8f-157e952582fe/</guid>
       <description>WPL/s 是一个在 VS Code 中发布知乎文章/回答的插件。在 VS Code 中搜索 zhihu ，安装即可，如下图。虽然目前排在最后一个&amp;#x1f622;。 Markdown基础功能</description>
+    </item>
+    <item>
+      <title>Obsidian插件开发笔记</title>
+      <link>http://localhost:1313/post/4166e75d-1a12-48d3-97c8-651e135df537/</link>
+      <pubDate>Fri, 10 May 2024 11:19:02 +0800</pubDate>
+      <guid>http://localhost:1313/post/4166e75d-1a12-48d3-97c8-651e135df537/</guid>
+      <description>#占位 1111 2222 3333</description>
+    </item>
+    <item>
+      <title>git-更新忽略文件</title>
+      <link>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
+      <description>直接重建git暂存区 1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39; 移除指定文件 1 git rm --cached redis/dump.rdb</description>
     </item>
     <item>
       <title>长恨歌-白居易</title>

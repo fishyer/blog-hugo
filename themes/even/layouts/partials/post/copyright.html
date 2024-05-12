@@ -11,6 +11,14 @@
         {{ with .GitInfo }}<a href="{{ $.Site.Params.gitRepo }}/commit/{{ .Hash }}" title="{{ .Subject }}">({{ .AbbreviatedHash }})</a>{{ end }}
     </span>
   </p>
+  {{ if .Params.obsidianLink }}
+    <p class="copyright-item">
+      <span class="item-title">{{ T "obsidianLink" }}</span>
+      <span class="item-content">
+          <a href="{{ .Params.obsidianLink | safeURL }}">{{ .Params.obsidianLink }}</a>
+      </span>
+    </p>
+  {{ end }}
   {{ if $.Site.Params.linkToMarkDown -}}
     {{ with $.OutputFormats.Get "markdown" -}}
     <p class="copyright-item">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Fishyer&#39;s Blog</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Fishyer&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 11 May 2024 13:30:54 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Obsidian插件-自动添加元数据</title>
+      <link>http://localhost:1313/post/1c701082-2351-4aed-8081-ff3b55e3ac25/</link>
+      <pubDate>Sat, 11 May 2024 12:16:47 +0800</pubDate>
+      <guid>http://localhost:1313/post/1c701082-2351-4aed-8081-ff3b55e3ac25/</guid>
+      <description>开发目的 被知乎和微信夹了几篇博文以后，感觉还是得搞一个自己的博客站点，以前用Notion搞的，但是现在Notion用的少了，反而是Obsid</description>
+    </item>
+  </channel>
+</rss>
