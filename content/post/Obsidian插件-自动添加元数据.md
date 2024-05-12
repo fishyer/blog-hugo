@@ -1,20 +1,20 @@
 ---
 title: Obsidian插件-自动添加元数据
-date: 2024-05-11T12:16:47+08:00
-updated_at: 2024-05-12T09:52:51+08:00
-id: 7826b334-1950-4289-84a5-3fa6ac29b81c
-slug: 7826b334-1950-4289-84a5-3fa6ac29b81c
 aliases: []
+date: 2024-05-11T12:16:47+08:00
+lastmod: 2024-05-12T10:51:39+08:00
+id: 2404c029-6f31-43fa-900f-51ee6951269d
+slug: 2404c029-6f31-43fa-900f-51ee6951269d
+obsidianLink: obsidian://advanced-uri?vault=note&uid=2404c029-6f31-43fa-900f-51ee6951269d
+hugoLink: https://blog.fishyer.com/post/2404c029-6f31-43fa-900f-51ee6951269d/
 tags:
   - Obsidian
   - Markdown
 zhihu-tags:
   - Obsidian
   - Markdown
-obsidianLink: obsidian://advanced-uri?vault=note&uid=7826b334-1950-4289-84a5-3fa6ac29b81c
-hugoLink: http://blog.fishyer.com/post/7826b334-1950-4289-84a5-3fa6ac29b81c/
-lastmod: 2024-05-12T10:10:45+08:00
 ---
+
 
 #Obsidian #Markdown 
 

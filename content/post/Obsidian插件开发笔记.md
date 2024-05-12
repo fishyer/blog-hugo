@@ -1,15 +1,18 @@
 ---
-lastmod: 2024-05-11T12:11:04+08:00
-date: 2024-05-10T11:19:02+08:00
-id: 4166e75d-1a12-48d3-97c8-651e135df537
 title: Obsidian插件开发笔记
-tags:
-  - Obsidian
-  - 插件
 aliases: []
-updated_at: 2024-05-12T08:46:10+08:00
-slug: 4166e75d-1a12-48d3-97c8-651e135df537
+date: 2024-05-11T11:19:02+08:00
+lastmod: 2024-05-12T10:48:58+08:00
+id: d06c89ae-40f9-43b3-aaed-ebb95555d62c
+slug: d06c89ae-40f9-43b3-aaed-ebb95555d62c
+obsidianLink: obsidian://advanced-uri?vault=note&uid=d06c89ae-40f9-43b3-aaed-ebb95555d62c
+hugoLink: https://blog.fishyer.com/post/d06c89ae-40f9-43b3-aaed-ebb95555d62c/
+tags:
+  - 占位
+zhihu-tags:
+  - 占位
 ---
+
 
 #占位
 

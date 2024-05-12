@@ -1,11 +1,14 @@
 ---
 title: docker-部署SpringBoot服务
 aliases: []
-tags: []
 date: 2024-05-12T08:40:26+08:00
-updated_at: 2024-05-12T08:45:51+08:00
+lastmod: 2024-05-12T10:48:36+08:00
 id: b67149e5-5093-4a0b-9133-c9d66e663be6
 slug: b67149e5-5093-4a0b-9133-c9d66e663be6
+obsidianLink: obsidian://advanced-uri?vault=note&uid=b67149e5-5093-4a0b-9133-c9d66e663be6
+hugoLink: https://blog.fishyer.com/post/b67149e5-5093-4a0b-9133-c9d66e663be6/
+tags: []
+zhihu-tags: []
 ---
 
 ## 1.在docker容器外使用mvn构建

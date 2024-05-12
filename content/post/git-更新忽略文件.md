@@ -1,9 +1,9 @@
 ---
-date: 2024-05-02
-lastmod: 2024-05-12T10:24:53+08:00
 title: git-更新忽略文件
-id: 150d2523-82e2-48b4-af49-db9c857cf9d8
 aliases: []
+date: 2024-05-02
+lastmod: 2024-05-12T10:51:20+08:00
+id: 150d2523-82e2-48b4-af49-db9c857cf9d8
 slug: 150d2523-82e2-48b4-af49-db9c857cf9d8
 obsidianLink: obsidian://advanced-uri?vault=note&uid=150d2523-82e2-48b4-af49-db9c857cf9d8
 hugoLink: https://blog.fishyer.com/post/150d2523-82e2-48b4-af49-db9c857cf9d8/

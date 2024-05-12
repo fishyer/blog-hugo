@@ -2,13 +2,14 @@
 zhihu-url: https://zhuanlan.zhihu.com/p/696946945
 title: WPLs-introduction-and-test
 aliases: []
-tags:
-  - Markdown
-  - Obsidian
 date: 2024-05-10T12:03:13+08:00
-updated_at: 2024-05-12T08:56:15+08:00
+lastmod: 2024-05-12T10:48:44+08:00
 id: 9cae7f7c-09ed-45ff-bc8f-157e952582fe
 slug: 9cae7f7c-09ed-45ff-bc8f-157e952582fe
+obsidianLink: obsidian://advanced-uri?vault=note&uid=9cae7f7c-09ed-45ff-bc8f-157e952582fe
+hugoLink: https://blog.fishyer.com/post/9cae7f7c-09ed-45ff-bc8f-157e952582fe/
+tags: []
+zhihu-tags: []
 ---
 
 

@@ -1,13 +1,16 @@
 ---
-lastmod: 2024-05-11T10:55:25+08:00
-date: 2024-05-11T10:53:17+08:00
-id: e1e8d18b-ff35-4d97-876e-88b464153c2a
 title: laf-云函数平台
 aliases: []
+date: 2024-05-11T10:43:35+08:00
+lastmod: 2024-05-12T10:51:23+08:00
+id: 6eb3c29f-80df-4ee7-9ba2-43962583d51e
+slug: 6eb3c29f-80df-4ee7-9ba2-43962583d51e
+obsidianLink: obsidian://advanced-uri?vault=note&uid=6eb3c29f-80df-4ee7-9ba2-43962583d51e
+hugoLink: https://blog.fishyer.com/post/6eb3c29f-80df-4ee7-9ba2-43962583d51e/
 tags: []
-slug: e1e8d18b-ff35-4d97-876e-88b464153c2a
-updated_at: 2024-05-12T08:46:58+08:00
+zhihu-tags: []
 ---
+
 占位
 
 1111
