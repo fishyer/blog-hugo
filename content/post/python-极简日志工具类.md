@@ -2,13 +2,17 @@
 title: python-极简日志工具类
 aliases: []
 date: 2024-05-14T00:06:11+08:00
-lastmod: 2024-05-14T00:19:57+08:00
+lastmod: 2024-05-14T01:53:06+08:00
 id: 8510cb4a-9c19-4ec6-ad1e-67f8c6616af5
 slug: 8510cb4a-9c19-4ec6-ad1e-67f8c6616af5
 obsidianLink: obsidian://advanced-uri?vault=note&uid=8510cb4a-9c19-4ec6-ad1e-67f8c6616af5
 hugoLink: https://blog.fishyer.com/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/
-tags: [python, 工具类, 日志]
+tags:
+  - python
+  - 工具类
 ---
+
+#python #工具类 
 
 用过不少的日志工具类，要么太重了，要么就是不太灵活，不方便自己定制化，感觉不如直接自己动手写算了。
 
