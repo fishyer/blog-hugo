@@ -6,14 +6,14 @@
     <description>Recent content in 日志 on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 May 2024 00:19:57 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 01:31:19 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python-极简日志工具类</title>
       <link>http://localhost:1313/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</link>
       <pubDate>Tue, 14 May 2024 00:06:11 +0800</pubDate>
       <guid>http://localhost:1313/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</guid>
-      <description>用过不少的日志工具类，感觉要么太重了，要么就是不太灵活，不方便自己定制化，感觉不如直接自己动手写算了。 介绍 只用系统库封装的极简日志工具类，实</description>
+      <description>用过不少的日志工具类，要么太重了，要么就是不太灵活，不方便自己定制化，感觉不如直接自己动手写算了。 介绍 只用系统库封装的极简日志工具类，实现功</description>
     </item>
   </channel>
 </rss>
