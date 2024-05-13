@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/python/</link>
-    <description>Recent content in Python on Fishyer&#39;s Blog</description>
+    <title>工具类 on Fishyer&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+    <description>Recent content in 工具类 on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 14 May 2024 00:19:57 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python-极简日志工具类</title>
       <link>http://localhost:1313/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</link>
       <pubDate>Tue, 14 May 2024 00:06:11 +0800</pubDate>
       <guid>http://localhost:1313/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</guid>
       <description>用过不少的日志工具类，感觉要么太重了，要么就是不太灵活，不方便自己定制化，感觉不如直接自己动手写算了。 介绍 只用系统库封装的极简日志工具类，实</description>
-    </item>
-    <item>
-      <title>FastApi-Python上最好用的Web框架</title>
-      <link>http://localhost:1313/post/c1c0b906-7eb5-4c47-a6a0-3ad695dbe8b8/</link>
-      <pubDate>Sat, 11 May 2024 10:44:15 +0800</pubDate>
-      <guid>http://localhost:1313/post/c1c0b906-7eb5-4c47-a6a0-3ad695dbe8b8/</guid>
-      <description>支持协程 自动生成文档 #FastApi #Python #Web框架 test</description>
     </item>
   </channel>
 </rss>

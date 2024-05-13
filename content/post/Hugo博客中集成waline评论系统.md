@@ -2,7 +2,7 @@
 title: Hugo博客中集成waline评论系统
 aliases: []
 date: 2024-05-12T20:11:04+08:00
-lastmod: 2024-05-12T21:33:26+08:00
+lastmod: 2024-05-14T00:14:15+08:00
 id: d9867c08-d7e0-4565-b742-ff9994c6d818
 slug: d9867c08-d7e0-4565-b742-ff9994c6d818
 obsidianLink: obsidian://advanced-uri?vault=note&uid=d9867c08-d7e0-4565-b742-ff9994c6d818
