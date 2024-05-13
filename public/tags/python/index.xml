@@ -6,14 +6,14 @@
     <description>Recent content in Python on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 May 2024 02:01:56 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 02:02:29 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python-极简装饰器工具类</title>
       <link>http://localhost:1313/post/f415170e-1284-46f2-86cc-fc67776935df/</link>
       <pubDate>Tue, 14 May 2024 01:53:48 +0800</pubDate>
       <guid>http://localhost:1313/post/f415170e-1284-46f2-86cc-fc67776935df/</guid>
-      <description>#python #工具类 先放源码，介绍之后再补。哈哈，感觉自己要把blog当做gist来用了。 源码-工具类 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24</description>
+      <description>#python #工具类 先放源码，之后再完善。哈哈，感觉自己要把blog当做gist来用了。 其实也不用多介绍了，看一下源码就知道怎么回事了。源码胜过文档。</description>
     </item>
     <item>
       <title>python-极简日志工具类</title>

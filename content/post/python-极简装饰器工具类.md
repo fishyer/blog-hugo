@@ -2,7 +2,7 @@
 title: python-极简装饰器工具类
 aliases: []
 date: 2024-05-14T01:53:48+08:00
-lastmod: 2024-05-14T02:01:56+08:00
+lastmod: 2024-05-14T02:08:53+08:00
 id: f415170e-1284-46f2-86cc-fc67776935df
 slug: f415170e-1284-46f2-86cc-fc67776935df
 obsidianLink: obsidian://advanced-uri?vault=note&uid=f415170e-1284-46f2-86cc-fc67776935df
@@ -14,8 +14,19 @@ tags:
 
 #python #工具类
 
-先放源码，介绍之后再补。哈哈，感觉自己要把blog当做gist来用了。
+先放源码，之后再完善。哈哈，感觉自己要把blog当做gist来用了。
 
+其实也不用多介绍了，看一下源码就知道怎么回事了。源码胜过文档。一般来说，代码写不好的人，文档也会写得稀烂。
+
+
+## 功能介绍
+1. trace_time：打印函数的执行时间
+2. trace_args：打印函数的入参和出参
+3. trace_exception：捕获并打印函数的异常
+4. trace_validate：检查并打印参数校验结果
+5. trace_retry：指定重试次数和延迟时间
+
+未来可能还会在这个工具类中添加更多好用的装饰器，感觉python的装饰器要比java里面的AOP更简单方便一点
 
 ## 源码-工具类
 
