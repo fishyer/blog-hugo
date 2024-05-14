@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python-函数式编程之纯数据类 - Fishyer&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="fishyer" /><meta name="description" content="看到一个观点：用纯函数&#43;纯数据类可以很大程度上代替掉面向对象，不用创建复杂的class类。 比如一个面向对象的写法：clazz.run(arg" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.125.7 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/e5a92298-4d68-4912-ae8b-10640acc57f3/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.35a28153ad50513521415b53ff28bc5a730019565c3dd09fba91d754a0c1c62d.css" rel="stylesheet">
+
+
+
+<meta property="og:url" content="http://localhost:1313/post/e5a92298-4d68-4912-ae8b-10640acc57f3/">
+  <meta property="og:site_name" content="Fishyer&#39;s Blog">
+  <meta property="og:title" content="python-函数式编程之纯数据类">
+  <meta property="og:description" content="看到一个观点：用纯函数&#43;纯数据类可以很大程度上代替掉面向对象，不用创建复杂的class类。 比如一个面向对象的写法：clazz.run(arg">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-14T16:25:30+08:00">
+    <meta property="article:modified_time" content="2024-05-14T17:00:48+08:00">
+
+  <meta itemprop="name" content="python-函数式编程之纯数据类">
+  <meta itemprop="description" content="看到一个观点：用纯函数&#43;纯数据类可以很大程度上代替掉面向对象，不用创建复杂的class类。 比如一个面向对象的写法：clazz.run(arg">
+  <meta itemprop="datePublished" content="2024-05-14T16:25:30+08:00">
+  <meta itemprop="dateModified" content="2024-05-14T17:00:48+08:00">
+  <meta itemprop="wordCount" content="1047"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="python-函数式编程之纯数据类">
+<meta name="twitter:description" content="看到一个观点：用纯函数&#43;纯数据类可以很大程度上代替掉面向对象，不用创建复杂的class类。 比如一个面向对象的写法：clazz.run(arg">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Fishyer</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/aboutme/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Fishyer</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/aboutme/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python-函数式编程之纯数据类</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-05-14 </span>
+        
+          <span class="more-meta"> 约 1047 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+      <div class="post-meta">
+        
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>看到一个观点：用纯函数+纯数据类可以很大程度上代替掉面向对象，不用创建复杂的class类。</p>
+<p>比如一个面向对象的写法：clazz.run(args)完全可以替换成run(clazz,args)的写法，让所有的函数都是一等公民，不必依赖于类而存在。</p>
+<p>而run方法还可以做为变量去做另外一个函数的入参或者出参，比如：invoke_run(run,data)，这样可以极大的增加程序的灵活性，而不必定义可能只会被继承一次的Java接口:RunInterface。</p>
+<p>这是类方法被代替的案例，那么对象方法怎么被代替呢。对象方法里面经常会依赖了对象参数。这个时候，就可以用到纯数据类了。</p>
+<p>比如一个User对象，有login方法，依赖了username和password两个参数。之前用python写面向对象的时候，感觉有点冗余:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;登录成功！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;用户名或密码错误。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 示例</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&#34;example_user&#34;</span><span class="p">,</span> <span class="s2">&#34;example_password&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&#34;example_user&#34;</span><span class="p">,</span> <span class="s2">&#34;example_password&#34;</span><span class="p">)</span>  <span class="c1"># 应该打印出 &#34;登录成功！&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&#34;wrong_user&#34;</span><span class="p">,</span> <span class="s2">&#34;example_password&#34;</span><span class="p">)</span>  <span class="c1"># 应该打印出 &#34;用户名或密码错误。&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>而改成函数式编程写法，可以这样,将login函数和User数据类独立：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@dataclass</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">User</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;登录成功！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;用户名或密码错误。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>之前不是有句话嘛，程序=数据结构+算法。那么，在函数式编程里，程序=纯数据类+纯函数。尽量让函数只依赖于它的入参，不依赖于其它的全局变量。如果确实要依赖全局变量呢？那就再加一个函数入参GlobalVariable数据类:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@dataclass</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GlobalVariable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">key1</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">key2</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">key3</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">gv</span><span class="p">:</span> <span class="n">GlobalVariable</span><span class="p">,</span> <span class="bp">self</span><span class="p">:</span> <span class="n">User</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;登录成功！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;用户名或密码错误。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gv</span> <span class="o">=</span> <span class="n">GlobalVariable</span><span class="p">(</span><span class="s2">&#34;value1&#34;</span><span class="p">,</span> <span class="s2">&#34;value2&#34;</span><span class="p">,</span> <span class="s2">&#34;value3&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&#34;example_user&#34;</span><span class="p">,</span> <span class="s2">&#34;example_password&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">login</span><span class="p">(</span><span class="n">gv</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="s2">&#34;example_user&#34;</span><span class="p">,</span> <span class="s2">&#34;example_password&#34;</span><span class="p">)</span>  <span class="c1"># 应该打印出 &#34;登录成功！&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">login</span><span class="p">(</span><span class="n">gv</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="s2">&#34;wrong_user&#34;</span><span class="p">,</span> <span class="s2">&#34;example_password&#34;</span><span class="p">)</span>  <span class="c1"># 应该打印出 &#34;用户名或密码错误。&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>纯函数的好处就是：极大的提高了可测试性。</p>
+<p>上面的@dataclass的python 3.7以后引用的一个系统库，可以自动添加<code>__init__</code>、<code>__repr__</code>、<code>__eq__</code>等，减少了样板代码，使类更加简洁。</p>
+<p>简洁的好处就是：代码量越少，出bug的可能性越小。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">fishyer</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2024-05-14
+        
+    </span>
+  </p>
+  
+    <p class="copyright-item">
+      <span class="item-title">笔记链接</span>
+      <span class="item-content">
+          <a href="obsidian://advanced-uri?vault=note&amp;uid=e5a92298-4d68-4912-ae8b-10640acc57f3">obsidian://advanced-uri?vault=note&amp;uid=e5a92298-4d68-4912-ae8b-10640acc57f3</a>
+      </span>
+    </p>
+  
+  
+    <p class="copyright-item">
+      <span class="item-title">文章链接</span>
+      <span class="item-content">
+          <a href="https://blog.fishyer.com/post/e5a92298-4d68-4912-ae8b-10640acc57f3/">https://blog.fishyer.com/post/e5a92298-4d68-4912-ae8b-10640acc57f3/</a>
+      </span>
+    </p>
+  
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/wx_zs.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/966099a8-b25d-47fd-ac52-689c930cdb99/">
+            <span class="next-text nav-default">python-快速使用pytest&#43;allure生成测试报告网页</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    
+    const locale = {
+      nick: '昵称',
+      nickError: '昵称不能少于3个字符',
+      mail: '邮箱',
+      mailError: '请填写正确的邮件地址',
+      link: '网址',
+      optional: '可选',
+      placeholder: '欢迎评论，可以不登录，不填昵称、邮箱、网址哦~',
+      sofa: '来发评论吧~',
+      submit: '提交',
+      like: '喜欢',
+      cancelLike: '取消喜欢',
+      reply: '回复',
+      cancelReply: '取消回复',
+      comment: '评论',
+      refresh: '刷新',
+      more: '加载更多...',
+      preview: '预览',
+      emoji: '表情',
+      uploadImage: '上传图片',
+      seconds: '秒前',
+      minutes: '分钟前',
+      hours: '小时前',
+      days: '天前',
+      now: '刚刚',
+      uploading: '正在上传',
+      login: '登录',
+      logout: '退出',
+      admin: '博主',
+      sticky: '置顶',
+      word: '字',
+      wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+      anonymous: '匿名',
+      level0: '潜水',
+      level1: '冒泡',
+      level2: '吐槽',
+      level3: '活跃',
+      level4: '话痨',
+      level5: '传说',
+      gif: '表情包',
+      gifSearchPlaceholder: '搜索表情包',
+      profile: '个人资料',
+      approved: '通过',
+      waiting: '待审核',
+      spam: '垃圾',
+      unsticky: '取消置顶',
+      oldest: '按倒序',
+      latest: '按正序',
+      hottest: '按热度',
+      reactionTitle: '你认为这篇文章怎么样？',
+    };
+
+    init({
+      el: '#waline',
+      reaction: true, 
+      serverURL: 'https://waline.fishyer.com',
+      path: location.pathname,
+      locale,
+    });
+  </script>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:fishyer@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/fishyer" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/fishyer2850" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/481831994" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>fishyer</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+
+
+
+
+
+</body>
+</html>
