@@ -2,7 +2,7 @@
 title: python-函数式编程之纯数据类
 aliases: []
 date: 2024-05-14T16:25:30+08:00
-lastmod: 2024-05-14T17:02:49+08:00
+lastmod: 2024-05-14T17:04:29+08:00
 id: e5a92298-4d68-4912-ae8b-10640acc57f3
 slug: e5a92298-4d68-4912-ae8b-10640acc57f3
 obsidianLink: obsidian://advanced-uri?vault=note&uid=e5a92298-4d68-4912-ae8b-10640acc57f3
@@ -93,7 +93,7 @@ if __name__ == "__main__":
 
 ```
 
-纯函数的好处就是：极大的提高了可测试性。
+纯函数的好处就是：极大的提高了可测试性。我们在做单测时，可以想怎么mock就怎么mock，还可以保证多次测试的一致性。
 
 上面的@dataclass的python 3.7以后引用的一个系统库，可以自动添加`__init__`、`__repr__`、`__eq__`等，减少了样板代码，使类更加简洁。
 
