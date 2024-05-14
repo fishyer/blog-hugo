@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>依赖管理 on Fishyer&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 依赖管理 on Fishyer&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 14 May 2024 15:02:18 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python-模块导入的最佳方案</title>
+      <link>http://localhost:1313/post/9e840039-9d01-4eee-b2de-e97c754b9ec7/</link>
+      <pubDate>Tue, 14 May 2024 14:56:59 +0800</pubDate>
+      <guid>http://localhost:1313/post/9e840039-9d01-4eee-b2de-e97c754b9ec7/</guid>
+      <description>#python #依赖管理 配置全局工具库 比如现在我有一个工具库：/Users/yutianran/MyGithub/fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py</description>
+    </item>
+  </channel>
+</rss>

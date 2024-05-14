@@ -2,7 +2,7 @@
 title: python-极简装饰器工具类
 aliases: []
 date: 2024-05-14T01:53:48+08:00
-lastmod: 2024-05-14T02:08:53+08:00
+lastmod: 2024-05-14T11:27:08+08:00
 id: f415170e-1284-46f2-86cc-fc67776935df
 slug: f415170e-1284-46f2-86cc-fc67776935df
 obsidianLink: obsidian://advanced-uri?vault=note&uid=f415170e-1284-46f2-86cc-fc67776935df
@@ -26,7 +26,7 @@ tags:
 4. trace_validate：检查并打印参数校验结果
 5. trace_retry：指定重试次数和延迟时间
 
-未来可能还会在这个工具类中添加更多好用的装饰器，感觉python的装饰器要比java里面的AOP更简单方便一点
+未来可能还会在这个工具类中添加更多好用的装饰器，感觉python的装饰器要比java里面的AOP更简单方便一点，比如支持lru_cache/disk_lru_cache
 
 ## 源码-工具类
 
