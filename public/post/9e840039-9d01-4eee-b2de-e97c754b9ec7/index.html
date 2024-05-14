@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="fishyer" /><meta name="description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：/Users/yutianran/MyGithub/fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="fishyer" /><meta name="description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py init.py decorator_util.py content_format.py tree_util.py common_op.py init.py README.md .gitignore main.py start_pytest.sh 那么，./test/test_l" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -42,22 +42,22 @@
 <meta property="og:url" content="http://localhost:1313/post/9e840039-9d01-4eee-b2de-e97c754b9ec7/">
   <meta property="og:site_name" content="Fishyer&#39;s Blog">
   <meta property="og:title" content="python-模块导入的最佳方案">
-  <meta property="og:description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：/Users/yutianran/MyGithub/fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py">
+  <meta property="og:description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py init.py decorator_util.py content_format.py tree_util.py common_op.py init.py README.md .gitignore main.py start_pytest.sh 那么，./test/test_l">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
     <meta property="article:published_time" content="2024-05-14T14:56:59+08:00">
-    <meta property="article:modified_time" content="2024-05-14T15:02:18+08:00">
+    <meta property="article:modified_time" content="2024-05-14T15:02:56+08:00">
     <meta property="article:tag" content="Python">
     <meta property="article:tag" content="依赖管理">
 
   <meta itemprop="name" content="python-模块导入的最佳方案">
-  <meta itemprop="description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：/Users/yutianran/MyGithub/fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py">
+  <meta itemprop="description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py init.py decorator_util.py content_format.py tree_util.py common_op.py init.py README.md .gitignore main.py start_pytest.sh 那么，./test/test_l">
   <meta itemprop="datePublished" content="2024-05-14T14:56:59+08:00">
-  <meta itemprop="dateModified" content="2024-05-14T15:02:18+08:00">
-  <meta itemprop="wordCount" content="757">
+  <meta itemprop="dateModified" content="2024-05-14T15:02:56+08:00">
+  <meta itemprop="wordCount" content="729">
   <meta itemprop="keywords" content="Python,依赖管理"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="python-模块导入的最佳方案">
-<meta name="twitter:description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：/Users/yutianran/MyGithub/fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py">
+<meta name="twitter:description" content="#python #依赖管理 配置全局工具库 比如现在我有一个工具库：fish_util： /Users/yutianran/MyGithub/fish_util test test_log_util.py test_allure.py init.py test_decorator_util.py src internal_var.py log_util.py init.py decorator_util.py content_format.py tree_util.py common_op.py init.py README.md .gitignore main.py start_pytest.sh 那么，./test/test_l">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -145,7 +145,7 @@ gtag('config', 'G-9Z9QVXELHX');
       <div class="post-meta">
         <span class="post-time"> 2024-05-14 </span>
         
-          <span class="more-meta"> 约 757 字 </span>
+          <span class="more-meta"> 约 729 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -174,7 +174,7 @@ gtag('config', 'G-9Z9QVXELHX');
     <div class="post-content">
       <p>#python #依赖管理</p>
 <h2 id="配置全局工具库">配置全局工具库</h2>
-<p>比如现在我有一个工具库：/Users/yutianran/MyGithub/fish_util：</p>
+<p>比如现在我有一个工具库：fish_util：</p>
 <ul>
 <li>/Users/yutianran/MyGithub/fish_util
 <ul>
@@ -215,8 +215,8 @@ gtag('config', 'G-9Z9QVXELHX');
 <p>但是这3种方案都有缺点：</p>
 <ol>
 <li>第1种要在每一个测试文件都加，太麻烦了</li>
-<li>第2种的话，运行main.py可以正常执行，直接运行test_log_util.py会报错：ImportError: attempted relative import with no known parent package
-3.第3种呢，以后每一个python项目中这种同一项目中不同模块互相导入都得加入环境变量么？那环境变量得加多少呀。</li>
+<li>第2种的话，运行main.py可以正常执行，直接运行test_log_util.py会报错：ImportError: attempted relative import with no known parent package</li>
+<li>第3种呢，以后每一个python项目中这种同一项目中不同模块互相导入都得加入环境变量么？那环境变量得加多少呀。</li>
 </ol>
 <p>综合考虑，我觉得最佳解决方案是这样的：</p>
 <ol>
@@ -245,7 +245,7 @@ gtag('config', 'G-9Z9QVXELHX');
     <span class="item-title">上次更新</span>
     <span class="item-content">
         2024-05-14
-        
+        <a href="https://github.com/fishyer/blog-hugo/commit/9c2674c7f080ebea79a44f5acbbe971a078cb4b7" title="update blog at 2024-05-14 15:02:56">(9c2674c)</a>
     </span>
   </p>
   
