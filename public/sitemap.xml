@@ -3,21 +3,21 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-05-14T17:00:48+08:00</lastmod>
+    <lastmod>2024-05-14T17:01:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-05-14T17:00:48+08:00</lastmod>
+    <lastmod>2024-05-14T17:01:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/e5a92298-4d68-4912-ae8b-10640acc57f3/</loc>
-    <lastmod>2024-05-14T17:00:48+08:00</lastmod>
+    <lastmod>2024-05-14T17:01:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -2,7 +2,7 @@
 title: python-函数式编程之纯数据类
 aliases: []
 date: 2024-05-14T16:25:30+08:00
-lastmod: 2024-05-14T17:00:48+08:00
+lastmod: 2024-05-14T17:02:49+08:00
 id: e5a92298-4d68-4912-ae8b-10640acc57f3
 slug: e5a92298-4d68-4912-ae8b-10640acc57f3
 obsidianLink: obsidian://advanced-uri?vault=note&uid=e5a92298-4d68-4912-ae8b-10640acc57f3
@@ -14,7 +14,7 @@ tags: []
 
 比如一个面向对象的写法：clazz.run(args)完全可以替换成run(clazz,args)的写法，让所有的函数都是一等公民，不必依赖于类而存在。
 
-而run方法还可以做为变量去做另外一个函数的入参或者出参，比如：invoke_run(run,data)，这样可以极大的增加程序的灵活性，而不必定义可能只会被继承一次的Java接口:RunInterface。
+而run方法还可以做为变量去做另外一个函数的入参或者出参，比如：invoke_run(run,data)，这样可以极大的增加程序的灵活性，而不必定义可能只会被继承一次的接口类:RunInterface。
 
 这是类方法被代替的案例，那么对象方法怎么被代替呢。对象方法里面经常会依赖了对象参数。这个时候，就可以用到纯数据类了。
 
