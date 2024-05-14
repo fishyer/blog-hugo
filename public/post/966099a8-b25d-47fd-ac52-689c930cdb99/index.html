@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python-快速使用pytest&#43;allure生成测试报告网页 - Fishyer&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="fishyer" /><meta name="description" content="#python #单元测试 Mac上安装依赖 1 2 brew install allure pip install pytest allure-pytest pytest的查找规则-可选项 pytest查找测试用例的默认匹配规则： 测试文件以test_开头" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.125.7 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/966099a8-b25d-47fd-ac52-689c930cdb99/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.35a28153ad50513521415b53ff28bc5a730019565c3dd09fba91d754a0c1c62d.css" rel="stylesheet">
+
+
+
+<meta property="og:url" content="http://localhost:1313/post/966099a8-b25d-47fd-ac52-689c930cdb99/">
+  <meta property="og:site_name" content="Fishyer&#39;s Blog">
+  <meta property="og:title" content="python-快速使用pytest&#43;allure生成测试报告网页">
+  <meta property="og:description" content="#python #单元测试 Mac上安装依赖 1 2 brew install allure pip install pytest allure-pytest pytest的查找规则-可选项 pytest查找测试用例的默认匹配规则： 测试文件以test_开头">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-14T15:29:15+08:00">
+    <meta property="article:modified_time" content="2024-05-14T16:04:01+08:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="单元测试">
+
+  <meta itemprop="name" content="python-快速使用pytest&#43;allure生成测试报告网页">
+  <meta itemprop="description" content="#python #单元测试 Mac上安装依赖 1 2 brew install allure pip install pytest allure-pytest pytest的查找规则-可选项 pytest查找测试用例的默认匹配规则： 测试文件以test_开头">
+  <meta itemprop="datePublished" content="2024-05-14T15:29:15+08:00">
+  <meta itemprop="dateModified" content="2024-05-14T16:04:01+08:00">
+  <meta itemprop="wordCount" content="1443">
+  <meta itemprop="keywords" content="Python,单元测试"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="python-快速使用pytest&#43;allure生成测试报告网页">
+<meta name="twitter:description" content="#python #单元测试 Mac上安装依赖 1 2 brew install allure pip install pytest allure-pytest pytest的查找规则-可选项 pytest查找测试用例的默认匹配规则： 测试文件以test_开头">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Fishyer</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/aboutme/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Fishyer</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/aboutme/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python-快速使用pytest&#43;allure生成测试报告网页</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-05-14 </span>
+        
+          <span class="more-meta"> 约 1443 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+      <div class="post-meta">
+        
+        <div class="post-tags">
+            <a href="/tags/python/">#python</a>
+            <a href="/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">#单元测试</a>
+            </div></div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mac上安装依赖">Mac上安装依赖</a></li>
+        <li><a href="#pytest的查找规则-可选项">pytest的查找规则-可选项</a></li>
+        <li><a href="#文件结构和测试用例结构对照">文件结构和测试用例结构对照</a></li>
+        <li><a href="#简单的测试文件">简单的测试文件</a></li>
+        <li><a href="#配置环境变量">配置环境变量</a></li>
+        <li><a href="#一键生成测试报告">一键生成测试报告</a></li>
+        <li><a href="#查看历史的测试报告">查看历史的测试报告</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>#python #单元测试</p>
+<h2 id="mac上安装依赖">Mac上安装依赖</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install allure
+</span></span><span class="line"><span class="cl">pip install pytest allure-pytest
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="pytest的查找规则-可选项">pytest的查找规则-可选项</h2>
+<p>pytest查找测试用例的默认匹配规则：</p>
+<ul>
+<li>测试文件以test_开头（以_test结尾也可以）</li>
+<li>测试类以Test开头，并且不能带有init方法</li>
+<li>测试函数以test_开头</li>
+</ul>
+<p>这个规则可以在pytest.ini配置文件修改，但没必要。一般来说，不用添加pytest.ini，非必须。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[pytest]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="na">python_files</span> <span class="o">=</span> <span class="s">xxx_*.py *_xxx.py</span>
+</span></span><span class="line"><span class="cl"><span class="na">python_classes</span> <span class="o">=</span> <span class="s">Test*</span>
+</span></span><span class="line"><span class="cl"><span class="na">python_functions</span> <span class="o">=</span> <span class="s">test_*</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="文件结构和测试用例结构对照">文件结构和测试用例结构对照</h2>
+<p>我的项目：fish_util</p>
+<ul>
+<li>/Users/yutianran/MyGithub/fish_util
+<ul>
+<li>test
+<ul>
+<li>test_log_util.py</li>
+<li><strong>init</strong>.py</li>
+<li>test_decorator_util.py</li>
+</ul>
+</li>
+<li>src
+<ul>
+<li>internal_var.py</li>
+<li>log_util.py</li>
+<li><strong>init</strong>.py</li>
+<li>decorator_util.py</li>
+<li>content_format.py</li>
+<li>tree_util.py</li>
+<li>common_op.py</li>
+</ul>
+</li>
+<li>test_allure.py</li>
+<li><strong>init</strong>.py</li>
+<li>README.md</li>
+<li>.gitignore</li>
+<li>main.py</li>
+<li>start_pytest.sh</li>
+<li>environment.properties</li>
+</ul>
+</li>
+</ul>
+<p>生成的测试网页如下，可以看到Suites中的结构基本和文件结构一致，而且界面还挺好看的：
+<img src="https://yupic.oss-cn-shanghai.aliyuncs.com/202405141540394.png" alt=""></p>
+<h2 id="简单的测试文件">简单的测试文件</h2>
+<p>集成pytest和allure真的超级简单，默认可以什么都不配置，只需要测试函数以test_开头就可以集成了。</p>
+<p>不过我推荐在测试函数上加上注解：<code>@allure.feature(__file__)</code>，这样就方便文件结构和测试用例结构一一对应了。</p>
+<p>然后再进阶的话就是玩一下pytest.fixture了，方便我们在测试用例上加上一些前置操作和后置操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">allure</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">fish_util.src.log_util</span> <span class="k">as</span> <span class="nn">log_util</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">logger</span> <span class="o">=</span> <span class="n">log_util</span><span class="o">.</span><span class="n">FishLogger</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="o">=</span> <span class="n">logger</span><span class="o">.</span><span class="n">debug</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest.fixture</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">login_fixture</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;前置操作-login&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;login_fixture_value&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">finalizer_fixture</span><span class="p">(</span><span class="n">login_fixture_value</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;后置操作-logout: &#34;</span> <span class="o">+</span> <span class="n">login_fixture_value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@allure.feature</span><span class="p">(</span><span class="s2">&#34;功能模块a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TestWithLogger</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@allure.story</span><span class="p">(</span><span class="s2">&#34;子功能b&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@allure.title</span><span class="p">(</span><span class="s2">&#34;用例c&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@allure.feature</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">test_case1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;用例test_case1的输出&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@allure.feature</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_login_fixture</span><span class="p">(</span><span class="n">login_fixture</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;执行测试用例-test_login_fixture&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">finalizer_fixture</span><span class="p">(</span><span class="n">login_fixture</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="配置环境变量">配置环境变量</h2>
+<p>environment.properties的配置是非必须的，不过推荐加上。因为加上很简单，方便后期调试。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-properties" data-lang="properties"><span class="line"><span class="cl"><span class="na">systemVersion</span><span class="o">=</span><span class="s">mac</span>
+</span></span><span class="line"><span class="cl"><span class="na">pythonVersion</span><span class="o">=</span><span class="s">3.11.5</span>
+</span></span><span class="line"><span class="cl"><span class="na">pytestVersion</span><span class="o">=</span><span class="s">7.4.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">allureVersion</span><span class="o">=</span><span class="s">2.29.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">baseUrl</span><span class="o">=</span><span class="s">http://192.168.110.64:11136</span>
+</span></span><span class="line"><span class="cl"><span class="na">projectName</span><span class="o">=</span><span class="s">fish_util</span>
+</span></span><span class="line"><span class="cl"><span class="na">author</span><span class="o">=</span><span class="s">fishyer</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后就可以在allure的网页上看到环境变量了
+<img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240514155536.png" alt="image.png"></p>
+<h2 id="一键生成测试报告">一键生成测试报告</h2>
+<p>其实不复杂，不过为了方便一键生成报告，所以我写了一个shell脚本。大家要用的话，可以拷贝运行即可。运行成功后，会自动打开allure的网页。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -q: 安静模式, 不输出环境信息</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -v: 丰富信息模式, 输出更详细的用例执行信息</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -s: 显示程序中的print/logging输出</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用相对路径，以适应不同环境</span>
+</span></span><span class="line"><span class="cl"><span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取当前日期时间 YYYY-MM-DD_HH-MM-SS</span>
+</span></span><span class="line"><span class="cl"><span class="nv">timestamp</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">&#34;%Y-%m-%d_%H-%M-%S&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pytest -s -v . --clean-alluredir --alluredir=./cache/allure-results</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 不加 -sv 是为了防止自己的文件中的日志被吞，好像是会被覆盖了</span>
+</span></span><span class="line"><span class="cl">pytest . --clean-alluredir --alluredir<span class="o">=</span>./cache/<span class="nv">$timestamp</span>/allure-results
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 检查环境变量文件是否存在再复制</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -f environment.properties <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  cp environment.properties ./cache/<span class="nv">$timestamp</span>/allure-results/environment.properties
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Error: environment.properties does not exist.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成 Allure 报告</span>
+</span></span><span class="line"><span class="cl">allure generate -c -o ./cache/<span class="nv">$timestamp</span>/allure-report ./cache/<span class="nv">$timestamp</span>/allure-results
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 优雅关闭进程</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Stopping process on port 11136&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">pid</span><span class="o">=</span><span class="k">$(</span>lsof -i:11136 -t<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$pid</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">kill</span> <span class="nv">$pid</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Process on port 11136 stopped gracefully.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;No process found on port 11136.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 nohup 启动 Allure 服务</span>
+</span></span><span class="line"><span class="cl">nohup allure open ./cache/<span class="nv">$timestamp</span>/allure-report -p <span class="m">11136</span> &gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Allure server started on port http://localhost:11136.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 直接查看指定时间戳的报告</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># allure open ./cache/$timestamp/allure-report</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># allure open ./cache/2024-05-14_15-44-26/allure-report</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="查看历史的测试报告">查看历史的测试报告</h2>
+<p>有时候，我们可能想看一下之前的测试生成的日志，这个时候可以使用命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">allure open ./cache/2024-05-14_15-44-26/allure-report
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2024-05-14_15-44-26是之前的测试的日期时间。在./cache文件夹下可以找到。</p>
+<h2 id="结语">结语</h2>
+<p>有了pytest+allure，做单元测试是很方便了。不过还可以更强大，让它去做功能测试和集成测试：比如配合postman做接口自动化测试、配合playwright做网页自动化测试、配合Appium做移动端自动化测试。感觉以前一天的测试工作，现在完全可以缩小为10分钟就搞定了。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">fishyer</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2024-05-14
+        
+    </span>
+  </p>
+  
+    <p class="copyright-item">
+      <span class="item-title">笔记链接</span>
+      <span class="item-content">
+          <a href="obsidian://advanced-uri?vault=note&amp;uid=966099a8-b25d-47fd-ac52-689c930cdb99">obsidian://advanced-uri?vault=note&amp;uid=966099a8-b25d-47fd-ac52-689c930cdb99</a>
+      </span>
+    </p>
+  
+  
+    <p class="copyright-item">
+      <span class="item-title">文章链接</span>
+      <span class="item-content">
+          <a href="https://blog.fishyer.com/post/966099a8-b25d-47fd-ac52-689c930cdb99/">https://blog.fishyer.com/post/966099a8-b25d-47fd-ac52-689c930cdb99/</a>
+      </span>
+    </p>
+  
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/wx_zs.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          <a href="/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/9e840039-9d01-4eee-b2de-e97c754b9ec7/">
+            <span class="next-text nav-default">python-模块导入的最佳方案</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    
+    const locale = {
+      nick: '昵称',
+      nickError: '昵称不能少于3个字符',
+      mail: '邮箱',
+      mailError: '请填写正确的邮件地址',
+      link: '网址',
+      optional: '可选',
+      placeholder: '欢迎评论，可以不登录，不填昵称、邮箱、网址哦~',
+      sofa: '来发评论吧~',
+      submit: '提交',
+      like: '喜欢',
+      cancelLike: '取消喜欢',
+      reply: '回复',
+      cancelReply: '取消回复',
+      comment: '评论',
+      refresh: '刷新',
+      more: '加载更多...',
+      preview: '预览',
+      emoji: '表情',
+      uploadImage: '上传图片',
+      seconds: '秒前',
+      minutes: '分钟前',
+      hours: '小时前',
+      days: '天前',
+      now: '刚刚',
+      uploading: '正在上传',
+      login: '登录',
+      logout: '退出',
+      admin: '博主',
+      sticky: '置顶',
+      word: '字',
+      wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+      anonymous: '匿名',
+      level0: '潜水',
+      level1: '冒泡',
+      level2: '吐槽',
+      level3: '活跃',
+      level4: '话痨',
+      level5: '传说',
+      gif: '表情包',
+      gifSearchPlaceholder: '搜索表情包',
+      profile: '个人资料',
+      approved: '通过',
+      waiting: '待审核',
+      spam: '垃圾',
+      unsticky: '取消置顶',
+      oldest: '按倒序',
+      latest: '按正序',
+      hottest: '按热度',
+      reactionTitle: '你认为这篇文章怎么样？',
+    };
+
+    init({
+      el: '#waline',
+      reaction: true, 
+      serverURL: 'https://waline.fishyer.com',
+      path: location.pathname,
+      locale,
+    });
+  </script>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:fishyer@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/fishyer" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/fishyer2850" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/481831994" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>fishyer</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+
+
+
+
+
+</body>
+</html>
