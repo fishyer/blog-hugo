@@ -2,7 +2,7 @@
 title: nps内网穿透服务的部署流程
 aliases: []
 date: 2024-05-15T13:48:46+08:00
-lastmod: 2024-05-15T14:34:38+08:00
+lastmod: 2024-05-15T14:37:01+08:00
 id: ab6fa852-1d4c-41eb-94d1-e6ba6e31ed2a
 slug: ab6fa852-1d4c-41eb-94d1-e6ba6e31ed2a
 obsidianLink: obsidian://advanced-uri?vault=note&uid=ab6fa852-1d4c-41eb-94d1-e6ba6e31ed2a
@@ -37,9 +37,9 @@ https_proxy_port=12443
 docker run -d --name=nps --restart=always --net=host -v /opt/nps/conf:/conf ffdfgdfg/nps
 ```
 
-5.访问nps的Web管理页面,默认端口是8080，记得开放防火墙端口
-http://server_ip:8080/nps
-默认用户名密码是: admin/123
+5.访问nps的Web管理页面,默认端口是8080，记得开放防火墙端口。
+- http://server_ip:8080/nps
+- 默认用户名密码是: admin/123
 
 
 ## 部署客户端
