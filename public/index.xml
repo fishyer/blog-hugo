@@ -6,8 +6,15 @@
     <description>Recent content on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 May 2024 17:02:52 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2024 14:29:30 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nps内网穿透服务的部署流程</title>
+      <link>http://localhost:1313/post/ab6fa852-1d4c-41eb-94d1-e6ba6e31ed2a/</link>
+      <pubDate>Wed, 15 May 2024 13:48:46 +0800</pubDate>
+      <guid>http://localhost:1313/post/ab6fa852-1d4c-41eb-94d1-e6ba6e31ed2a/</guid>
+      <description>之前做内网穿透，都是用frp，后来发现nps更方便一点，因为它有Web管理界面。之前用过几次，但是过一阵子再要用的时候，老是忘记怎么用的了，</description>
+    </item>
     <item>
       <title>python-函数式编程之纯数据类</title>
       <link>http://localhost:1313/post/e5a92298-4d68-4912-ae8b-10640acc57f3/</link>
