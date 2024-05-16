@@ -65,39 +65,11 @@
       <description>1.在docker容器外使用mvn构建 其实就是先mvn clean package生成jar包 然后再将jar包拷贝到容器里面 问题在于：可能不同开发者的本</description>
     </item>
     <item>
-      <title>docker-部署SpringBoot服务</title>
-      <link>http://localhost:1313/post/b67149e5-5093-4a0b-9133-c9d66e663be6/</link>
-      <pubDate>Sun, 12 May 2024 08:40:26 +0800</pubDate>
-      <guid>http://localhost:1313/post/b67149e5-5093-4a0b-9133-c9d66e663be6/</guid>
-      <description>1.在docker容器外使用mvn构建 其实就是先mvn clean package生成jar包 然后再将jar包拷贝到容器里面 问题在于：可能不同开发者的本</description>
-    </item>
-    <item>
       <title>Obsidian插件-自动添加元数据</title>
       <link>http://localhost:1313/post/2404c029-6f31-43fa-900f-51ee6951269d/</link>
       <pubDate>Sat, 11 May 2024 12:16:47 +0800</pubDate>
       <guid>http://localhost:1313/post/2404c029-6f31-43fa-900f-51ee6951269d/</guid>
       <description>#Obsidian #Markdown 开发目的 尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞</description>
-    </item>
-    <item>
-      <title>Obsidian插件开发笔记</title>
-      <link>http://localhost:1313/post/d06c89ae-40f9-43b3-aaed-ebb95555d62c/</link>
-      <pubDate>Sat, 11 May 2024 11:19:02 +0800</pubDate>
-      <guid>http://localhost:1313/post/d06c89ae-40f9-43b3-aaed-ebb95555d62c/</guid>
-      <description>#占位 1111 2222 3333</description>
-    </item>
-    <item>
-      <title>宝塔部署笔记</title>
-      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
-      <pubDate>Sat, 11 May 2024 11:18:50 +0800</pubDate>
-      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
-      <description>#服务器面板 #部署 占位2222 #测试</description>
-    </item>
-    <item>
-      <title>docker部署笔记</title>
-      <link>http://localhost:1313/post/d8254244-0607-4d07-969a-307e8ac6ec9c/</link>
-      <pubDate>Sat, 11 May 2024 11:18:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/d8254244-0607-4d07-969a-307e8ac6ec9c/</guid>
-      <description>占位</description>
     </item>
     <item>
       <title>hugo-使用go构建的静态博客工具</title>
@@ -114,27 +86,6 @@
       <description>支持协程 自动生成文档 #FastApi #Python #Web框架 test</description>
     </item>
     <item>
-      <title>laf-云函数平台</title>
-      <link>http://localhost:1313/post/6eb3c29f-80df-4ee7-9ba2-43962583d51e/</link>
-      <pubDate>Sat, 11 May 2024 10:43:35 +0800</pubDate>
-      <guid>http://localhost:1313/post/6eb3c29f-80df-4ee7-9ba2-43962583d51e/</guid>
-      <description>占位 1111</description>
-    </item>
-    <item>
-      <title>Sealos-云托管平台</title>
-      <link>http://localhost:1313/post/3776883c-36b2-42bc-bbe4-0786f2a695b4/</link>
-      <pubDate>Sat, 11 May 2024 10:43:19 +0800</pubDate>
-      <guid>http://localhost:1313/post/3776883c-36b2-42bc-bbe4-0786f2a695b4/</guid>
-      <description>占位</description>
-    </item>
-    <item>
-      <title>Prisma-最好用的ORM框架</title>
-      <link>http://localhost:1313/post/8945f26a-4a97-4f81-9c12-5bacfa931a56/</link>
-      <pubDate>Sat, 11 May 2024 10:30:30 +0800</pubDate>
-      <guid>http://localhost:1313/post/8945f26a-4a97-4f81-9c12-5bacfa931a56/</guid>
-      <description>占位</description>
-    </item>
-    <item>
       <title>WPLs-introduction-and-test</title>
       <link>http://localhost:1313/post/9cae7f7c-09ed-45ff-bc8f-157e952582fe/</link>
       <pubDate>Fri, 10 May 2024 12:03:13 +0800</pubDate>
@@ -147,6 +98,48 @@
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
       <description>直接重建git暂存区 1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39; 移除指定文件 1 git rm --cached redis/dump.rdb #git #配置 #测试 111</description>
+    </item>
+    <item>
+      <title>Obsidian插件开发笔记</title>
+      <link>http://localhost:1313/post/d06c89ae-40f9-43b3-aaed-ebb95555d62c/</link>
+      <pubDate>Mon, 11 Mar 2024 11:19:02 +0800</pubDate>
+      <guid>http://localhost:1313/post/d06c89ae-40f9-43b3-aaed-ebb95555d62c/</guid>
+      <description>#占位 1111 2222 3333</description>
+    </item>
+    <item>
+      <title>宝塔部署笔记</title>
+      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
+      <pubDate>Mon, 11 Mar 2024 11:18:50 +0800</pubDate>
+      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
+      <description>#服务器面板 #部署 占位2222 #测试</description>
+    </item>
+    <item>
+      <title>docker部署笔记</title>
+      <link>http://localhost:1313/post/d8254244-0607-4d07-969a-307e8ac6ec9c/</link>
+      <pubDate>Mon, 11 Mar 2024 11:18:40 +0800</pubDate>
+      <guid>http://localhost:1313/post/d8254244-0607-4d07-969a-307e8ac6ec9c/</guid>
+      <description>占位</description>
+    </item>
+    <item>
+      <title>laf-云函数平台</title>
+      <link>http://localhost:1313/post/6eb3c29f-80df-4ee7-9ba2-43962583d51e/</link>
+      <pubDate>Mon, 11 Mar 2024 10:43:35 +0800</pubDate>
+      <guid>http://localhost:1313/post/6eb3c29f-80df-4ee7-9ba2-43962583d51e/</guid>
+      <description>占位 1111</description>
+    </item>
+    <item>
+      <title>Sealos-云托管平台</title>
+      <link>http://localhost:1313/post/3776883c-36b2-42bc-bbe4-0786f2a695b4/</link>
+      <pubDate>Mon, 11 Mar 2024 10:43:19 +0800</pubDate>
+      <guid>http://localhost:1313/post/3776883c-36b2-42bc-bbe4-0786f2a695b4/</guid>
+      <description>占位</description>
+    </item>
+    <item>
+      <title>Prisma-最好用的ORM框架</title>
+      <link>http://localhost:1313/post/8945f26a-4a97-4f81-9c12-5bacfa931a56/</link>
+      <pubDate>Mon, 11 Mar 2024 10:30:30 +0800</pubDate>
+      <guid>http://localhost:1313/post/8945f26a-4a97-4f81-9c12-5bacfa931a56/</guid>
+      <description>占位</description>
     </item>
   </channel>
 </rss>

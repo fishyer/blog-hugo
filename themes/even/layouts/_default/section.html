@@ -12,9 +12,9 @@
   {{- end -}}
 
   {{- range $index, $element := $paginator.Pages -}}
-    {{- $thisYear := $element.Date.Format "2006" }}
+    {{- $thisYear := $element.Date.Format "2006-01" }}
     {{- $lastElement := $index | add -1 | index $paginator.Pages }}
-    {{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+    {{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006-01") $thisYear ) }}
       <div class="collection-title">
         <h2 class="archive-year">{{ $thisYear }}</h2>
       </div>

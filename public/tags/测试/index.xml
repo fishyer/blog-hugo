@@ -9,18 +9,18 @@
     <lastBuildDate>Sun, 12 May 2024 10:52:48 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>宝塔部署笔记</title>
-      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
-      <pubDate>Sat, 11 May 2024 11:18:50 +0800</pubDate>
-      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
-      <description>#服务器面板 #部署 占位2222 #测试</description>
-    </item>
-    <item>
       <title>git-更新忽略文件</title>
       <link>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
       <description>直接重建git暂存区 1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39; 移除指定文件 1 git rm --cached redis/dump.rdb #git #配置 #测试 111</description>
+    </item>
+    <item>
+      <title>宝塔部署笔记</title>
+      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
+      <pubDate>Mon, 11 Mar 2024 11:18:50 +0800</pubDate>
+      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
+      <description>#服务器面板 #部署 占位2222 #测试</description>
     </item>
   </channel>
 </rss>
