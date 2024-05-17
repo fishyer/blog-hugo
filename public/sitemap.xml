@@ -3,7 +3,7 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-05-17T13:45:22+08:00</lastmod>
+    <lastmod>2024-05-17T18:23:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17,7 +17,7 @@
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-05-17T13:45:22+08:00</lastmod>
+    <lastmod>2024-05-17T18:23:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,7 +45,7 @@
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-05-16T09:45:26+08:00</lastmod>
+    <lastmod>2024-05-17T18:23:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -263,6 +263,27 @@
   <url>
     <loc>http://localhost:1313/post/8945f26a-4a97-4f81-9c12-5bacfa931a56/</loc>
     <lastmod>2024-05-16T09:45:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2e516661-b581-4b54-8111-fd812f5d20fd/</loc>
+    <lastmod>2024-05-17T18:23:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2024-05-17T18:23:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-05-17T18:23:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

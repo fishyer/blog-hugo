@@ -6,7 +6,7 @@
     <description>Recent content on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 May 2024 13:45:22 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 18:23:09 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nps内网穿透服务的部署流程</title>
@@ -154,6 +154,13 @@
       <pubDate>Mon, 11 Mar 2024 10:30:30 +0800</pubDate>
       <guid>http://localhost:1313/post/8945f26a-4a97-4f81-9c12-5bacfa931a56/</guid>
       <description>占位</description>
+    </item>
+    <item>
+      <title>从零开始写一个极简版Hookmark</title>
+      <link>http://localhost:1313/post/2e516661-b581-4b54-8111-fd812f5d20fd/</link>
+      <pubDate>Mon, 16 Oct 2023 17:19:06 +0800</pubDate>
+      <guid>http://localhost:1313/post/2e516661-b581-4b54-8111-fd812f5d20fd/</guid>
+      <description>从零开始写一个极简版Hookmark #文件管理 #自定义工具 1.Hookmark 最让我惊艳的点 在我们写笔记时，难免会引用到一些文件，以前的话，我都是用的文件的绝</description>
     </item>
   </channel>
 </rss>
