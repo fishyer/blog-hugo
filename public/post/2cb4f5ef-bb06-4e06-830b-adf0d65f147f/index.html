@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>自己在本机部署ChatGPT网站 - Fishyer&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="fishyer" /><meta name="description" content="#AI #DIY网站 #Docker 1-购买代理服务 这是我搜集到的2个ChatGPT-API的代理服务，都支持GPT4 OpenAI-SB 🎉EZ-API API2D 说下我的实际使用体验，S" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.125.7 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.35a28153ad50513521415b53ff28bc5a730019565c3dd09fba91d754a0c1c62d.css" rel="stylesheet">
+
+
+
+<meta property="og:url" content="http://localhost:1313/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/">
+  <meta property="og:site_name" content="Fishyer&#39;s Blog">
+  <meta property="og:title" content="自己在本机部署ChatGPT网站">
+  <meta property="og:description" content="#AI #DIY网站 #Docker 1-购买代理服务 这是我搜集到的2个ChatGPT-API的代理服务，都支持GPT4 OpenAI-SB 🎉EZ-API API2D 说下我的实际使用体验，S">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-17T18:54:31+08:00">
+    <meta property="article:modified_time" content="2024-05-17T20:41:35+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="DIY网站">
+    <meta property="article:tag" content="Docker">
+
+  <meta itemprop="name" content="自己在本机部署ChatGPT网站">
+  <meta itemprop="description" content="#AI #DIY网站 #Docker 1-购买代理服务 这是我搜集到的2个ChatGPT-API的代理服务，都支持GPT4 OpenAI-SB 🎉EZ-API API2D 说下我的实际使用体验，S">
+  <meta itemprop="datePublished" content="2024-05-17T18:54:31+08:00">
+  <meta itemprop="dateModified" content="2024-05-17T20:41:35+08:00">
+  <meta itemprop="wordCount" content="1261">
+  <meta itemprop="keywords" content="AI,DIY网站,Docker"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="自己在本机部署ChatGPT网站">
+<meta name="twitter:description" content="#AI #DIY网站 #Docker 1-购买代理服务 这是我搜集到的2个ChatGPT-API的代理服务，都支持GPT4 OpenAI-SB 🎉EZ-API API2D 说下我的实际使用体验，S">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Fishyer</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/aboutme/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Fishyer</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/aboutme/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">自己在本机部署ChatGPT网站</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-05-17 </span>
+        
+          <span class="more-meta"> 约 1261 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+      <div class="post-meta">
+        
+        <div class="post-tags">
+            <a href="/tags/ai/">#AI</a>
+            <a href="/tags/diy%E7%BD%91%E7%AB%99/">#DIY网站</a>
+            <a href="/tags/docker/">#Docker</a>
+            </div></div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-购买代理服务">1-购买代理服务</a></li>
+        <li><a href="#2-如何使用api">2-如何使用API</a></li>
+        <li><a href="#3-本地docker部署chatbot-ui">3-本地docker部署chatbot-ui</a></li>
+        <li><a href="#4-推荐做的几个配置修改">4-推荐做的几个配置修改</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>#AI #DIY网站 #Docker</p>
+<h2 id="1-购买代理服务">1-购买代理服务</h2>
+<p>这是我搜集到的2个ChatGPT-API的代理服务，都支持GPT4</p>
+<ul>
+<li><a href="https://www.openai-sb.com/">OpenAI-SB</a></li>
+<li>🎉<a href="https://api.ezchat.top/">EZ-API</a></li>
+<li><a href="https://api2d.com/">API2D</a></li>
+</ul>
+<p>说下我的实际使用体验，SB第一家是我最先接触到的，用了半年，感觉还不错。不过价格比EZ要贵一点，EZ是我目前在用的，价格比较实惠，但是感觉有时候速度有点慢，可能是因为我一直用GPT4的原因吧。2D那家没用过。</p>
+<h2 id="2-如何使用api">2-如何使用API</h2>
+<p>这里有很多网站可以用API来部署聊天站点，比如:</p>
+<ul>
+<li><a href="https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web">ChatGPTNextWeb</a></li>
+<li>🎉<a href="https://github.com/mckaywrigley/chatbot-ui">chatbot-ui</a></li>
+<li><a href="https://github.com/Bin-Huang/chatbox">chatbox</a></li>
+</ul>
+<p>我目前用的是chatbot-ui，不过自己从它的其中一个commit节点切出来了，因为作者后期加入了很多我不需要的东西，UI也改动很大，还是喜欢最开始的简约风格：</p>
+<ul>
+<li><a href="https://github.com/mckaywrigley/chatbot-ui/commits/138950c5520e80f69f059ecf0aea6a91a727cff9">chatbot-ui/Commits/138950c5</a></li>
+</ul>
+<p>直接从这个commit切出来弄一个仓库，发布到Vercel，配置一下环境变量：</p>
+<ul>
+<li>OPENAI_API_HOST=&ldquo;<a href="https://api.ezchat.top">https://api.ezchat.top</a>&rdquo;</li>
+<li>OPENAI_API_KEY=&ldquo;sk-XXXXXXXXX&rdquo;</li>
+</ul>
+<p>不过如果只是自己用，我更推荐的是直接在Mac本机上安装OrbStack软件，然后通过它作为docker容器来部署chatbot-ui。毕竟Vercel是国外网站，访问网速还是不太给力。</p>
+<h2 id="3-本地docker部署chatbot-ui">3-本地docker部署chatbot-ui</h2>
+<p>一键初始化仓库的脚本：会自动在当前目录创建一个my-chatui-repo仓库，分支为my-main</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置本地仓库名称</span>
+</span></span><span class="line"><span class="cl"><span class="nv">local_repo_path</span><span class="o">=</span><span class="s2">&#34;my-chatui-repo&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Local repository name: </span><span class="nv">$local_repo_path</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果文件夹不存在则创建</span>
+</span></span><span class="line"><span class="cl">mkdir -p <span class="nv">$local_repo_path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 跳转到本地仓库目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="nv">$local_repo_path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置远程仓库URL</span>
+</span></span><span class="line"><span class="cl"><span class="nv">remote_repo_url</span><span class="o">=</span><span class="s2">&#34;https://github.com/mckaywrigley/chatbot-ui.git&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置要克隆的commit节点的哈希值</span>
+</span></span><span class="line"><span class="cl"><span class="nv">commit_hash</span><span class="o">=</span><span class="s2">&#34;138950c5520e80f69f059ecf0aea6a91a727cff9&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 初始化本地仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 克隆指定的commit节点到本地仓库</span>
+</span></span><span class="line"><span class="cl">git fetch <span class="nv">$remote_repo_url</span> <span class="nv">$commit_hash</span> <span class="o">&amp;&amp;</span> git checkout FETCH_HEAD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 切换到名为my-main的分支</span>
+</span></span><span class="line"><span class="cl">git checkout -b my-main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后进入仓库，修改docker-compose.yml，填上HOST和KEY</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.6&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">chatgpt</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">3000</span><span class="p">:</span><span class="m">3000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;OPENAI_API_HOST=https://api.ezchat.top&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;OPENAI_API_KEY=sk-XXXXX&#39;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后部署docker-compose</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker-compose up -d 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="4-推荐做的几个配置修改">4-推荐做的几个配置修改</h2>
+<p>1.增加支持gpt-4-0125-preview模型，这个模型的价格更实惠：</p>
+<p>修改types/openai.ts文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">OPENAI_API_TYPE</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../utils/app/const&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">OpenAIModel</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">id</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">maxLength</span>: <span class="kt">number</span><span class="p">;</span> <span class="c1">// maximum length of a message
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">tokenLimit</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">enum</span> <span class="nx">OpenAIModelID</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GPT_3_5</span> <span class="o">=</span> <span class="s1">&#39;gpt-3.5-turbo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GPT_3_5_AZ</span> <span class="o">=</span> <span class="s1">&#39;gpt-35-turbo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GPT_4</span> <span class="o">=</span> <span class="s1">&#39;gpt-4&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GPT_4_32K</span> <span class="o">=</span> <span class="s1">&#39;gpt-4-32k&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GPT_4_0125_PREVIEW</span> <span class="o">=</span> <span class="s1">&#39;gpt-4-0125-preview&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">fallbackModelID</span> <span class="o">=</span> <span class="nx">OpenAIModelID</span><span class="p">.</span><span class="nx">GPT_3_5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">OpenAIModels</span>: <span class="kt">Record</span><span class="p">&lt;</span><span class="nt">OpenAIModelID</span><span class="err">,</span> <span class="na">OpenAIModel</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">OpenAIModelID</span><span class="p">.</span><span class="nx">GPT_3_5</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">OpenAIModelID.GPT_3_5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;GPT-3.5&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxLength</span>: <span class="kt">12000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tokenLimit</span>: <span class="kt">4000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">OpenAIModelID</span><span class="p">.</span><span class="nx">GPT_3_5_AZ</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">OpenAIModelID.GPT_3_5_AZ</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;GPT-3.5&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxLength</span>: <span class="kt">12000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tokenLimit</span>: <span class="kt">4000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">OpenAIModelID</span><span class="p">.</span><span class="nx">GPT_4</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">OpenAIModelID.GPT_4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;GPT-4&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxLength</span>: <span class="kt">24000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tokenLimit</span>: <span class="kt">8000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">OpenAIModelID</span><span class="p">.</span><span class="nx">GPT_4_32K</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">OpenAIModelID.GPT_4_32K</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;GPT-4-32K&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxLength</span>: <span class="kt">96000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tokenLimit</span>: <span class="kt">32000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">OpenAIModelID</span><span class="p">.</span><span class="nx">GPT_4_0125_PREVIEW</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">OpenAIModelID.GPT_4_0125_PREVIEW</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;GPT-4-0125-preview&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxLength</span>: <span class="kt">128000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tokenLimit</span>: <span class="kt">128000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改了源码以后需要重新编译部署：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker-compose up -d --build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2.gitignore文件中忽略掉docker-compose.yml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker-compose.yml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>防止不小心被KEY给提交到远程仓库了，修改了.gitignore后，执行下面命令让它生效</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git rm --cache docker-compose.yml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3.建议修改默认的3000端口，这个端口号太常用了，太容易冲突了，我改成了23000</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version: &#39;3.6&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  chatgpt:
+</span></span><span class="line"><span class="cl">    build: .
+</span></span><span class="line"><span class="cl">    ports:
+</span></span><span class="line"><span class="cl">      - 23000:3000
+</span></span><span class="line"><span class="cl">    environment:
+</span></span><span class="line"><span class="cl">      - &#39;OPENAI_API_HOST=https://api.ezchat.top&#39;
+</span></span><span class="line"><span class="cl">      - &#39;OPENAI_API_KEY=sk-XXXXXXX&#39;
+</span></span><span class="line"><span class="cl"># docker-compose up -d 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>好了，下面就是愉快的调戏AI的时刻了。</p>
+<p><img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240517203854.png" alt="image.png"></p>
+<p>其实chatbot-ui是从SB那里发现的这个开源项目。</p>
+<p>左侧聊天历史，右侧自定义Prompt模板。可以导出和导入json格式的历史对话。感觉用起来很顺手。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">fishyer</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2024-05-17
+        
+    </span>
+  </p>
+  
+    <p class="copyright-item">
+      <span class="item-title">笔记链接</span>
+      <span class="item-content">
+          <a href="obsidian://advanced-uri?vault=MyNote&amp;uid=2cb4f5ef-bb06-4e06-830b-adf0d65f147f">obsidian://advanced-uri?vault=MyNote&amp;uid=2cb4f5ef-bb06-4e06-830b-adf0d65f147f</a>
+      </span>
+    </p>
+  
+  
+    <p class="copyright-item">
+      <span class="item-title">文章链接</span>
+      <span class="item-content">
+          <a href="https://blog.fishyer.com/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/">https://blog.fishyer.com/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/</a>
+      </span>
+    </p>
+  
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/wx_zs.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ai/">AI</a>
+          <a href="/tags/diy%E7%BD%91%E7%AB%99/">DIY网站</a>
+          <a href="/tags/docker/">Docker</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/ab6fa852-1d4c-41eb-94d1-e6ba6e31ed2a/">
+            <span class="next-text nav-default">nps内网穿透服务的部署流程</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    
+    const locale = {
+      nick: '昵称',
+      nickError: '昵称不能少于3个字符',
+      mail: '邮箱',
+      mailError: '请填写正确的邮件地址',
+      link: '网址',
+      optional: '可选',
+      placeholder: '欢迎评论，可以不登录，不填昵称、邮箱、网址哦~',
+      sofa: '来发评论吧~',
+      submit: '提交',
+      like: '喜欢',
+      cancelLike: '取消喜欢',
+      reply: '回复',
+      cancelReply: '取消回复',
+      comment: '评论',
+      refresh: '刷新',
+      more: '加载更多...',
+      preview: '预览',
+      emoji: '表情',
+      uploadImage: '上传图片',
+      seconds: '秒前',
+      minutes: '分钟前',
+      hours: '小时前',
+      days: '天前',
+      now: '刚刚',
+      uploading: '正在上传',
+      login: '登录',
+      logout: '退出',
+      admin: '博主',
+      sticky: '置顶',
+      word: '字',
+      wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+      anonymous: '匿名',
+      level0: '潜水',
+      level1: '冒泡',
+      level2: '吐槽',
+      level3: '活跃',
+      level4: '话痨',
+      level5: '传说',
+      gif: '表情包',
+      gifSearchPlaceholder: '搜索表情包',
+      profile: '个人资料',
+      approved: '通过',
+      waiting: '待审核',
+      spam: '垃圾',
+      unsticky: '取消置顶',
+      oldest: '按倒序',
+      latest: '按正序',
+      hottest: '按热度',
+      reactionTitle: '你认为这篇文章怎么样？',
+    };
+
+    init({
+      el: '#waline',
+      reaction: true, 
+      serverURL: 'https://waline.fishyer.com',
+      path: location.pathname,
+      locale,
+    });
+  </script>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:fishyer@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/fishyer" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/fishyer2850" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/481831994" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>fishyer</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z9QVXELHX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z9QVXELHX');
+</script>
+
+
+
+
+
+
+</body>
+</html>
