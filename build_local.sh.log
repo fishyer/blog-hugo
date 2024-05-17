@@ -1,0 +1,358 @@
+[2024-05-17 17:02:12] Running blog_hugo build_local.sh
+[2024-05-17 17:02:12] Current datetime: 2024-05-17 17:02:12
+[2024-05-17 17:02:12] blog server is run at http://localhost:1313/
+[2024-05-17 17:02:12] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 163 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+[2024-05-17 17:02:26] Running blog_hugo build_local.sh
+[2024-05-17 17:02:26] Current datetime: 2024-05-17 17:02:26
+[2024-05-17 17:02:26] blog server is run at http://localhost:1313/
+[2024-05-17 17:02:26] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 170 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-17 17:08:30.959 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 39 ms
+
+Change detected, rebuilding site (#2).
+2024-05-17 17:08:31.948 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 136 ms
+
+Change detected, rebuilding site (#3).
+2024-05-17 17:08:54.448 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 63 ms
+
+Change detected, rebuilding site (#4).
+2024-05-17 17:08:54.953 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 54 ms
+
+Change detected, rebuilding site (#5).
+2024-05-17 17:08:55.949 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 54 ms
+[2024-05-17 17:09:00] Running blog_hugo build_local.sh
+[2024-05-17 17:09:00] Current datetime: 2024-05-17 17:09:00
+[2024-05-17 17:09:01] blog server is run at http://localhost:1313/
+[2024-05-17 17:09:01] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 165 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-17 17:10:25.930 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 58 ms
+
+Change detected, rebuilding site (#2).
+2024-05-17 17:18:04.491 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 85 ms
+
+Change detected, rebuilding site (#3).
+2024-05-17 17:21:51.988 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 64 ms
+
+Change detected, rebuilding site (#4).
+2024-05-17 17:21:53.486 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 58 ms
+[2024-05-17 17:21:58] Running blog_hugo build_local.sh
+[2024-05-17 17:21:58] Current datetime: 2024-05-17 17:21:58
+[2024-05-17 17:21:58] blog server is run at http://localhost:1313/
+[2024-05-17 17:21:58] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 162 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-17 17:22:22.253 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 54 ms
+[2024-05-17 17:22:26] Running blog_hugo build_local.sh
+[2024-05-17 17:22:26] Current datetime: 2024-05-17 17:22:26
+[2024-05-17 17:22:27] blog server is run at http://localhost:1313/
+[2024-05-17 17:22:27] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 166 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-17 17:23:19.310 +0800
+Template changed /partials/footer.html
+ERROR Rebuild failed: process: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:54:1": parse failed unexpected EOF
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 6 ms
+
+Change detected, rebuilding site (#2).
+2024-05-17 17:23:20.810 +0800
+Template changed /partials/footer.html
+ERROR Rebuild failed: process: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:54:1": parse failed unexpected EOF
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 5 ms
+
+Change detected, rebuilding site (#3).
+2024-05-17 17:23:21.313 +0800
+Template changed /partials/footer.html
+ERROR Rebuild failed: process: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:54:1": parse failed unexpected EOF
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 9 ms
+[2024-05-17 17:23:24] Running blog_hugo build_local.sh
+[2024-05-17 17:23:24] Current datetime: 2024-05-17 17:23:24
+[2024-05-17 17:23:24] blog server is run at http://localhost:1313/
+[2024-05-17 17:23:24] ##################################################
+Error: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:54:1": parse failed: template: partials/footer.html:54: unexpected EOF
+[2024-05-17 17:24:19] Running blog_hugo build_local.sh
+[2024-05-17 17:24:19] Current datetime: 2024-05-17 17:24:19
+[2024-05-17 17:24:19] blog server is run at http://localhost:1313/
+[2024-05-17 17:24:19] ##################################################
+Error: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:53:1": parse failed: template: partials/footer.html:53: unexpected EOF
+[2024-05-17 17:24:42] Running blog_hugo build_local.sh
+[2024-05-17 17:24:42] Current datetime: 2024-05-17 17:24:42
+[2024-05-17 17:24:42] blog server is run at http://localhost:1313/
+[2024-05-17 17:24:42] ##################################################
+Error: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:53:1": parse failed: template: partials/footer.html:53: unexpected EOF
+[2024-05-17 17:25:07] Running blog_hugo build_local.sh
+[2024-05-17 17:25:07] Current datetime: 2024-05-17 17:25:07
+[2024-05-17 17:25:07] blog server is run at http://localhost:1313/
+[2024-05-17 17:25:07] ##################################################
+Error: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:52:1": parse failed: template: partials/footer.html:52: unexpected EOF
+[2024-05-17 17:25:32] Running blog_hugo build_local.sh
+[2024-05-17 17:25:32] Current datetime: 2024-05-17 17:25:32
+[2024-05-17 17:25:32] blog server is run at http://localhost:1313/
+[2024-05-17 17:25:32] ##################################################
+Error: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:52:1": parse failed: template: partials/footer.html:52: unexpected EOF
+[2024-05-17 17:25:57] Running blog_hugo build_local.sh
+[2024-05-17 17:25:57] Current datetime: 2024-05-17 17:25:57
+[2024-05-17 17:25:58] blog server is run at http://localhost:1313/
+[2024-05-17 17:25:58] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 168 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-17 17:28:18.353 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 64 ms
+
+Change detected, rebuilding site (#2).
+2024-05-17 17:28:19.853 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 104 ms
+[2024-05-17 17:28:34] Running blog_hugo build_local.sh
+[2024-05-17 17:28:34] Current datetime: 2024-05-17 17:28:34
+[2024-05-17 17:28:34] blog server is run at http://localhost:1313/
+[2024-05-17 17:28:34] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+WARN  deprecated: .Site.RSSLink was deprecated in Hugo v0.114.0 and will be removed in a future release. Use the Output Format's Permalink method instead, e.g. .OutputFormats.Get "RSS".Permalink
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 162 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-17 17:28:50.534 +0800
+Template changed /partials/footer.html
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 57 ms
+
+Change detected, rebuilding site (#2).
+2024-05-17 17:29:16.535 +0800
+Template changed /partials/footer.html
+ERROR Rebuild failed: process: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:11:1": parse failed unexpected "/" in command
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 5 ms
+
+Change detected, rebuilding site (#3).
+2024-05-17 17:29:18.034 +0800
+Template changed /partials/footer.html
+ERROR Rebuild failed: process: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:11:1": parse failed unexpected "/" in command
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 13 ms
+[2024-05-17 17:29:20] Running blog_hugo build_local.sh
+[2024-05-17 17:29:20] Current datetime: 2024-05-17 17:29:20
+[2024-05-17 17:29:20] blog server is run at http://localhost:1313/
+[2024-05-17 17:29:20] ##################################################
+Error: "/Users/yutianran/Documents/MyCode/blog-hugo/themes/even/layouts/partials/footer.html:11:1": parse failed: template: partials/footer.html:11: unexpected "/" in command
+[2024-05-17 17:29:39] Running blog_hugo build_local.sh
+[2024-05-17 17:29:39] Current datetime: 2024-05-17 17:29:39
+[2024-05-17 17:29:40] blog server is run at http://localhost:1313/
+[2024-05-17 17:29:40] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 176 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop

@@ -3,7 +3,7 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-05-17T13:44:20+08:00</lastmod>
+    <lastmod>2024-05-17T13:45:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17,7 +17,7 @@
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-05-17T13:44:20+08:00</lastmod>
+    <lastmod>2024-05-17T13:45:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -199,7 +199,7 @@
   
   <url>
     <loc>http://localhost:1313/post/d3094a40-e3a4-4266-afb3-e8e65abcaa3a/</loc>
-    <lastmod>2024-05-17T13:44:20+08:00</lastmod>
+    <lastmod>2024-05-17T13:45:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

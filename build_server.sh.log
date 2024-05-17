@@ -1,0 +1,9 @@
+[2024-05-17 17:32:21] Running blog_hugo build_local.sh
+[2024-05-17 17:32:21] Current datetime: 2024-05-17 17:32:21
+[2024-05-17 17:32:21] blog server is run at http://localhost:1313/
+[2024-05-17 17:32:21] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
