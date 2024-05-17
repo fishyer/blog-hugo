@@ -2,7 +2,7 @@
 title: 自己在本机部署ChatGPT网站
 aliases: []
 date: 2024-05-17T18:54:31+08:00
-lastmod: 2024-05-17T20:41:35+08:00
+lastmod: 2024-05-17T20:57:32+08:00
 id: 2cb4f5ef-bb06-4e06-830b-adf0d65f147f
 slug: 2cb4f5ef-bb06-4e06-830b-adf0d65f147f
 obsidianLink: obsidian://advanced-uri?vault=MyNote&uid=2cb4f5ef-bb06-4e06-830b-adf0d65f147f
@@ -24,6 +24,11 @@ tags:
 
 说下我的实际使用体验，SB第一家是我最先接触到的，用了半年，感觉还不错。不过价格比EZ要贵一点，EZ是我目前在用的，价格比较实惠，但是感觉有时候速度有点慢，可能是因为我一直用GPT4的原因吧。2D那家没用过。
 
+EZ目前用了2个月，充值50人民币，剩余可用28人民币额度。1个月差不多10元左右，很便宜的使用GPT4的费用了。
+
+虽然现在有很多别人部署好的AI聊天工具了，但是API这个东西，在自己想去体验一下一些开源项目时，还是刚需，比如[abi/screenshot-to-code](https://github.com/abi/screenshot-to-code )。
+
+所以，买一个API，绝对不亏。本来我也想搞官方版本的API的，可惜的是没法绑定支付方式，用[NOBE](https://www.nobepay.com )的虚拟信用卡都不行，只好放弃。
 
 ## 2-如何使用API
 
@@ -34,8 +39,6 @@ tags:
 
 我目前用的是chatbot-ui，不过自己从它的其中一个commit节点切出来了，因为作者后期加入了很多我不需要的东西，UI也改动很大，还是喜欢最开始的简约风格：
 - [chatbot-ui/Commits/138950c5](https://github.com/mckaywrigley/chatbot-ui/commits/138950c5520e80f69f059ecf0aea6a91a727cff9 )
-
-
 
 直接从这个commit切出来弄一个仓库，发布到Vercel，配置一下环境变量：
 - OPENAI_API_HOST="https://api.ezchat.top"
