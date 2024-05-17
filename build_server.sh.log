@@ -80,3 +80,25 @@ Press Ctrl+C to stop
 [2024-05-17 18:27:06] Current datetime: 2024-05-17 18:27:06
 [2024-05-17 18:27:07] blog server is run at http://localhost:1313/
 [2024-05-17 18:27:07] ##################################################
+Watching for changes in /Users/yutianran/Documents/MyCode/blog-hugo/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    65  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    18  
+  Cleaned          |     0  
+
+Built in 203 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
