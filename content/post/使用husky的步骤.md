@@ -2,13 +2,18 @@
 title: 使用husky的步骤
 aliases: []
 date: 2024-04-18T17:53:14+08:00
-lastmod: 2024-05-17T13:44:20+08:00
-id: d3094a40-e3a4-4266-afb3-e8e65abcaa3a
-slug: d3094a40-e3a4-4266-afb3-e8e65abcaa3a
-obsidianLink: obsidian://advanced-uri?vault=note&uid=d3094a40-e3a4-4266-afb3-e8e65abcaa3a
-hugoLink: https://blog.fishyer.com/post/d3094a40-e3a4-4266-afb3-e8e65abcaa3a/
-tags: []
+lastmod: 2024-05-17T18:47:15+08:00
+id: 9188e3dc-9201-4efb-b543-c13ef8a6c35a
+slug: 9188e3dc-9201-4efb-b543-c13ef8a6c35a
+obsidianLink: obsidian://advanced-uri?vault=MyNote&uid=9188e3dc-9201-4efb-b543-c13ef8a6c35a
+hugoLink: https://blog.fishyer.com/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/
+tags:
+  - husky
+  - git
+  - 自动化
 ---
+
+#husky #git #自动化
 
 ## 1-安装husky
 

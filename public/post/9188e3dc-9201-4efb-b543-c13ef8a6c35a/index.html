@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Obsidian插件-自动添加元数据 - Fishyer&#39;s Blog</title>
+  <title>使用husky的步骤 - Fishyer&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="fishyer" /><meta name="description" content="#Obsidian #Markdown 开发目的 尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="fishyer" /><meta name="description" content="#husky #git #自动化 1-安装husky 单个项目安装 npm install husky --save-dev 全局安装 npm install husky -g 2-配置husky npx husky install 执行完毕后，会在项目根目录下生成.husky文件夹" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.125.7 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/2404c029-6f31-43fa-900f-51ee6951269d/" />
+<link rel="canonical" href="http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,25 +39,26 @@
 
 
 
-<meta property="og:url" content="http://localhost:1313/post/2404c029-6f31-43fa-900f-51ee6951269d/">
+<meta property="og:url" content="http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/">
   <meta property="og:site_name" content="Fishyer&#39;s Blog">
-  <meta property="og:title" content="Obsidian插件-自动添加元数据">
-  <meta property="og:description" content="#Obsidian #Markdown 开发目的 尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞">
+  <meta property="og:title" content="使用husky的步骤">
+  <meta property="og:description" content="#husky #git #自动化 1-安装husky 单个项目安装 npm install husky --save-dev 全局安装 npm install husky -g 2-配置husky npx husky install 执行完毕后，会在项目根目录下生成.husky文件夹">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2024-05-11T12:16:47+08:00">
-    <meta property="article:modified_time" content="2024-05-12T10:52:48+08:00">
-    <meta property="article:tag" content="Obsidian">
-    <meta property="article:tag" content="Markdown">
+    <meta property="article:published_time" content="2024-04-18T17:53:14+08:00">
+    <meta property="article:modified_time" content="2024-05-17T13:45:22+08:00">
+    <meta property="article:tag" content="Husky">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="自动化">
 
-  <meta itemprop="name" content="Obsidian插件-自动添加元数据">
-  <meta itemprop="description" content="#Obsidian #Markdown 开发目的 尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞">
-  <meta itemprop="datePublished" content="2024-05-11T12:16:47+08:00">
-  <meta itemprop="dateModified" content="2024-05-12T10:52:48+08:00">
-  <meta itemprop="wordCount" content="1060">
-  <meta itemprop="keywords" content="Obsidian,Markdown"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Obsidian插件-自动添加元数据">
-<meta name="twitter:description" content="#Obsidian #Markdown 开发目的 尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞">
+  <meta itemprop="name" content="使用husky的步骤">
+  <meta itemprop="description" content="#husky #git #自动化 1-安装husky 单个项目安装 npm install husky --save-dev 全局安装 npm install husky -g 2-配置husky npx husky install 执行完毕后，会在项目根目录下生成.husky文件夹">
+  <meta itemprop="datePublished" content="2024-04-18T17:53:14+08:00">
+  <meta itemprop="dateModified" content="2024-05-17T13:45:22+08:00">
+  <meta itemprop="wordCount" content="207">
+  <meta itemprop="keywords" content="Husky,Git,自动化"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="使用husky的步骤">
+<meta name="twitter:description" content="#husky #git #自动化 1-安装husky 单个项目安装 npm install husky --save-dev 全局安装 npm install husky -g 2-配置husky npx husky install 执行完毕后，会在项目根目录下生成.husky文件夹">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -140,20 +141,21 @@ gtag('config', 'G-9Z9QVXELHX');
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Obsidian插件-自动添加元数据</h1>
+      <h1 class="post-title">使用husky的步骤</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2024-05-11 </span>
+        <span class="post-time"> 2024-04-18 </span>
         
-          <span class="more-meta"> 约 1060 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 207 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
       <div class="post-meta">
         
         <div class="post-tags">
-            <a href="/tags/obsidian/">#Obsidian</a>
-            <a href="/tags/markdown/">#Markdown</a>
+            <a href="/tags/husky/">#husky</a>
+            <a href="/tags/git/">#git</a>
+            <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">#自动化</a>
             </div></div>
     </header>
 
@@ -164,11 +166,9 @@ gtag('config', 'G-9Z9QVXELHX');
   <ul>
     <li>
       <ul>
-        <li><a href="#开发目的">开发目的</a></li>
-        <li><a href="#配置项">配置项</a></li>
-        <li><a href="#仿tabcopy的小功能">仿TabCopy的小功能</a></li>
-        <li><a href="#如何使用">如何使用</a></li>
-        <li><a href="#源码">源码</a></li>
+        <li><a href="#1-安装husky">1-安装husky</a></li>
+        <li><a href="#2-配置husky">2-配置husky</a></li>
+        <li><a href="#3-添加pre-commit钩子">3-添加pre-commit钩子</a></li>
       </ul>
     </li>
   </ul>
@@ -176,47 +176,19 @@ gtag('config', 'G-9Z9QVXELHX');
   </div>
 </div>
     <div class="post-content">
-      <p>#Obsidian #Markdown</p>
-<h2 id="开发目的">开发目的</h2>
-<p>尝试了各种博客平台以后，感觉它们的限制还是蛮多的，不方便各种自定义设置，最终决定还是得搞一个自己的博客站点。以前用Notion搞过，但是现在Notion用的少了，反而是Obsidian用得多，本地的工具还是方便点。最后选择的博客站点生成工具是Hugo，主要是生成的快。</p>
-<p>在用Hugo发布Obsidian的Markdown文件时，需要有一些frontmatter属性，例如这样的：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lastmod: 2024-05-11T12:17:17+08:00
-</span></span><span class="line"><span class="cl">date: 2024-05-11T12:16:47+08:00
-</span></span><span class="line"><span class="cl">id: f50ee79a-23fd-4db4-bfa1-4d7c0900fd85
-</span></span><span class="line"><span class="cl">title: Obsidian插件-自动添加元数据
-</span></span><span class="line"><span class="cl">tags: []
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>自己手动添加这些属性太麻烦了，就让插件来帮我自动生成吧，每次修改时，都会自动更新属性值（没有就新建，有就更新），其实更新操作主要是更新最后修改时间和标签。</p>
-<h2 id="配置项">配置项</h2>
-<ul>
-<li>更新时间：lastmod (最好别改，不然hugo可能识别有问题)</li>
-<li>创建时间：date (最好别改，不然hugo可能识别有问题)</li>
-<li>uuid名称：id 这个是方便配合Advanced-URI插件使用,改成id是为了和Omnivore插件保持一致</li>
-<li>时间格式：YYYY-MM-DDTHH:mm:ss+08:00（最好别改，不然hugo可能识别有问题）</li>
-<li>其它的配置我没动过，都是<a href="https://github.com/alangrainger/obsidian-frontmatter-modified-date">obsidian-frontmatter-modified-date</a>插件上原有的</li>
-</ul>
-<p><img src="https://yupic.oss-cn-shanghai.aliyuncs.com/20240511122458.png" alt="image.png"></p>
-<h2 id="仿tabcopy的小功能">仿TabCopy的小功能</h2>
-<p>我在这个插件里面还添加一个小功能（Tab-Copy for Advanced URL）：可以像TabCopy一样，通过命令一键生成类似：<code>[title](url)</code>这种格式的链接，不过它的链接是用的Adcanced-URI插件的，最后生成的效果如下：<code>[Obsidian插件-自动添加元数据](obsidian://advanced-uri?vault=note&amp;uid=1c701082-2351-4aed-8081-ff3b55e3ac25 )</code></p>
-<p>强烈建议将这个命令通过Commander插件添加在页面首部，这样在其它地方引用就方便多了。比如我就经常把Obsidian的笔记链接粘贴到WorkFlowy中。</p>
-<h2 id="如何使用">如何使用</h2>
-<p>下载源码，将dist文件夹的内容移动到.obsidian/plugins文件夹即可，可以将dist文件夹改一下名：auto-frontmatter</p>
-<p>我是用的Hugo，所以才这样配置，如果你是用的其它静态站点生成器，比如：jekyll/hexo/gatsby等，可能需要调整一下配置项。如果这些配置无法满足你的需求，可以自己修改源码。或者通过邮件联系我，我来拓展一下这个插件的功能。未来的计划是让这插件可以通过模板来自定义配置项，这样就可以更灵活地使用。</p>
-<h2 id="源码">源码</h2>
-<ol>
-<li><a href="https://github.com/fishyer/auto-frontmatter">fishyer/auto-frontmatter</a></li>
-<li><a href="https://github.com/fishyer/blog-hugo">fishyer/blog-hugo</a></li>
-</ol>
+      <p>#husky #git #自动化</p>
+<h2 id="1-安装husky">1-安装husky</h2>
+<p>单个项目安装</p>
+<p><code>npm install husky --save-dev</code></p>
+<p>全局安装</p>
+<p><code>npm install husky -g</code></p>
+<h2 id="2-配置husky">2-配置husky</h2>
+<p><code>npx husky install</code></p>
+<p>执行完毕后，会在项目根目录下生成.husky文件夹，里面包含.gitignore文件，.git/hooks文件夹</p>
+<p>husky的本质就是：在husky install 时设置 ~/.husky 目录为 git hooks 目录。</p>
+<h2 id="3-添加pre-commit钩子">3-添加pre-commit钩子</h2>
+<p>在自动生成的.husky文件夹下，添加pre-commit文件，文件名必须正确，并添加自定义脚本内容</p>
+<p>注意添加权限： <code>chmod +x .husky/pre-commit</code></p>
 
     </div>
 
@@ -228,15 +200,15 @@ gtag('config', 'G-9Z9QVXELHX');
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2024-05-12
-        <a href="https://github.com/fishyer/blog-hugo/commit/a9972f06853cd0546a1196659a784602aab9cb30" title="update blog at 2024-05-12 10:52:48">(a9972f0)</a>
+        2024-05-17
+        <a href="https://github.com/fishyer/blog-hugo/commit/57b9cc9e89423744a7b0c603e3ce1a56bfeb6ba7" title="update blog at 2024-05-17 13:45:22">(57b9cc9)</a>
     </span>
   </p>
   
     <p class="copyright-item">
       <span class="item-title">笔记链接</span>
       <span class="item-content">
-          <a href="obsidian://advanced-uri?vault=note&amp;uid=2404c029-6f31-43fa-900f-51ee6951269d">obsidian://advanced-uri?vault=note&amp;uid=2404c029-6f31-43fa-900f-51ee6951269d</a>
+          <a href="obsidian://advanced-uri?vault=MyNote&amp;uid=9188e3dc-9201-4efb-b543-c13ef8a6c35a">obsidian://advanced-uri?vault=MyNote&amp;uid=9188e3dc-9201-4efb-b543-c13ef8a6c35a</a>
       </span>
     </p>
   
@@ -244,7 +216,7 @@ gtag('config', 'G-9Z9QVXELHX');
     <p class="copyright-item">
       <span class="item-title">文章链接</span>
       <span class="item-content">
-          <a href="https://blog.fishyer.com/post/2404c029-6f31-43fa-900f-51ee6951269d/">https://blog.fishyer.com/post/2404c029-6f31-43fa-900f-51ee6951269d/</a>
+          <a href="https://blog.fishyer.com/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/">https://blog.fishyer.com/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</a>
       </span>
     </p>
   
@@ -267,17 +239,18 @@ gtag('config', 'G-9Z9QVXELHX');
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/obsidian/">Obsidian</a>
-          <a href="/tags/markdown/">Markdown</a>
+          <a href="/tags/husky/">husky</a>
+          <a href="/tags/git/">git</a>
+          <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/b67149e5-5093-4a0b-9133-c9d66e663be6/">
+        <a class="prev" href="/post/150d2523-82e2-48b4-af49-db9c857cf9d8/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">docker-部署SpringBoot服务</span>
+            <span class="prev-text nav-default">git-更新忽略文件</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/71752a97-14e0-4266-937e-38802be681b5/">
-            <span class="next-text nav-default">hugo-使用go构建的静态博客工具</span>
+        <a class="next" href="/post/d06c89ae-40f9-43b3-aaed-ebb95555d62c/">
+            <span class="next-text nav-default">Obsidian插件开发笔记</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

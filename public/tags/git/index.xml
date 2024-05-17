@@ -6,7 +6,7 @@
     <description>Recent content in Git on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 May 2024 10:52:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 13:45:22 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于我</title>
@@ -21,6 +21,13 @@
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
       <description>直接重建git暂存区 1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39; 移除指定文件 1 git rm --cached redis/dump.rdb #git #配置 #测试 111</description>
+    </item>
+    <item>
+      <title>使用husky的步骤</title>
+      <link>http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</link>
+      <pubDate>Thu, 18 Apr 2024 17:53:14 +0800</pubDate>
+      <guid>http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</guid>
+      <description>#husky #git #自动化 1-安装husky 单个项目安装 npm install husky --save-dev 全局安装 npm install husky -g 2-配置husky npx husky install 执行完毕后，会在项目根目录下生成.husky文件夹</description>
     </item>
   </channel>
 </rss>

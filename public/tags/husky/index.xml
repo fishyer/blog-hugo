@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>自动化 on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
-    <description>Recent content in 自动化 on Fishyer&#39;s Blog</description>
+    <title>Husky on Fishyer&#39;s Blog</title>
+    <link>http://localhost:1313/tags/husky/</link>
+    <description>Recent content in Husky on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 17 May 2024 13:45:22 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/husky/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用husky的步骤</title>
       <link>http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</link>

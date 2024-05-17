@@ -2,10 +2,10 @@
 title: 从零开始写一个极简版Hookmark
 aliases: []
 date: 2023-10-16T17:19:06+08:00
-lastmod: 2024-05-17T18:26:35+08:00
+lastmod: 2024-05-17T18:30:03+08:00
 id: 2e516661-b581-4b54-8111-fd812f5d20fd
 slug: 2e516661-b581-4b54-8111-fd812f5d20fd
-obsidianLink: obsidian://advanced-uri?vault=note&uid=2e516661-b581-4b54-8111-fd812f5d20fd
+obsidianLink: obsidian://advanced-uri?vault=MyNote&uid=2e516661-b581-4b54-8111-fd812f5d20fd
 hugoLink: https://blog.fishyer.com/post/2e516661-b581-4b54-8111-fd812f5d20fd/
 zhihu-url: https://zhuanlan.zhihu.com/p/661658554
 zhihu-tags:
