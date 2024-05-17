@@ -7,3 +7,20 @@ Watching for config changes in /Users/yutianran/Documents/MyCode/blog-hugo/hugo.
 Start building sites … 
 hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
 
+
+                   | ZH-CN  
+-------------------+--------
+  Pages            |    60  
+  Paginator pages  |     0  
+  Non-page files   |     1  
+  Static files     |    41  
+  Processed images |     0  
+  Aliases          |    16  
+  Cleaned          |     0  
+
+Built in 198 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
