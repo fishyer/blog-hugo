@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cp -rf /Users/yutianran/Documents/MyPKM/note/blog/* /Users/yutianran/MyGithub/blog-hugo/content/
-cd /Users/yutianran/MyGithub/blog-hugo
+cp -rf /Users/yutianran/Documents/MyNote/blog/* /Users/yutianran/Documents/MyCode/blog-hugo/content/
+cd /Users/yutianran/Documents/MyCode/blog-hugo
 hugo --buildFuture
 git add .
 cur_time=$(date +'%Y-%m-%d %H:%M:%S')
