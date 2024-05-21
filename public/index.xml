@@ -6,8 +6,15 @@
     <description>Recent content on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 May 2024 20:43:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2024 21:18:09 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>强强联合，微信-滴答清单-Workflowy-Obsidian的自动化同步案例</title>
+      <link>http://localhost:1313/post/f80d5840-d6c6-4444-af19-83d9d828a447/</link>
+      <pubDate>Tue, 21 May 2024 18:09:59 +0800</pubDate>
+      <guid>http://localhost:1313/post/f80d5840-d6c6-4444-af19-83d9d828a447/</guid>
+      <description>发给滴答清单的微信机器人消息 对应的滴答清单的任务清单 自动生成的WorkFlowy节点 自动生成的Obsidian目录 自动生成的Obsidian</description>
+    </item>
     <item>
       <title>自己在本机部署ChatGPT网站</title>
       <link>http://localhost:1313/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/</link>
