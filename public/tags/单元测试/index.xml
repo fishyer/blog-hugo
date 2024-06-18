@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>单元测试 on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+    <link>http://localhost:58574/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
     <description>Recent content in 单元测试 on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 14 May 2024 16:04:14 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58574/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python-快速使用pytest&#43;allure生成测试报告网页</title>
-      <link>http://localhost:1313/post/966099a8-b25d-47fd-ac52-689c930cdb99/</link>
+      <link>http://localhost:58574/post/966099a8-b25d-47fd-ac52-689c930cdb99/</link>
       <pubDate>Tue, 14 May 2024 15:29:15 +0800</pubDate>
-      <guid>http://localhost:1313/post/966099a8-b25d-47fd-ac52-689c930cdb99/</guid>
+      <guid>http://localhost:58574/post/966099a8-b25d-47fd-ac52-689c930cdb99/</guid>
       <description>#python #单元测试 Mac上安装依赖 1 2 brew install allure pip install pytest allure-pytest pytest的查找规则-可选项 pytest查找测试用例的默认匹配规则： 测试文件以test_开头</description>
     </item>
   </channel>

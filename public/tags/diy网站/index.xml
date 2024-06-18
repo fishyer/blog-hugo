@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DIY网站 on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/diy%E7%BD%91%E7%AB%99/</link>
+    <link>http://localhost:58574/tags/diy%E7%BD%91%E7%AB%99/</link>
     <description>Recent content in DIY网站 on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 17 May 2024 20:57:52 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/diy%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58574/tags/diy%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自己在本机部署ChatGPT网站</title>
-      <link>http://localhost:1313/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/</link>
+      <link>http://localhost:58574/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/</link>
       <pubDate>Fri, 17 May 2024 18:54:31 +0800</pubDate>
-      <guid>http://localhost:1313/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/</guid>
+      <guid>http://localhost:58574/post/2cb4f5ef-bb06-4e06-830b-adf0d65f147f/</guid>
       <description>#AI #DIY网站 #Docker 1-购买代理服务 这是我搜集到的2个ChatGPT-API的代理服务，都支持GPT4 OpenAI-SB 🎉EZ-API API2D 说下我的实际使用体验，S</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>服务器面板 on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</link>
+    <link>http://localhost:58574/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</link>
     <description>Recent content in 服务器面板 on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 16 May 2024 09:45:26 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58574/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>宝塔部署笔记</title>
-      <link>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
+      <link>http://localhost:58574/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</link>
       <pubDate>Mon, 11 Mar 2024 11:18:50 +0800</pubDate>
-      <guid>http://localhost:1313/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
+      <guid>http://localhost:58574/post/68c233ac-1011-41b6-afc1-f6ac9d89cd7e/</guid>
       <description>#服务器面板 #部署 占位2222 #测试</description>
     </item>
   </channel>

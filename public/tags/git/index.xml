@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/git/</link>
+    <link>http://localhost:58574/tags/git/</link>
     <description>Recent content in Git on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 17 May 2024 18:47:40 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58574/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于我</title>
-      <link>http://localhost:1313/aboutme/</link>
+      <link>http://localhost:58574/aboutme/</link>
       <pubDate>Sat, 11 May 2024 01:37:56 +0800</pubDate>
-      <guid>http://localhost:1313/aboutme/</guid>
+      <guid>http://localhost:58574/aboutme/</guid>
       <description>this is a page about me</description>
     </item>
     <item>
       <title>git-更新忽略文件</title>
-      <link>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</link>
+      <link>http://localhost:58574/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
+      <guid>http://localhost:58574/post/150d2523-82e2-48b4-af49-db9c857cf9d8/</guid>
       <description>直接重建git暂存区 1 2 3 git rm -r --cached . git add . git commit -m &amp;#39;update .gitignore&amp;#39; 移除指定文件 1 git rm --cached redis/dump.rdb #git #配置 #测试 111</description>
     </item>
     <item>
       <title>使用husky的步骤</title>
-      <link>http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</link>
+      <link>http://localhost:58574/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</link>
       <pubDate>Thu, 18 Apr 2024 17:53:14 +0800</pubDate>
-      <guid>http://localhost:1313/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</guid>
+      <guid>http://localhost:58574/post/9188e3dc-9201-4efb-b543-c13ef8a6c35a/</guid>
       <description>#husky #git #自动化 1-安装husky 单个项目安装 npm install husky --save-dev 全局安装 npm install husky -g 2-配置husky npx husky install 执行完毕后，会在项目根目录下生成.husky文件夹</description>
     </item>
   </channel>

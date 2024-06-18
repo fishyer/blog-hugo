@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具类 on Fishyer&#39;s Blog</title>
-    <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+    <link>http://localhost:58574/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
     <description>Recent content in 工具类 on Fishyer&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 14 May 2024 15:02:56 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58574/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python-极简装饰器工具类</title>
-      <link>http://localhost:1313/post/f415170e-1284-46f2-86cc-fc67776935df/</link>
+      <link>http://localhost:58574/post/f415170e-1284-46f2-86cc-fc67776935df/</link>
       <pubDate>Tue, 14 May 2024 01:53:48 +0800</pubDate>
-      <guid>http://localhost:1313/post/f415170e-1284-46f2-86cc-fc67776935df/</guid>
+      <guid>http://localhost:58574/post/f415170e-1284-46f2-86cc-fc67776935df/</guid>
       <description>#python #工具类 先放源码，之后再完善。哈哈，感觉自己要把blog当做gist来用了。 其实也不用多介绍了，看一下源码就知道怎么回事了。源码胜过文档。</description>
     </item>
     <item>
       <title>python-极简日志工具类</title>
-      <link>http://localhost:1313/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</link>
+      <link>http://localhost:58574/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</link>
       <pubDate>Tue, 14 May 2024 00:06:11 +0800</pubDate>
-      <guid>http://localhost:1313/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</guid>
+      <guid>http://localhost:58574/post/8510cb4a-9c19-4ec6-ad1e-67f8c6616af5/</guid>
       <description>#python #工具类 用过不少的日志工具类，要么太重了，要么就是不太灵活，不方便自己定制化，感觉不如直接自己动手写算了。 介绍 只用系统库封装的极简日志工具</description>
     </item>
   </channel>
